@@ -1,0 +1,205 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		header_lean.css
+    -Description:	Basic formatting and styling for the lean Header
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyle			General Style for the normal Header
+    
+    ================================================================= */
+
+/*  ===== General Style (--genStyle) ================================ */
+
+    * {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight:300;
+	font-stretch:normal;
+    }
+    body {
+	/*background: url('/images/backgrounds/grey.png');*/
+	background: url('/images/backgrounds/low_contrast_linen.png');
+	/*background: #F5F5F5;*/
+    }
+    
+    /*--------- Header Buttons Style -------------- */
+    #header {
+	    width: 100%;
+	    height: 70px;
+	    background-repeat: repeat-x;
+	    background: rgb(83,80,89); /* Old browsers */
+	    background: -moz-linear-gradient(top, rgba(83,80,89,1) 0%, rgba(36,34,40,1) 100%); /* FF3.6+ */
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(83,80,89,1)), color-stop(100%,rgba(36,34,40,1))); /* Chrome,Safari4+ */
+	    background: -webkit-linear-gradient(top, rgba(83,80,89,1) 0%,rgba(36,34,40,1) 100%); /* Chrome10+,Safari5.1+ */
+	    background: -o-linear-gradient(top, rgba(83,80,89,1) 0%,rgba(36,34,40,1) 100%); /* Opera 11.10+ */
+	    background: -ms-linear-gradient(top, rgba(83,80,89,1) 0%,rgba(36,34,40,1) 100%); /* IE10+ */
+	    background: linear-gradient(to bottom, rgba(83,80,89,1) 0%,rgba(36,34,40,1) 100%); /* W3C */
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#535059', endColorstr='#242228',GradientType=0 ); /* IE6-9 */
+	border-bottom: 1px solid #2D2D2D;
+		box-shadow: 0 1px 6px 0 rgba(10,10,10,.5);
+	   -moz-box-shadow: 0 1px 6px 0 rgba(10,10,10,.5);
+	-webkit-box-shadow: 0 1px 6px 0 rgba(10,10,10,.5);
+	position: relative;
+	z-index:1;
+    }
+    
+    #homeLink {
+	height: 51px;
+	margin: 10px 0 0 0px;
+	/* background-image: url('/images/fandropHeaderLogo_c.png'); */
+	/* background: url('/images/fandropHeaderLogo_sprite.png') 0 0 no-repeat; */	/* Turn on when no longer BETA */
+	background: url('/images/fandropHeaderLogo_beta_sprite_new.png') 0 0 no-repeat;
+	position: relative;
+    }
+    #homeLink_span {
+	height: 51px;
+	/* background: url('/images/fandropHeaderLogo_sprite.png') 0 -53px no-repeat; */	/* Turn on when no longer BETA */
+	background: url('/images/fandropHeaderLogo_beta_sprite_new.png') 0 -53px no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity ease-in 250ms;
+	-moz-transition: opacity ease-in 250ms;
+	-webkit-transition: opacity ease-in 250ms;
+    }
+    #homeLink_span:hover {
+	opacity: 1;
+    }
+    #header .header_error {
+	    /*margin-right: 40px;*/
+	    color: #fbb917;
+	    width: 175px;
+	    position: absolute;
+	    top: 56px;
+	    right: 225px;
+    }
+    
+    #header .grid_6 img{
+      margin: 4px 0 0 0;
+      text-align: center;
+    }
+    
+    #header .grid_10 {
+      margin: 0px 0 0 0;
+      text-align: right;
+      position: relative;
+    }
+    
+    /* #header a, td{ font-family: Helvetica Neue, Helvetica, Verdana, Geneva, sans-serif; font-size:11px;} */
+    #header a, td, input { font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight:300; font-stretch:normal; font-size:11px;} 
+    
+    #fb_login_button,
+    #twitter_login_button {
+	background: url('/images/socNetLogin_sprites.png');
+	/* background: linear-gradient(#F3F3F4, #D6D7D9) repeat scroll 0 0 transparent;
+	background: -moz-linear-gradient(#F3F3F4, #D6D7D9) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(#F3F3F4, #D6D7D9) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F3F3F4', endColorstr='#D6D7D9');
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: #555555;
+	font-weight: bold;
+	padding: 0px 15px 0 0;
+	text-align:left;*/
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin-top: 19px;
+	display: inline-block;
+	box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+	-moz-box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+	-webkit-box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+	text-shadow: 1px 1px #F9F9F9;
+	cursor: pointer;
+	float: right;
+    }
+    #fb_login_button:hover,
+    #twitter_login_button:hover {
+	/* background: linear-gradient(#D3D3D4, #B6B7B9) repeat scroll 0 0 transparent;
+	background: -moz-linear-gradient(#D3D3D4, #B6B7B9) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(#D3D3D4, #B6B7B9) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D3D3D4', endColorstr='#B6B7B9');
+	border: 1px solid #BDBDBD;
+	text-shadow: 1px 1px #D9D9D9;*/
+	box-shadow:0 3px 5px rgba(34, 25, 25, 0.4);
+	-moz-box-shadow:0 3px 5px rgba(34, 25, 25, 0.4);
+	-webkit-box-shadow:0 3px 5px rgba(34, 25, 25, 0.4);
+    }
+    #fb_login_button {background-position: 0 0; height: 22px; width: 71px;margin-left: 10px;}
+    #twitter_login_button {background-position: 0 -24px; height: 22px; width: 71px;}
+    #login_button_container {
+	width: 300px;
+	display: inline-block;
+	float: left;
+    }
+    #fb_login_button img,
+    #twitter_login_button img {
+	padding: 0 7px 0 0;
+	vertical-align: middle;
+	display: inline-block;
+    }
+    #fb_login_button .authentication-text,
+    #twitter_login_button .authentication-text {
+	font-size: 12px;
+	vertical-align: middle;
+	display: inline-block;
+    }
+    
+    #login a:link{font-weight:bold; color: #CCC;  font-size:11px;}
+    #login a:hover{ color:#FFF;}
+    #login a:visited{color:#FFF;}
+    #login a { padding:1px; border:0px solid #000;}
+    /* #login div{margin:1px 0 0 0;} */
+    #login #login_input #login_user,
+    #login #login_input #login_pass {
+	width: 140px;
+	margin-top: 6px;
+	margin-right: 1%;
+	margin-bottom: 5px;
+    }
+    
+    .headerBtns{
+	    margin-bottom:4px;
+    }
+    .headerBtns a{
+	    background-image:url(headerBtnsBG.jpg);
+	    border:#999 1px solid;
+	    color:#333;
+	    text-decoration:none;
+	    padding:2px;
+    }
+    .headerBtns a:link{
+	    color:#333;
+    }
+    .headerBtns a:hover {
+	    background-image:url(headerBtnsBGover.jpg);
+	    border:#666 1px solid;
+	    text-decoration:none;
+    }
+    .headerBtns a:visited {
+	    color:#333;
+    }
+    #bookmarklet_walkthrough_body h6 {
+	width: 100% !important;
+	color: #707070;
+	font-size: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #E6E6E6;
+	margin: 0 0 15px 0px;
+	text-shadow: 1px 1px #FFFFFF;
+	float: left;
+    }
+
+/* ================================================================= */

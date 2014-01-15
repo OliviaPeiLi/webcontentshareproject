@@ -1,0 +1,26 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://saucelabs.com/test/guinea-pig2.html"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "i am a link"
+      }
+    },
+    {
+      "type": "waitForCurrentUrl",
+      "url": "http://saucelabs.com/test-guinea-pig2.html"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "I am not just another div"
+    }
+  ]
+}

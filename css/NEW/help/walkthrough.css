@@ -1,0 +1,396 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		walkthrough.css
+    -Description:	Formatting and styling for the Walkthrough modal
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --walkthrough		Styling for the Walkthrough
+    --dropSite			Styling for Drop It Button for embeeding
+				on sites
+
+    ================================================================= */
+
+/* ===== Walkthrough (--walkthrough) ================================ */
+
+    body {
+	/*background: #F5F5F5 !important;*/
+    }
+    #walkthrough_popup {
+	width: 665px !important;
+    }
+    #walkthrough_body {
+	min-width: 750px;
+	/*padding-bottom: 5px;
+	margin-top: 5px;
+	margin-left: 10px;
+    height: 98%;
+	overflow-y: scroll;*/
+    padding: 17px;
+    
+    }
+	#walkthrough_body h3{
+	    padding-bottom: 5px;
+	    margin-bottom: 10px;
+	    font-weight: bold;
+	}
+	#walkthrough_body h3.section_break {
+	    padding-bottom: 5px;
+	    border-bottom: 1px solid #EAEAEA;
+	}
+    #bookmarklet_walkthrough_body {
+	/* min-height: 1850px; */
+	margin-top: 40px;
+	margin-bottom: 20px;
+    text-align: center;
+    }
+    #bookmarklet_walkthrough_body #wrapper_container {
+    	/*width: 520px;*/
+	width: 570px;
+    	text-align: left;
+    	display: inline-block;
+    }
+    #walkthrough_body h2,
+    #bookmarklet_walkthrough_body h2 {
+	font-weight: bold;
+    }
+	#bookmarklet_walkthrough_body h6 {
+	    color: #B0B0B0;
+	    float: left;
+	    margin: 0 0 15px 20px;
+	    margin-left: 0px !important;
+	    width: 100% !important;
+	    padding-bottom: 10px;
+	    border-bottom: 1px solid #B0B0B0;
+	    text-shadow: 1px 1px #303030;
+	}
+    #walkthrough_body #walkthrough_menu {
+	width: 125px;
+	float: right;
+    }
+    #walkthrough_menu ul {
+	/* background: #FAFAFA; */
+	padding: 0 5px;
+    }
+    #walkthrough_menu ul h2 {
+	color: #3D3D3D;
+	margin-bottom: 5px;
+	margin-left: 10px;
+    }
+    #walkthrough_menu ul li {
+	line-height: 0px;
+	padding: 4px 10px;
+	margin-bottom: 2px;
+    }
+    #walkthrough_menu ul li:hover {
+	background: url("/images/blue_bg_grad.png");
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    }
+    #walkthrough_menu ul li.active {
+	background: url("/images/blue_bg_grad_active.png");
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    }
+    #walkthrough_menu ul li.active a,
+    #walkthrough_menu ul li.active a:hover {
+	color: #FFFFFF !important;
+	text-shadow: 1px 1px #6699FF !important;
+    }
+    #walkthrough_menu ul li:hover>a {
+	color: #FFFFFF;
+	text-shadow: 1px 1px #73A6FC;
+    }
+    
+    #walkthrough_menu ul li a {
+	color: #656565;
+	text-shadow: 1px 1px #FEFEFE;
+	font-size: 15px;
+	display: block;
+    }
+    #walkthrough_body .shared_line {
+	margin-left: 10px;
+	width: 91%;
+    }
+    #walkthrough_body>div {
+	margin-top: 10px;
+    }
+    #walkthrough_body .block_span {
+	display: block;
+    }
+    #bookmarklet_walkthrough_body .show_bookmark_bar_text {
+	width: 528px;
+	background: #F0F0F0;
+	padding: 5px 21px 9px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+		box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+    }
+	.show_bookmark_bar_text h4 {
+	    color: #656565;
+	    font-size: 14px !important;
+	    font-weight: bold;
+	    text-shadow: 1px 1px #FFFFFF;
+	    margin-bottom: 10px;
+	}
+    #walkthrough_body p,
+    #bookmarklet_walkthrough_body p{
+	color: #656565;
+	font-size: 14px;
+	width: 525px;
+	margin: 5px 5px 10px 5px;
+    }
+    #walkthrough_body i>strong{
+	margin-left: 13px;
+    }
+    #walkthrough_body strong,
+    #bookmarklet_walkthrough_body strong {
+	font-size: 14px;
+	font-weight: bold;
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    }
+    #walkthrough_body i,
+    #bookmarklet_walkthrough_body i {
+	font-size: 14px;
+    }
+    #walkthrough_body a {
+	color: #3366CC;
+    }
+    #walkthrough_body a:hover {
+	color: #003399
+    }
+    #bookmarklet_walkthrough_body img {
+	padding: 0;
+	margin-bottom: 15px;
+	margin-left: 20px;
+    }
+    
+    #bookmarklet_button {
+    	position: relative;
+    }
+    #bookmarklet_button .sharrow_big {
+	background: url(/images/sharrow3.png) no-repeat;
+	height: 57px;
+	width: 53px;
+	position: absolute;
+	left: -50px;
+	top: -30px;
+    }
+    #bookmarklet_button .bookmarklet-btn {
+	padding: 8px;
+	border: 2px dotted #E0E0E0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	
+    	display: inline-block;
+    	margin-top: 6px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 3%;
+    }
+    #bookmarklet_button .bookmarklet-btn img {
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding: 0;
+	border-radius: 9px;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	box-shadow: 0 2px 3px rgba(34, 25, 25, 0.4);
+	-moz-box-shadow: 0 2px 3px rgba(34, 25, 25, 0.4);
+	-webkit-box-shadow: 0 2px 3px rgba(34, 25, 25, 0.4);
+    }
+    #bookmarklet_button .body_text {
+    vertical-align: top;
+    display: inline-block;
+	color: #656565;
+	font-size: 14px;
+	line-height: 19px;
+	width: 305px;
+	padding: 23px 5px 2%;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+    }
+    #bookmarklet_container #animation_container {
+	height: 245px;
+	margin-right: 10%;
+	margin-left: 10%;
+	display: inline-block;
+    }
+    #bookmarklet_container #installation_animation {
+	height: 245px;
+	display: inline-block;
+	position: relative;
+	top: 0px;
+	overflow-y: hidden;
+    }
+    #bookmarklet_container #animation_cover {
+	height: 245px;
+	width: 440px;
+	top: 0;
+    }
+    #bookmarklet_container #animation_video {
+	position: relative;
+	top: -38px;
+    }
+    #bookmarklet_container img,
+    #bookmarklet_container #animation_container {
+	padding: 4px;
+	border: 1px solid #707070;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-bottom: 25px;
+    }
+    #walkthrough_info_wrapper {
+	background: #F0F0F0;
+	padding: 10px 5px 5px 5px;
+	border: 1px solid #E0E0E0;
+	border-radius: 9px;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	margin-bottom: 25px;
+	box-shadow: 0 1px 1px 0px rgba(100,100,100, 0.25) inset;
+	-moz-box-shadow: 0 1px 1px 0px rgba(100,100,100, 0.25) inset;
+	-webkit-box-shadow: 0 1px 1px 0px rgba(100,100,100, 0.25) inset;
+    }
+    #bookmarklet_walkthrough_body .bookmarklet_step_completed {
+    	float: right;
+    	margin-bottom: 25px;
+    	margin-right: 10px;
+	display: inline-block;
+    }
+    #bookmarklet_walkthrough_body .bookmarklet_step_completed_top {
+	float: right;
+    	margin-bottom: 10px;
+    	margin-right: 10px;
+	display: inline-block;
+    }
+
+/* ================================================================== */
+
+/* ===== Drop It for Sites (--dropSite) ============================= */
+    
+    .embed-button-style,
+    .embed-selectors {
+	margin-bottom: 30px;
+	display: inline-block;
+	vertical-align: top;
+    }
+    .embed-button-style,
+    .embed-selectors,
+    .embed-code {
+	background: #F0F0F0;
+	padding: 15px;
+	border: 1px solid #D0D0D0;
+		border-radius: 5px;
+	   -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+		box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+    }
+    .embed-button-style {
+	height: 248px;
+	width: 205px;
+	margin-right: 20px;
+    }
+    .embed-selectors {
+	width: 275px;
+    }
+    .embed-button-style li {
+	width: 85px;
+	padding: 6px 5px 6px;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    .embed-button-style .selected {
+	background: #DDEEFF;
+	padding: 4px;
+	border: 1px solid #CCDDEE;
+	border-radius: 3px;
+	display: inline-block;
+		box-shadow: 0 0 5px 1px #CCDDEE;
+	   -moz-box-shadow: 0 0 5px 1px #CCDDEE;
+	-webkit-box-shadow: 0 0 5px 1px #CCDDEE;
+    }
+    .embed-style-0,
+    .embed-style-1 {
+		height: 25px;
+		width: 75px;
+		background: #f0eded url("/images/dropIt_site.png") no-repeat 0 0;
+		padding: 4px 8px;
+		border-radius: 3px;
+			 box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		-web-kit-box-sizing: border-box;
+		position: relative;
+		display: block; /* RR - updated inline-block to inline because its not working in IE */
+    }
+    .embed-style-0:hover,
+    .embed-style-1:hover {
+		background-color: #f0eded;
+		box-shadow: 0 1px 0 0px rgba(255, 255, 255, 0.25) inset, 0 1px 2px rgba(35, 24, 24, 0.35);
+		-moz-box-shadow: 0 1px 0 0px rgba(255, 255, 255, 0.25) inset, 0 1px 2px rgba(35, 24, 24, 0.35);
+		-webkit-box-shadow: 0 1px 0 0px rgba(255, 255, 255, 0.25) inset, 0 1px 2px rgba(35, 24, 24, 0.35);
+    }
+    .embed-style-0 span,
+    .embed-style-1 span {
+    	position: absolute;
+		left: 100%;
+		border: 1px solid #D0D0D0;
+		padding: 0 5px;
+	}
+    #embed-form legend {
+	min-width: 220px;
+	color: #656565;
+	padding-bottom: 10px;
+	font-size: 16px;
+    }
+    .embed-button-style label,
+    .embed-button-style ul {
+	width: 185px;
+	min-width: 185px;
+	color: #656565;
+	padding: 5px 10px;
+    }
+    .embed-selectors label {
+	padding: 5px 10px;
+	display: block;
+    }
+    .embed_label_text {
+	width: 515px;
+	color: #656565;
+	margin-bottom: 3px;
+	display: block;
+    }
+    .embed-selectors input {
+	width: 230px;
+	margin-right: 5px;
+    }
+    #dropIt_code {
+	width: 515px;
+	margin: 5px 10px;
+	resize: none;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    #dropIt_code_desc {
+	
+    }
+
+/* ================================================================== */

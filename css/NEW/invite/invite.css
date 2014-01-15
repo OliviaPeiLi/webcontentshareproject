@@ -1,0 +1,342 @@
+/*  ===== INFO =========================================================
+   
+	-FileName:		invite.css
+	-Description:	Formatting and styling for the Invite Page
+	-Version:		Unspecified Beta
+	-Site:		Fandrop.com
+	-Author/s:		Dmitry Kashlev & Michael Eng
+	
+	----- Structure ----------------------------------------------------
+	
+	-Page format:	960 Grid - Fluid variant
+	
+	----- Anchors ------------------------------------------------------
+	
+	--invite		Styling for the Invite Page
+
+	================================================================= */
+
+/* ===== Invite Page (--invite) ===================================== */
+
+	#inviteContainer {
+		width: 900px;
+		margin: 100px auto;
+		background: white;
+		border: 1px solid #ddd;
+	}
+
+	#invite_body {
+		margin: 20px;
+	}
+	#footer {
+		position: relative;
+	}
+	#invite_page {
+	margin-top: 5px;
+	text-align: center;
+	}
+	#invite_page h1 {
+		font-size: 42px;
+		text-align: left;
+	}
+	#invite_title {
+	padding: 15px 20px;
+	border-bottom: 1px solid #ddd;
+	}
+	#inviteContainer .blue_bg_tall {
+		display: inline-block;
+	}
+	#invite_content_wrapper {
+	width: 500px;
+	text-align: left;
+	display: inline-block;
+	}
+	.invite_email_field span {
+	display: inline-block;
+	}
+	.invite_email_field .inviteField_email,
+	.inviteMessage {
+	padding: 5px 10px !important;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-bottom: 5px;
+	font-size: 14px !important;
+	resize: none;
+	}
+	.invite_email_field .inviteField_email {
+	background: #FFFFFF !important;
+	height: 30px !important;
+	}
+	.inviteMessage {
+	background: #FFFFFF !important;
+	}
+	#emailInviter .form_row label {
+		display: inline-block;
+		position: relative;
+		width: 370px;
+		color: #656565;
+		margin: 5px 0 0 0;
+		padding: 0;
+		font-size: 14px;
+		line-height: 19px;
+	}
+	#emailInviter .form_row .error {
+		color: #CC3333;
+		font-weight: normal;
+		font-size: 14px;
+		float: left;
+	}
+	#emailInviter .form_row .valid,
+	#emailInviter .form_row .success {
+		color: #390;
+		font-weight: normal;
+		font-size: 14px;
+		background: #FFF url(/images/accept.png) no-repeat left center;
+		float: left;
+	}
+	#emailInviter .form_row .error .error_contents,
+	#emailInviter .form_row .valid .valid_contents,
+	#emailInviter .form_row .success .success_contents {
+		height: 12px;
+		width: 15px;
+		background: url(/images/common_sprites.png) no-repeat;
+		margin: 0 5px 0 0;
+		display: inline-block;
+		vertical-align: -1px;
+	}
+	#emailInviter .form_row .valid .valid_contents,
+	#emailInviter .form_row .success .success_contents {
+		background-position: -240px -304px;
+	}
+	#emailInviter .form_row .error .error_contents {
+		background-position: -224px -304px;
+	}
+	#emailInviter form.error .inviteField_button {
+		background: grey !important;
+    	color: white !important;
+    	text-shadow: none !important;
+    	cursor: default !important;
+	}
+	
+	#submit_invites {
+	margin: 12px 0 5px 0px;
+	vertical-align: bottom;
+	}
+	.inviteField_button {
+	
+	}
+
+	/* facebook invite button */
+	.fb_invite_btn { }
+	.fb_invite_btn.success, .fb_invite_btn.success:hover {
+		color: blue !important;
+		background:#F2F0F0;border-color: #D1CDCD;color: #D1CDCD;text-shadow: 0 -1px rgba(34, 25, 25, 0.01);
+	}
+	.fb_invite_btn.fail { color: red !important;}
+
+/* Moved from profie/invite.css */
+	
+	#inviteTop { padding-bottom: 20px; border-bottom: 1px solid #DDDDDD; margin-bottom: 25px; }
+	#inviteTop .inviteTop_text { color: #656565; font-size: 14px; margin-bottom: 10px; }
+	#inviteTop #inviteTop_textarea { height: 25px; width: 405px; padding-left: 10px; line-height: 25px; resize: none; overflow: hidden; white-space: nowrap;}
+	
+	#inviteLeft { width: 175px;overflow: hidden; line-height: 1em; vertical-align: top;}
+	#inviteLeft li a { height: 18px; display:block; padding: 9px 26px 9px 0;color: #221919;font-size: 18px;text-decoration: none;margin-bottom:5px;font-weight:normal;padding-left: 10px;}
+	#inviteLeft li a:hover { background-color: #EAEAEA;/*background: url(../images/AboutNav.png) no-repeat 0 -36px;*/}
+	#inviteLeft li a.selected { background-color: #DADADA;/*background: url(../images/AboutNav.png) no-repeat 0 0;*/}
+	#inviteLeft li a .inviterIcon { color: #656565; font-size: 16px; text-shadow: 0 1px #fff; position: relative; z-index: 3;}
+	#inviteLeft li a .inviterIcon span { height: 15px; width: 15px; background: url(/images/common_sprites.png) no-repeat; }
+	#inviteLeft li .emailInvite .inviterIcon span {background-position: -304px -112px;}
+	#inviteLeft li .facebookInvite .inviterIcon span {background-position: -256px -112px;}
+	#inviteLeft li .gmailInvite .inviterIcon span {background-position: -288px -96px;}
+	#inviteLeft li .yahooInvite .inviterIcon span {background-position: -288px -112px;}
+	
+	.invitesFavicon { margin-right: 6px; display: inline-block;}
+	#inviteRight { width: 650px; margin-left: 20px; }
+	.FB_only #inviteRight { width: 85%; margin-right: auto; margin-left: auto;}
+	.FB_only #inviteRight h2 { margin-bottom: 30px; }
+	#inviteRight li { margin-bottom: 12px;}
+	#inviteRight .half { 
+		width: 47%; margin-bottom: 40px; float: left; border: 1px solid #ddd; border-radius: 5px; margin-top: 10px;
+	}
+	#inviteRight .half.facebook {
+		width: 42%;
+	}
+	
+	#inviteRight .half.right {
+		float: right;
+	}
+	#inviteRight .half h3 {
+		padding: 10px;
+	}
+	#inviteRight .half .fb_invite_all_btn.loading {
+		background: url('/images/loading_icons/bigRoller_32x32.gif') no-repeat center center; 
+	}
+	
+	#inviteRight .users-meter {
+		width : 47%;
+		border: 1px solid #DDDDDD;
+		border-radius: 5px;
+		margin-top: 10px;
+		float: right;
+	}
+	#inviteRight .users-meter h2 {
+		margin: 15px 10px 10px;
+		font-size: 15px;
+		color: #1A84BA;
+	}
+	#inviteRight .users-meter h2 span {
+	    font-size: 18px;
+	    font-weight: bold;
+	}
+	#inviteRight .users-meter ul {
+		margin: 10px;
+		text-align: center;
+	}
+	#inviteRight .users-meter ul li {
+		display: inline-block;
+		padding: 10px;
+	}
+	#inviteRight .users-meter ul li span {
+		display: block;
+		width: 9px; height: 20px;
+		background: url(/images/friends_icon.png) no-repeat 0 -29px; 
+	}
+	#inviteRight .users-meter ul li.selected span {
+		background-position: 0 0;
+	}
+	
+	#facebook-connector-button {
+		overflow: hidden;
+	}
+	.FB_only #inviteRight .half { 
+	}
+	#inviteRight .invite_upper { padding: 15px 12px 15px; text-align: right; }
+	#inviteRight .invite_upper .fb_invite_all_btn.loading {
+		background: url('/images/loading_icons/bigRoller_32x32.gif') no-repeat center center; 
+	}
+	#inviteRight .invite_upper h3 { margin-right: 20px; }
+	#inviteRight .invite_upper .fb_deselect_all { margin-right: 7px; }
+	#inviteRight .half h3 .blue_bg { margin: 0px 0 0px 0; float: right;}
+	#inviteRight .invitesList {margin: 0;}
+	#inviteRight .invitesList li { padding: 5px 10px 5px 5px; border-top: 1px dashed #ddd; margin: 0; clear: both; display: block; overflow: hidden;}
+	.FB_only #inviteRight .invitesList li {padding: 10px 10px 10px 10px;}
+	#inviteRight .invitesList .colourless_button,
+	#inviteRight .invitesList .follow_button_class { color: #656565; margin-top: 3px; float: right;}
+	#inviteRight .invitesList .inviteeUserImage { height: 31px; width: 31px; padding: 2px; border: 1px solid #C0C0C0; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin-right: 6px; float: left;}
+	#inviteRight .invitesList .fandropFriend .inviteeUserImage { border: 1px solid #C0C0C0 !important;}
+	#inviteRight .invitesList .person { width: 180px; padding: 2px 0; margin-top: 0; font-size: 14px; line-height: 19px; display: block; float: left; }
+	#inviteRight .friend-list .person .name,
+	#inviteRight .invitesList .fandropFriend .name a { color: #656565; text-shadow: 1px 1px #FFFFFF; overflow: hidden; text-overflow: ellipsis; }
+	#inviteRight .friend-list .person .email {color: #8C7E7E;font-size: 0.95em;overflow: hidden; text-overflow: ellipsis; }
+	.inviteContent{display:none;}
+	.inviteContent p {color: #8B8B8B; margin-bottom: 10px; font-size: 16px; line-height: 20px; text-shadow: 1px 1px #FFFFFF;}
+	.inviteContent p:last-of-type {margin-bottom: 20px;}
+	.inviteContent h1 {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	.inviteContent h3 {
+		padding: 10px;
+	}
+	.fandropFriend > span {
+		display: inline-block;
+		margin-top: 8px;
+		margin-left: 5px;
+	}
+	
+	.inviteForm li {position: relative;}
+	.inviteForm input[type=text],
+	.inviteForm input[type=password],
+	.inviteForm textarea {
+		background: transparent;
+		padding: 6px 12px;
+		border: 1px solid #CCCCCC;
+		border-radius: 6px;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+		box-shadow: inset 0 1px rgba(34,25,25,0.15), 0 1px #fff;
+		-moz-box-shadow: inset 0 1px rgba(34,25,25,0.15), 0 1px #fff;
+		-webkit-box-shadow: inset 0 1px rgba(34,25,25,0.15), 0 1px #fff;
+		display: inline-block;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.4;
+		position: relative;
+		z-index: 3;
+		resize: none;
+	}
+	.inviteForm input[type=text],
+	.inviteForm input[type=password] {
+		width: 300px;
+	}
+	.inviteForm textarea {
+		width: 480px;
+	}
+	#search_friends {
+		width: 250px;
+		margin-left: 10px;
+	}
+	.FB_only #search_friends {
+		width: 270px;
+	}
+
+	/* Input Focus */
+	.inviteForm input[type=text]:focus,
+	.inviteForm input[type=password]:focus,
+	.inviteForm textarea:focus,
+	.inviteForm input[type=text].error,
+	.inviteForm input[type=password].error,
+	.inviteForm textarea.error {border-color: #039; /*box-shadow: inset 0 1px rgba(25,25,34,0.15), 0 1px rgba(255,255,255,0.8), 0 0 14px rgba(82,82,232,0.35); -moz-box-shadow: inset 0 1px rgba(25,25,34,0.15), 0 1px rgba(255,255,255,0.8), 0 0 14px rgba(82,82,235,0.35); -webkit-box-shadow: inset 0 1px rgba(25,25,34,0.15), 0 1px rgba(255,255,255,0.8), 0 0 14px rgba(82,82,235,0.35);*/}
+	/*.inviteForm label {-moz-transition: all 0.16s ease-in-out 0s;-moz-user-select: none;color: #D7D7D7;display: block;left: 13px;position: absolute;top: 3px;z-index: 2;font-size: 14px;line-height: 1.4em;}*/
+	.inviteForm .blocker {background-color: #FFFFFF;border-radius: 8px 8px 8px 8px;bottom: 0;left: 0;position: absolute;right: 0;top: 0;z-index: 1;}
+	.inviteForm .helper {bottom: 3px;font-size: 16px;line-height: 15px;position: absolute;right: -194px;width: 180px;}
+	.inviteForm input.filter-term {background: url(/images/searchButton.png) no-repeat 230px 0; padding: 0 20px 0 5px;}
+	.FB_only .inviteForm input.filter-term {background: url(/images/searchButton.png) no-repeat 250px 0; padding-left: 28px;}
+	.inviteForm label.filter-term {padding-left: 0px;}
+	
+	#FriendSelectorInput{ /*padding-top: 15px;*/ }
+	#FriendSelectorInput ul{margin-bottom:0;}
+	
+	#AboutRight h1 a { margin-top: 9px; float: right; }
+	
+	#facebook-connector-button #link_facebook.disabled {
+		position: relative;
+	}
+	#facebook-connector-button #link_facebook.disabled > span {
+		background: url('/images/loading_icons/roller_16x16.gif') no-repeat;
+		width: 18px;
+		height: 18px;
+		display: inline-block;
+		position: absolute;
+		top: 8px;
+		left: 5px;
+	}
+	
+	#sectionRightLoader	{
+		float: left;
+		display: none;
+		min-height: 200px;
+	}
+	#sectionRightLoader img	{
+		float: left;
+	}
+	#sectionRightLoader span {
+	    color: #656565;
+	    display: block;
+	    float: left;
+	    font-size: 25px;
+	    margin-left: 30px;
+	    margin-top: 41px;
+	}
+
+	.gmail_error,
+	.yahoo_error	{
+		display: inline-block;
+		width: 650px;
+	}

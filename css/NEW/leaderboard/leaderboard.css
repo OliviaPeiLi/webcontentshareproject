@@ -1,0 +1,160 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		leaderboard.css
+    -Description:	Layout and styling for the Leaderboard Page
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant  
+    
+    ----- Anchors ------------------------------------------------------
+
+    --general			General Structure and Styling for the leaderboard
+	--leaderLabel		Styling for the column headers.
+	--leaderData		Styling for the Leaderboard Data--the content inside
+						of the fields.
+    
+    ================================================================= */
+
+/*  ===== General (--general) ======================================= */
+    
+    #leaderboardBody {
+		width: 960px;
+		margin: 100px auto 100px;
+	}
+	#leaderboardBody h1 {
+		color: #B0B0B0;
+		margin-bottom: 15px;
+	}
+	#leaderboardMe,
+	#leaderboardMain {
+		width: 775px;
+		margin: 0 auto;
+	}
+	#leaderboardMe {
+		margin-bottom: 25px;
+	}
+	#leaderboardMe_box,
+	#leaderboardMain_box {
+		width: 100%;
+		display: table;
+		border-collapse: collapse;
+	}
+	
+/*  ================================================================= */
+	
+	
+/*  ===== Field Labels (--leaderLabel) ======================================= */
+	
+	.fieldTitle {
+		padding: 5px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.fieldTitle { 
+		display: table-cell;
+	}
+	.leaderboard_fieldNames {
+		display: table-row;
+	}
+	div.fieldTitle:nth-of-type(1) {
+		width: 50px;
+	}
+	div.fieldTitle:nth-of-type(2) {
+		width: 165px;
+	}
+	div.fieldTitle:nth-of-type(n+3) {
+		width: 130px;
+	}
+	.leaderboard_fieldNames div,
+	.leaderboard_fieldNames div a {
+		color: #B0B0B0;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	.leaderboard_fieldNames div a {
+		text-decoration: underline;
+	}
+	.leaderboard_fieldNames div a:hover {
+		color: #909090;
+	}
+	.leaderboard_fieldNames div a span {
+		font-size: 11px;
+		font-weight: bold;
+	}
+	.leaderboard_userData {
+		background: #FFFFFF;
+		border-width: 1px 1px 0 1px;
+		border-style: solid;
+		border-color: #B0B0B0;
+		display: table-row;
+	}
+	div.leaderboard_userData:last-of-type {
+		border-bottom-width: 1px;
+	}
+	.leaderboard_userData div {
+		min-height: 50px;
+		padding: 10px 15px;
+		border-color: #B0B0B0;
+		border-width: 1px;
+		border-style: solid;
+		font-size: 16px;
+		line-height: 20px;
+		display: table-cell;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.leaderboard_userData div:last-of-type {
+		border-right-width: 0;
+	}
+	
+/*  ================================================================= */
+
+
+/*  ===== Leaderboard Data (--leaderData) =========================== */
+
+	#leaderboardBody .userRank {
+		width: 50px;
+		padding: 10px;
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+		vertical-align: top;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+		div.leaderboard_userData:nth-of-type(2n+1) .userRank {
+			background: #BCBEC0;
+		}
+		div.leaderboard_userData:nth-of-type(2n) .userRank {
+			background: #D1D3D4;
+		}
+	#leaderboardBody .userName {
+		background: #E9F2F4;
+		width: 165px;
+	}
+	#leaderboardBody .userViews,
+	#leaderboardBody .userLikes,
+	#leaderboardBody .userComments,
+	#leaderboardBody .userRefs {
+		width: 95px;
+	}
+	#leaderboardBody .userViews,
+	#leaderboardBody .userComments {
+		background: #F1F2F2;
+	}
+	#leaderboardBody .userLikes,
+	#leaderboardBody .userRefs {
+		background: #E6E7E8;
+	}
+	#leaderboardBody .userScore {
+		font-weight: bold;
+	}
+	
+/*  ================================================================= */

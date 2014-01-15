@@ -1,0 +1,81 @@
+#contestAdd_item {
+	/*width: 960px;*/ width: 395px;
+	background: #FFFFFF;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 0 auto;
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+}
+
+#contestAdd_item form.loading .selfSubmission_loading {
+	display: inline-block;
+}
+
+#contestAdd_item .selfSubmission_loading {
+	background: url('/images/loading_icons/bigRoller_32x32.gif') no-repeat;
+	background-color: rgba(255,255,255,0.75);
+	background-position: 50%;
+	border-radius: 10px;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+#contestAdd_item h2 {
+	color: #3D3D3D;
+	margin-bottom: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#contestAdd_item .form_row {
+	min-height: 42px;
+	margin-bottom: 10px;
+}
+#contestAdd_item .form_row .loading {
+	display: none;
+	background: url(/images/loading_icons/roller_16x16.gif) no-repeat left center;
+	color: #666;
+	padding: 2px 0 2px 20px;
+	margin-top: 5px;
+	margin-left: 105px;
+}
+#contestAdd_item div.form_row:nth-of-type(4) {
+	min-height: 83px;
+}
+#contestAdd_item div.form_row:last-of-type {
+	margin-top: 5px;
+	margin-bottom: 0;
+	text-align: center;
+}
+#contestAdd_item .form_row .hidden_upload {
+	display: inline-block;
+}
+#contestAdd_item label {
+	min-width: 100px;
+	max-width: 100px;
+	color: #656565;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: top;
+}
+#contestAdd_item input[type=text],
+#contestAdd_item textarea {
+	width: 232px;
+}
+#contestAdd_item textarea {
+	resize: none;
+}
+#contestAdd_item .preview {
+	margin-top: 25px;
+}
+#contestAdd_item .preview img {
+	max-width: 100%;
+	padding: 0;
+}

@@ -1,0 +1,455 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		folder_ugc.css
+    -Description:	Formatting and styling for the base Newsfeed
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Radil Radenkov & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyling	General Styling
+    
+    ================================================================= */
+
+/* ===== General Styling (--genStyling) ============================= */
+
+	#home {
+		margin-top: 90px;
+	}
+	#home .folder_ugc {
+		margin-bottom: 10px;
+		cursor: pointer;
+		position: relative;
+	}
+	#home .folder_ugc > h2 {
+		/*margin-bottom: 18px;*/
+	}
+	.folder_ugc > h2 {
+		padding: 18px 10px 15px 10px;
+	}
+	.folder_ugc h2:hover {
+		text-decoration: underline;
+	}
+	.folder_ugc h2 a {
+		max-width: 100%;
+		color: #222;
+		line-height: 1.2em;
+		display: inline-block;
+		overflow: hidden;
+		word-wrap: break-word;
+	}	
+	.folder_ugc h2 a:hover {
+		color: #222;
+	}
+	.folder_ugc .hashtags {
+		padding: 0px 10px 0;
+		border: solid #F0F0F0;
+		border-width: 1px 0;
+		margin-bottom: 5px;
+		overflow: hidden;
+    }
+	.folder_ugc .hashtagContainer {
+		min-height: 50px;
+		max-width: 420px;
+		padding: 10px 0 10px 10px;
+		border-left: 1px solid #F0F0F0;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		float: left;
+		display: none; /* This may or may not be temporary, but I'm only doing it this way in case we need this to come back. */
+	}
+    #folder .hashtags .hashtagUnit,
+    .folder_ugc .hashtags .hashtagUnit {
+		padding: 0px 10px 10px 0;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		vertical-align: top;
+    }
+	#home .folder_ugc .newsfeed_dropInfo {
+		min-height: 42px;
+		padding: 5px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#home .folder_ugc .newsfeed_dropInfo_nameAndDateLink {
+		min-height: 50px;
+		padding: 10px 10px 10px 0;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		vertical-align: top;
+		float: left;
+	}
+	#home .folder_ugc .newsfeed_dropInfo_nameAndDateLink img {
+		width: 30px;
+		padding: 0;
+		margin-right: 5px;
+		vertical-align: top;
+    }
+    #home .folder_ugc .newsfeed_dropInfo_nameAndDate {
+		vertical-align: top;
+    }
+	#home .folder_ugc .newsfeed_dropInfo_nameAndDate .newsfeed_dropInfo_dropUser,
+    #home .folder_ugc .newsfeed_dropInfo_nameAndDate .newsfeed_dropInfo_dropDate {
+		line-height: 1.2em;
+		display: block;
+    }
+    #home .folder_ugc .newsfeed_dropInfo_nameAndDate .newsfeed_dropInfo_dropUser {
+		max-width: 100px;
+		word-wrap: break-word;
+    }
+    #home .folder_ugc .newsfeed_dropInfo_nameAndDate .newsfeed_dropInfo_dropDate {
+		color: #9D9D9D;
+    }
+	#home .folder_ugc .actionButton {
+		display: inline-block;
+		height: 42px;
+		padding: 11px 15px 11px 15px;
+		vertical-align: top;
+	}
+	#home .folder_ugc .actionButton.hidden {
+		display: none;
+	}
+	#home .folder_ugc .actionButton.vote .ico {
+		height: 20px;
+		width: 20px;
+		background-position: -64px -496px;
+	}
+	#home .folder_ugc .actionButton.downvote {
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		background-color: #dfdfdf; /* layer fill content */
+		-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.54); /* inner shadow */
+		-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.54); /* inner shadow */
+		box-shadow: inset 0 1px 3px rgba(0,0,0,.54); /* inner shadow */
+		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjIiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTAxMTEwIiBzdG9wLW9wYWNpdHk9IjAuMiIvPgogICA8L2xpbmVhckdyYWRpZW50PgoKPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjaGF0MCkiIC8+Cjwvc3ZnPg==); /* gradient overlay */
+		background-image: -moz-linear-gradient(bottom, rgba(255,255,255,.2) 0%, rgba(16,18,16,.2) 100%); /* gradient overlay */
+		background-image: -o-linear-gradient(bottom, rgba(255,255,255,.2) 0%, rgba(16,18,16,.2) 100%); /* gradient overlay */
+		background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,.2) 0%, rgba(16,18,16,.2) 100%); /* gradient overlay */
+		background-image: linear-gradient(bottom, rgba(255,255,255,.2) 0%, rgba(16,18,16,.2) 100%); /* gradient overlay */
+	}
+	#home .folder_ugc .actionButton .num,
+	#home .folder_ugc .actionButton.edit {
+		color: #3D3D3D;
+		margin-left: 2px;
+		font-size: 14px;
+		font-weight: bold;
+		text-shadow: 1px 1px #FFFFFF;
+	}
+	#home .folder_ugc .fb_share_collection .ico, .folder_ugc .share_fb_app .ico {
+		background-position: -128px -544px;
+	}
+	#home .folder_ugc .fb_share_collection .ico:after,
+    #home .folder_ugc .share_fb_app .ico:after {
+		content: 'Share';
+		color: #FFFFFF;
+		font-size: 14px;
+		line-height: 23px;
+		margin-left: 33px;
+		display: inline-block;
+		vertical-align: middle;
+    }
+	
+	#home .folder_ugc .share_twt_app .ico {
+		background-position: -128px -574px;
+    }
+	#home .folder_ugc .share_twt_app .ico:after {
+		content: 'Tweet';
+		color: #FFFFFF;
+		font-size: 14px;
+		line-height: 23px;
+		margin-left: 25px;
+		display: inline-block;
+		vertical-align: middle;
+    }
+	#home .folder_ugc .share_twt_app .ico, #home .folder_ugc .share_fb_app .ico, #home .folder_ugc .fb_share_collection .ico {
+		height: 23px;
+		width: 25px;
+	}
+	#home .fb_share_collection, #home .share_fb_app, #home .share_twt_app {
+	}
+	#home .fb_share_collection:hover,
+    #home .share_fb_app:hover,
+    #home .share_twt_app:hover {
+    }
+	#home .folder_ugc .fb_share_collection, .folder_ugc .share_fb_app, .folder_ugc .share_twt_app {
+		height: 42px;
+		width: 93px;
+		padding: 9px 10px 10px;
+		border-radius: 2px;
+		vertical-align: top;
+		text-align: left;
+	}
+	#home .folder_ugc .newsfeed_dropContent > h2 {
+	    display: none;
+    }
+	#home .folder_ugc .newsfeed_dropContent {
+		padding: 0 5px 5px;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_dropContent_container {
+		width: 100%;
+		margin-top: 4px;
+	}
+	.folder_ugc .newsfeed_dropContent img {
+		padding: 0;
+    }
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent {
+		margin-top: 5px;
+		margin-left: -6px;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6 {
+		margin-left: 7px;
+		width: 189px;
+		background-color: #CCC;
+		}
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent,
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6 {
+		position: relative;
+    }
+    /* RR - these 2 rules are for hiding watermarks do not remove them */ 
+    .folder_ugc .photo-container.watermarked div { overflow: hidden; /* text-align: center; */ }
+    .folder_ugc .photo-container.watermarked div img { margin-bottom: -35px; }
+    
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent .photo-container {
+		height: 355px;
+		overflow: hidden;
+	}
+	/* RR - margin-top is managed by js - if you need to change it let me know I will update it
+	/*
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent .photo-container div {
+		margin-top: 0 !important;
+	}
+	*/
+    .folder_ugc .newsfeed_dropContent_container .play_container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -25px; 
+		margin-left: -25px;
+    }
+	.folder_ugc .newsfeed_dropContent_container .play_container .play_button {
+		background: url('/images/common_sprites.png') no-repeat;
+		display: inline-block;
+    }
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent .play_container .play_button {
+		height: 52px;
+		width: 52px;
+		background-position: -384px -96px;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .play_container .play_button {
+		height: 52px;
+		width: 52px;
+		background-position: -384px -96px;
+	}
+	/* RR - span6 is a general class which already has a width
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6 {
+		width: 192px;
+	}*/
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6:nth-of-type(n+2) {
+		margin-left: 4px;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .photo-container {
+		height: 115px;
+		overflow: hidden;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent > div,
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6 > div {
+		background: url(/images/zachary-images/ps_neutral.png);
+		border: 1px solid #F0F0F0;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent > div,
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent > .text-container {
+		height: 370px;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6 > div,
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6 > .text-container{
+		height: 115px;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent img {
+		/* width: 229px; */
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent > .text-container,
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6 > .text-container {
+		background: #F5F5F5;
+		padding: 15px;
+		border: 1px solid #F0F0F0;
+		line-height: 1.2em;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		overflow: hidden;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_upperContent > .text-container {
+		max-height: 18em;
+		font-size: 21px;
+	}
+	.folder_ugc .newsfeed_dropContent .newsfeed_lowerContent .span6 > .text-container {
+		max-height: 13em;
+		font-size: 14px;
+	}
+	
+/* ================================================================== */
+
+/* ===== Right Column (--rightCol) ================================== */
+	
+	#home .currentUser_panel,
+	#profile .currentUser_panel {
+		background: #FFFFFF;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+		border: 1px solid #D4D5D9;
+	}
+	#home .currentUser_panelUpper,
+	#profile .currentUser_panelUpper {
+		position: relative;
+		padding: 5px;
+		border-bottom: 1px solid #F0F0F0;
+	}
+	
+	#home .currentUser_panelUpper .avatarPopup,
+	#profile .currentUser_panelUpper .avatarPopup {
+		background: rgba(10, 10, 10, 0.5);
+		color: #FFFFFF;
+		padding: 5px;
+		font-size: 10px;
+		display: none;
+		position: absolute;
+		left: 6px;
+		top: 6px;
+	}
+	#home .currentUser_panelUpper:hover .avatarPopup,
+	#profile .currentUser_panelUpper:hover .avatarPopup {
+		display: block;
+	}
+
+	#home .currentUser_panelUpper img,
+	#profile .currentUser_panelUpper img {
+		width: 80px;
+		padding: 0;
+		margin-right: 5px;
+		vertical-align: top;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons {
+		width: 125px;
+		vertical-align: top;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons a.accountButton {
+		padding: 5px 0;
+		display: block;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons .accountButton .ico {
+		height: 15px;
+		width: 15px;
+		background: url('/images/common_sprites.png') no-repeat;
+		margin-right: 5px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons .accountButton.messageButton .ico {
+		background-position: -32px -544px;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons .accountButton.optionsButton .ico {
+		background-position: -32px -560px;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons .accountButton.twitterButton .ico {
+		background-position: -32px -576px;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons .accountButton.facebookButton .ico {
+		/*background-position: -32px -592px;*/
+		background-position: -48px -544px;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons .accountButton .accountButton_text {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+		margin-top: -1px;
+	}
+	#home .currentUser_panelUpper .currentUser_panel_accountButtons .accountButton .accountButton_text:hover {
+		text-decoration: underline;
+	}
+	#home .currentUser_panel_followPane,
+	#profile .currentUser_panel_followPane {
+		border-bottom: 1px solid #F0F0F0;
+	}
+	#home .currentUser_panel_followPane .followButton,
+	#profile .currentUser_panel_followPane .followButton {
+		height: 55px;
+		font-family: 'Droid Sans',"HelveticaNeue", Helvetica, sans-serif;
+		width: 50%;
+		padding: 10px 0px 15px 20px;
+		font-size: 14px;
+		color: #222;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#home .currentUser_panel_followPane .followButton span,
+	#profile .currentUser_panel_followPane .followButton span {
+		font-size: 14px;
+		display:block;
+		font-weight: bold;
+		padding-bottom: 5px;
+		}
+
+	#home .currentUser_panel_followPane .followButton:hover,
+	#profile .currentUser_panel_followPane .followButton:hover {
+	text-decoration: underline;
+	}
+	#home .currentUser_panel_followPane .followersButton,
+	#profile .currentUser_panel_followPane .followersButton {
+		border-right: 1px solid #F0F0F0;
+	}
+	#home .currentUser_panel_uploadPane,
+	#home .currentUser_panel_postsPane {
+		padding: 10px;
+	}
+	#home .currentUser_panel_uploadPane {
+		border-bottom: 1px solid #F0F0F0;
+	}
+		#home .currentUser_panel_uploadPane .uploadButton {
+			height: 47px;
+			padding: 15px;
+			display: block;
+			text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			font-size: 14px;
+		}
+	#home .currentUser_panel_postsPane {
+		
+	}
+		#home .currentUser_panel_postsPane .previousPosts {
+			height: 46px;
+			color: #3D3D3D;
+			padding: 15px;
+			display: block;
+			letter-spacing: .07em;
+			text-align: center;
+			font-size: 14px;
+		}
+		#home .currentUser_panel_postsPane .previousPosts:hover {
+			color: #656565;
+		}

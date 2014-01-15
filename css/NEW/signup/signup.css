@@ -1,0 +1,2323 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		signup.css
+    -Description:	Layout and styling for the Landing page and Sign up page
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant  
+    
+    ----- Anchors ------------------------------------------------------
+
+    --signUp			Styling for the signup page
+    --iFrame			Styling for the iFrame
+    --landingPage		Styling for the landing page
+	--leftSide		
+	--rightSide
+	--loggedAdjust		
+    --category			Styling and structure for the category page
+    --erlibirdAccess	Styling for the Earlybird sign up
+    --uniSignup			Styling for the Univeristy sign up page
+		--uniColours	Different colours and images for different schools
+		--specialTheme	Different colours and images for different campaigns
+    
+    ================================================================= */
+
+/*  ===== Sign Up (--signUp) ======================================== */
+    
+    li {list-style:none;}
+    
+	#login_wrapper {
+		text-align: center;
+	}
+	
+	#footer {
+		/*position: absolute;
+		bottom: 0;*/
+		margin-top: 120px;
+	}
+
+    .signup_container {
+    	position: relative;
+		background: #FFFFFF;
+				border-radius: 7px;
+		   -moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+		border: 1px solid #E0E0E0;
+		margin: 55px auto;
+		display: inline-block;
+				box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		text-align: left;
+    }
+    .signup_container.login {
+		padding: 0px 30px 0px 30px;		
+	}
+	.signup_container .signup_content {
+		padding: 30px 30px 30px 30px;
+	}
+	.signup_container.signup_main .signup_content h2 {
+		color: #3D3D3D;
+		margin-bottom: 10px;
+		line-height: 23px;
+	}
+	.signup_container.signup_main .signup_content h3 {
+		line-height: 20px;
+	}
+	.signup_container .signup_content h3 a {
+		font-size: 16px;
+	}
+	
+	.signup_container .signup_title {
+		padding: 15px 20px;
+		border-bottom: 1px solid #C0C0C0;
+	}
+	
+	.signup_container .signup_title h1 {
+		
+	}
+	
+	.signup_container .signup_title .status {
+		position: absolute;
+		right: 18px; top: 18px;
+	}
+	.signup_container .signup_title .status .step {
+		display:inline-block;
+		width: 17px; height: 17px;
+		margin: 2px;
+		background-color: #FFFFFF;
+		border: 1px solid #C0C0C0;
+		border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;
+		vertical-align: middle;
+	}
+	.signup_container .signup_title .status .step.active {
+		background: #73A6FC;
+	}
+	.signup_container .signup_title .status .stepText {
+		color: #A0A0A0;
+		margin-right: 3px;
+		vertical-align: middle;
+	}
+	.signup_container .form_row label {
+		position: relative;
+		padding: 0;
+	}
+
+	.signup_container.request_invite {
+		width: 550px;
+	}
+	.signup_container.request_invite .form_row {
+		padding: 20px 0 4px;
+	}
+	.signup_container.request_invite .form_row p {
+		color: #FF3333;
+		margin-bottom: 5px;
+	}
+	.signup_container.request_invite .input_box {
+		width: 65%;
+		margin-right: 10px;
+	}
+	.signup_container.request_invite .blue-btn {
+		width: 140px;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.request_invite_page .authentication-header a#facebook_login_button_old,
+	.request_invite_page .authentication-header a#facebook_login_button_old span {
+		background: url('/images/login_button_sprites.png') no-repeat;
+	}
+	.request_invite_page .authentication-header a#facebook_login_button_old {
+		background-position: -280px -65px;
+		margin-left: -7px;
+		position: relative;
+	}
+	.request_invite_page .authentication-header a#facebook_login_button_old span {
+		background-position: -280px 0;
+	}
+	.request_invite_page .authentication-header a#facebook_login_button_old:hover span {
+		opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+	
+	.signup_container.signup_main {
+		width: 400px;
+		text-align: center;
+	}
+	.signup_container.signup_form .signup_content {
+		padding: 30px 70px;
+	}
+	.signup_container.signup_form .form {
+		display: inline-block;
+		width: 330px;
+		padding-right: 30px;
+		border-right: 1px solid #E0E0E0;
+	}
+	.signup_container.signup_form .form .form_row {
+		margin-bottom: 5px;
+	}
+	.signup_container.signup_form input[type=text],
+	.signup_container.signup_form input[type=password]{
+		width: 250px;
+		padding: 2px 10px !important;
+	}
+	.signup_container.signup_form .tmp_input_holder {
+		padding: 2px 10px;
+		font-size: 14px;
+		top: 0;
+	}
+    .signup_container.signup_form #submit_signup {
+		width: 150px;
+	}
+	.signup_container.signup_form #email_image_upload {
+		background: url('/images/backgrounds/theSimple.png');
+		margin: 30px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.signup_container.choose_category {
+		width: 900px;
+	}
+	.signup_container.choose_category form {
+		padding: 0 115px;
+	}
+	.signup_container.choose_category .form_row {
+		text-align: center;
+	}
+	.signup_container.choose_category .form_row:last-child {
+		width: 100%;
+		padding-top: 10px;
+	}
+	.signup_container.choose_category .form_row input[type=submit] {
+		width: 200px;
+		padding: 10px;
+		font-size: 16px;
+	}
+	
+	.topicTile {
+		height: 100px;
+		width: 78px;
+		color: #656565;
+		margin: 10px 9px 10px 9px;
+		display: inline-block;
+		float: left;
+		text-align: left;
+		text-shadow: 1px 1px #FFFFFF;
+    }
+	.topicTile input {
+		display: none;
+	}
+	.topicTile:hover {
+        color: #656565;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    .topicTile:hover .topicImage {
+	        	box-shadow: 0 2px 3px 0px rgba(100, 100, 100, 0.5);
+		   -moz-box-shadow: 0 2px 3px 0px rgba(100, 100, 100, 0.5);
+		-webkit-box-shadow: 0 2px 3px 0px rgba(100, 100, 100, 0.5);
+			transition: ease-in 125ms;
+		   -moz-transition: ease-in 125ms;
+		-webkit-transition: ease-in 125ms;
+    }
+    .topicTile .topicEffects {
+		background: rgba(50,50,50,0.35);
+		border-radius: 3px;
+		position: absolute;
+		display: none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+    }
+    .topicTile .topicEffects_contents {
+		height: 20px;
+		width: 20px;
+		background: rgba(10,10,10,0.5) url("/images/common_sprites.png") -28px 444px no-repeat;
+		display: inline-block;
+		position: absolute;
+		right: 4px;
+		bottom: 4px;
+    }
+    .topicTile.selected .topicEffects {
+		display: inline-block;
+    }
+    .topicTile.selected {
+    	color: black !important;
+    	font-weight: bold;
+    }
+    .topicTile.selected .topicImage {
+		border: 2px solid #5060FF;
+		    box-shadow: 0 3px 4px 0px rgba(100, 100, 100, 0.5);
+		   -moz-box-shadow: 0 3px 4px 0px rgba(100, 100, 100, 0.5);
+		-webkit-box-shadow: 0 3px 4px 0px rgba(100, 100, 100, 0.5);
+			transition: ease-in 125ms;
+		   -moz-transition: ease-in 125ms;
+		-webkit-transition: ease-in 125ms;
+    }
+    .topicImage {
+		background: #FFFFFF;
+		border: 2px solid #FEFEFE;
+		border-radius: 5px;
+		margin-bottom: 5px;
+		display: inline-block;
+		position: relative;
+			box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);
+		   -moz-box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);
+		-webkit-box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);
+			transition: ease-in 125ms;
+		   -moz-transition: ease-in 125ms;
+		-webkit-transition: ease-in 125ms;
+    }
+    .topicImage img {
+		height: 69px;
+		padding: 2px;
+    }
+
+	/**
+	 * upload image dialog
+	 */
+	#email_image_upload {
+		position: relative;
+    }
+    #email_image_upload img {
+	max-width: 197px;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    #email_image_upload_button {
+	position: absolute;
+	left: 56px;
+	bottom: 60px;
+    }
+	#upload_image_dialog .dialog-container {
+		overflow: hidden;
+		height: 100%;
+		padding: 10px;
+	}
+	
+	#upload_image_dialog .left {
+		/*width: 50%;*/
+		width: 163px;
+		background: url('/images/backgrounds/theSimple.png');
+		border-right: 1px solid #E6E6E6;
+		/*margin-right: 5%;*/
+		margin-right: 12px;
+		display: inline-block;
+	}
+	
+	#upload_image_dialog .image_placeholder img {
+		max-width: 90%;
+		padding: 0;
+	}
+	
+	#upload_image_dialog .right {
+		/*width: 43%;*/
+		width: 218px;
+		padding: 13px 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+	#upload_image_dialog .right .hidden_upload {
+		height: 29px;
+		margin-right: 5px;
+		display: inline-block;
+	}
+	#upload_image_dialog .right .hidden_upload #upload_img_filename {
+		margin: 0;
+		top: -8px;
+	}
+	#signUp_chooseAvatar,
+	#signUp_avatarDone {
+		position: relative;
+		top: 9px;
+		vertical-align: top;
+	}
+	#signUp_chooseAvatar {
+		
+	}
+	.hidden_upload:hover #signUp_chooseAvatar {
+		background: rgb(48,248,114); /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(48,248,114,1) 0%, rgba(0,207,72,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(48,248,114,1)), color-stop(100%,rgba(0,207,72,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(48,248,114,1) 0%,rgba(0,207,72,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(48,248,114,1) 0%,rgba(0,207,72,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(48,248,114,1) 0%,rgba(0,207,72,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom, rgba(48,248,114,1) 0%,rgba(0,207,72,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f872', endColorstr='#00cf48',GradientType=0 ); /* IE6-9 */
+		color: #FFFFFF;
+    }
+	#signUp_avatarDone {
+		
+	}
+	#upload_image_dialog .right .error {
+		
+		margin: 10px 0 0 0;
+		display: inline-block;
+	}
+
+	/*
+	 *    OLD css from here - to clean
+	 */
+	
+    #index_interest_placeholder, #index_user_placeholder, #index_signup_placeholder {
+	margin-top: 33px;
+	margin-bottom: 20px;
+	height: 368px;13
+	margin-left: 20px;
+	margin-right: 20px;
+    }
+    #index_interest_placeholder {
+	text-align: center;
+    }
+    #interest_description {
+	height: 310px;1
+	width: 528px;
+	background-color: #888888;
+	border-top: 1px solid #959595;
+	border-right: 1px solid #959595;
+	border-bottom: 1px solid #757575;
+	border-left: 1px solid #757575;
+	margin-top: 20px;
+	margin-right: 20px;
+	text-align: center;
+	vertical-align: middle;
+    }
+    #reg_signup_form {
+	border: 0px;
+	background-color: #DDDDDD;
+	border-top: 1px solid #E5E5E5;
+	border-right: 1px solid #E5E5E5;
+	border-bottom: 1px solid #C5C5C5;
+	border-left: 1px solid #C5C5C5;
+	padding: 15px 40px 27px;
+	margin: 0 0 20px 0;
+    }
+    #reg_signup_form legend {
+	margin-left: 20px;
+	padding: 5px;
+	color: #A72822;
+	font-size: 24px;
+    }
+    #reg_signup_form input[type=text], 
+    #reg_signup_form input[type=password],
+    #signup_form_step1 input[type=text],
+    #signup_form_step1 input[type=password]{
+	display: block;
+    }
+    #reg_signup_form input[type=text],
+    #reg_signup_form input[type=password],
+    #reg_signup_form .tmp_input_holder,
+    #signup_form_step1 input[type=text],
+    #signup_form_step1 input[type=password],
+    #signup_form_step1 .tmp_input_holder{
+	width: 255px;
+    }
+    #reg_signup_form input[type=text],
+    #reg_signup_form input[type=password],
+    #reg_signup_form .tmp_input_holder,
+    #reg_signup_form select,
+    #signup_form_step1 input[type=text],
+    #signup_form_step1 input[type=password],
+    #signup_form_step1 .tmp_input_holder,
+    #signup_form_step1 select
+    {
+	color: #656565;
+	font-size: 16px;
+	height: 30px;
+	padding: 0 5px;
+	margin: 0px 2px 0px;
+    }
+    #reg_signup_form select,
+    #signup_form_step1 select{
+	border-top: 1px solid #D5D5D5;
+	border-right: 1px solid #D5D5D5;
+	border-bottom: 1px solid #E5E5E5;
+	border-left: 1px solid #D5D5D5;
+	box-shadow: -1px 1px 2px 0px #888888 inset;
+	-moz-box-shadow: -1px 1px 2px 0px #888888 inset;
+	-webkit-box-shadow: -1px 1px 2px 0px #888888 inset;
+	display: inline-block;
+    }
+    #reg_signup_form input[type=text]:hover,
+    #reg_signup_form input[type=password]:hover,
+    #signup_form_step1 input[type=text]:hover,
+    #signup_form_step1 input[type=password]:hover,
+    #reg_signup_form .tmp_input_holder:hover
+    {
+	border: 1px solid #3366cc;
+    }
+    
+    #reg_password {
+	    padding-right: 80px !important;
+	    width: 180px !important;
+    }
+    
+    #index_register_submit {
+	margin-left: 2px;
+    }
+    .fandrop_border {
+	border-top-left-radius: 0px; -moz-border-radius-topleft: 0px;
+	border-top-right-radius: 0px; -moz-border-radius-topright: 0px;
+	border-bottom-left-radius: 0px; -moz-border-radius-bottomleft: 0px;
+	border-bottom-right-radius: 0px; -moz-border-radius-bottomright: 0px;
+	box-shadow: -4px 4px #DBDBDB;
+	-moz-box-shadow: -4px 4px #DBDBDB;
+	-webkit-box-shadow: -4px 4px #DBDBDB;
+    }
+    #signup_options_title, #signup, #signup_blob_title /* .signup_blob */ {
+	border: 0px;
+	background-color: #8b8b8b;
+	border-top: 1px solid #8b8b8b;
+	border-right: 1px solid #8b8b8b;
+	border-bottom: 1px solid #8b8b8b;
+	border-left: 1px solid #8b8b8b;
+	padding: 0px 0px 15px;
+	margin: 0 0 20px 0;
+	-moz-box-shadow: -4px 4px rgba(190, 190, 190, .5);
+	-webkit-box-shadow: -4px 4px rgba(190, 190, 190, .5);
+	box-shadow: -4px 4px rgba(190, 190, 190, .5);
+    }
+    .signup_desc {
+	color: white;
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight:300;
+	font-stretch:normal;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 0 15px;
+    }
+    .signup_heading {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+    }
+    .fb_iframe_widget iframe {
+	position: relative !important;
+    }
+    
+    #fb_button, #twtr_button {
+	text-decoration: none !important;
+	color: white !important;
+    }
+    #fb_button {
+	line-height: 18px;
+    }
+    #twtr_button {
+	line-height: 18px;
+    }
+    #fb_button img, #twtr_button img {
+	margin-top: 10px;
+    }
+    #fb_button img {
+	padding-left: 0px;
+    }
+    #signup_desc_or {
+	vertical-align: -5px;
+    }
+    #signup p {
+	padding-top: 10px;
+	padding-bottom: 10px;
+    }
+    #signup em {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-stretch:normal;
+	font-size: 14px;
+	font-weight: 300;
+	/* margin-bottom: 5px; */ 
+	margin-bottom: 8px;		/* For single pane presentation */
+	display: block;
+    }
+    #signup smaller {
+	font-size: 12px;
+	padding-bottom: 5px;	/* For single pane presentation */
+	display: block;		/* For single pane presentation */
+    }
+    #signup .signup_textbox {
+	background-color: #c8c8c8;
+	color: #3d3d3d;
+	width: 210px;
+	height: 33px;
+	font-size: 100%;
+	padding: 0.4em 0.4em 0.4em 0.9em;
+	border-top: 1px solid #a4a4a4;
+	border-right: 1px solid #a4a4a4;
+	border-bottom: 1px solid #a4a4a4;
+	border-left: 1px solid #a4a4a4;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	margin-top: 0px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+	margin-left: 2px;
+	display: block;
+    }
+    #signup .signup_email {
+	background-color: #c8c8c8;
+	color: #3d3d3d;
+	font-size: 100%;
+	width: 210px;
+	padding: 0.4em 0.4em 0.4em 0.9em;
+	border-top: 1px solid #a4a4a4;
+	border-right: 1px solid #a4a4a4;
+	border-bottom: 1px solid #a4a4a4;
+	border-left: 1px solid #a4a4a4;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	margin-top: 0px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+	margin-left: 2px;
+    }
+    #signup .signup_email:hover {
+	color: #3d3d3d !important;
+	background-color: #eeeeee;
+    }
+    #signup .signup_email:focus {
+	background-color: #EEEEEE;
+	color: #3d3d3d !important;
+	border: 1px solid #EEEEEE;
+    }
+    #signup_email_step1 {
+	padding-left: 15px;
+	margin-left: -2px;
+    }
+    #signup_email_step2 {
+	color: #E0E0E0;
+	padding:0 15px;
+    }
+    #signup_email_step2 p {
+	padding: 10px 0 0 0;
+    }
+    #bump_none {
+	padding-top: 5px;
+    }
+    .interest_count_bar {
+	border-left: 5px solid #cb0000;
+	background-color: #8b8b8b;
+	width: 503px;
+	height: 38px;
+	-moz-box-shadow: -4px 4px #DBDBDB;
+	-webkit-box-shadow: -4px 4px #DBDBDB;
+	box-shadow: -4px 4px #DBDBDB;
+	padding: 2px 10px 0px;
+	margin-left: 0px;
+	margin-top: 20px;
+    }
+    #interest_counter {
+	font-family: "lucida grande", helvetica, arial, sans-serif;    
+	text-align: center !important;
+    }
+    .email_err {
+	color: #fbb917;
+	/*font-weight: bold;*/
+	padding: 5px;
+    }
+    /* ----- Basic Info (--basicInfo) ------------------------------- */
+    #register {min-width: 540px; margin:0px 0 0px 0px; text-align: left;}
+    #register li:first-child{font-size: 20px}
+    #register li{font-weight:bold; margin:15px 0 0 0;}
+    #register .button {display: inline-block;}
+    .form_row span.valid .valid_contents,
+    .form_row span.error .error_contents,
+    span.error .error_contents,
+    div.error .error_contents {height: 12px; width: 15px; display: inline-block; background: url(/images/common_sprites.png) no-repeat; margin: 0 5px 0 0; vertical-align: -2px;}
+    .form_row span{color: #656565; margin:5px 0 0 0;font-size: 12px;line-height: 19px;}
+    .form_row span.tmp_input_holder{padding:5px 0 0 5px;}
+	.form_row span.valid{display: none; position: static; color: #339900; margin-top: 5px;}
+	.form_row span.valid .valid_contents {background-position: -240px -304px; }
+    .form_row span.error{display: none; position: static; color: #CC3333; margin-top: 5px;}
+	.form_row span.error .error_contents,
+	span.error .error_contents,
+	div.error .error_contents {background-position: -224px -304px;}
+    .form_row span.loading{display: none; position: static; background: url(/images/loading_icons/roller_16x16.gif) no-repeat left center;color: #666666; padding: 2px 0 2px 20px; margin-top: 5px;}
+    .form_row span.field_tip{display: none; }
+    
+    .score{left: 200px; top: 6px; position: absolute;}
+    .score span{background-color: #DDD;border-radius: 3px 3px 3px 3px;display: inline-block;height: 8px;overflow: hidden;vertical-align: middle;width: 50px;}
+    .score span b{ background-color: #6EC02A;display: block;height: 8px;width:10%;}
+    
+    #signup_submit_basic {
+    	background: silver url(/images/spinner-small.gif) no-repeat 3px center;
+    	color: #ffffff; 
+    	padding-left:20px;
+    }
+    
+    .overlay {
+	background-color: #FFFFFF;
+	position: absolute;
+	height: 255px;
+	opacity: 0; filter(opacity=100); filter:Alpha(Opacity=100);
+	z-index: 5;
+    }
+    #signup_left_overlay {
+	width: 100%;
+	height: 100%;
+    }
+    #signup_right_overlay {
+	width: 100%;
+    }
+    #signup_right_overlay_tmp {
+    	width: 250px;
+    	height: 140px;
+    	margin-top: 40px;
+    	background: white url(/images/loading_icons/bigRoller_32x32.gif) no-repeat;
+    	background-position: 200px 10px;
+    }
+    #signup_form_step1 {
+	border: 0px;
+    }
+    #signup_social_wrapper {
+	/* margin-left: 25px;*/
+    }
+	#signup_social_wrapper.request_invite_page {
+		margin-top: 10px;
+	}
+    #signup_left_wrapper,
+    #signup_right_wrapper {
+	background: #FFFFFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #E0E0E0;
+	padding: 30px 40px 30px 40px;
+	margin: 35px auto 0;
+	display: inline-block;
+	box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+	-moz-box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+	-webkit-box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+    }
+    #soc_netwk_desc {
+	margin-top: 5px;
+	margin-bottom: -10px;
+	display: block;
+    }
+    .auth_or {
+	color: #AAAAAA;
+	font-weight: bold;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	margin-left: 20px;
+	text-shadow: 1px 1px #FFFFFF;
+    }
+    .auth_can {
+	color: #656565;
+	margin-top: 15px;
+    }
+    .auth_can #provider_twitter_link {
+	color: #4090E0;
+	display: inline-block;
+    }
+	.auth_can #provider_twitter_link:hover {
+		text-decoration: underline;
+	}
+    .auth_can #provider_twitter_link .authentication-text {
+	font-weight: bold;
+    }
+    .authentication-header {
+	margin-bottom: 6px;
+    }
+    .authentication-header, .auth_or {
+    	display: inline-block;
+    }
+    .authentication-header a {
+		height: 65px;
+		width: 278px;
+		display: inline-block;
+		text-align:left;
+		position: relative;
+    }
+	#facebook_login_button_header,
+	#provider_twitter_link,
+	#provider_twitter_link span,
+	#facebook_login_button_old,
+	#facebook_login_button_old span {
+		background: url('/images/login_button_sprites.png') no-repeat;
+	}
+	#facebook_login_button_header {
+		background-position: 0 0;
+	}
+	#provider_twitter_link,
+	#provider_twitter_link span {
+		background-position: 0 -65px;
+	}
+	.auth_can #provider_twitter_link,
+	.auth_can #provider_twitter_link span {
+		background: none;
+	}
+	#facebook_login_button_old.loading span {
+		background: rgba(255,255,255,.75) url('/images/loading_icons/loading_basic.gif') no-repeat !important;
+		background-position: 240px 26px !important;
+		position: absolute;
+		border-radius: 5px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		cursor: default;
+		/* This is temporary until I move this styling on to a new element positioned outside of the button */
+	}
+	#facebook_login_button_header.loading span,
+	#provider_twitter_link.loading span {
+		background: rgba(255,255,255,.75) url('/images/loading_icons/loading_basic.gif') no-repeat;
+		background-position: 240px 26px !important;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		cursor: default;
+	}
+	#facebook_login_button_header.loading,
+	#provider_twitter_link.loading {
+		position: relative;
+	}
+	.authentication-header a span {
+		/*opacity: 0;*/
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+				transition: opacity ease-in 125ms;
+		   -moz-transition: opacity ease-in 125ms;
+		-webkit-transition: opacity ease-in 125ms;
+	}
+	.authentication-header a span:hover {
+		opacity: 1;
+	}
+    #newuser_reg_wrapper .authentication-header a {
+	min-width: 240px;
+    }
+    #newuser_reg_wrapper .authentication-header .authentication-text {
+	font-size: 20px;
+    }
+    .authentication-header a:hover {
+	
+    }
+    .authentication-header img {
+	padding-right: 7px;
+	vertical-align: middle;
+	display: inline-block;
+    }
+    .authentication-header .authentication-text {
+	font-size: 16px;
+	vertical-align: middle;
+	display: inline-block;
+    }
+    #account_already a,
+    #signup_with_email a {
+	color: #4090E0;
+	font-weight: bold;
+    }
+    #account_already a:hover,
+    #signup_with_email a:hover {
+	text-decoration: underline;
+    }
+    #signup_with_email {
+	color: #656565;
+	padding-bottom: 13px;
+	border-bottom: 1px solid #E5E5E5;
+	margin-top: 15px;
+    }
+    #account_already {
+	color: #656565;
+	margin-top: 10px;
+    }
+    #newuser_reg_wrapper {
+	background: #F5F5F5;
+	height: 520px;
+	padding-top: 20px;
+    }
+    .reg_step_active {
+	background-color: #6396FC !important;
+    }
+    #fandrop_video {
+	margin-top: 10px;
+    }
+    #signup_options_title,
+    #signup_blob_title {
+	padding: 0px 0px 27px;
+    }
+    .frontPage_title, .frontPage_subTitle {
+	text-align: left;
+	margin-left: 0px;
+	padding: 5px;
+    }
+    .frontPage_title {
+	float: left;
+    }
+    .frontPage_title, .frontPage_title span {
+	color: #ffffff;
+	font-size: 20px;
+    }
+    .frontPage_subTitle, .frontPage_subTitle span {
+	color: white;
+	font-size: 20px;
+	padding: 10px 5px 0px 10px;
+    }
+    #early_access_title,
+    #step2_title {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight:300;
+	font-stretch:normal;
+	margin-left: -15px;
+	width: 100%;
+    }
+    #signup_options .step_box {
+	width: 300px;
+	margin: 10px 0px 10px 0px;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+    }
+    #signup_options .step_box .step_title {
+	border-left: 5px solid #CB0000;
+	background-color: #8B8B8B;
+	height: 30px;
+	width: 290px;
+	position: relative;
+	z-index: 1;
+	-moz-box-shadow: -4px 4px rgba(150, 150, 150, .5);
+	-webkit-box-shadow: -4px 4px rgba(190, 190, 190, .5);
+	box-shadow: -4px 4px rgba(190, 190, 190, .5);
+	cursor: pointer;
+    }
+    #signup_options .step_box .step_body {
+	background-color: #B7B7B7;
+	color: #3D3D3D;
+	width: 273px;
+	padding: 10px;
+	padding-left: 15px;
+	border-right: 2px solid #B7B7B7;
+	border-bottom: 2px solid #B7B7B7;
+	border-left: 2px solid #B7B7B7;
+	margin-left: 5px;
+    }
+    #site_description {
+	color: #b9b9b9;
+	font-size: 11.5px;
+	line-height: 16px;
+	width: 250px;
+	text-align: left;
+	float: left;
+	margin-left: 20px;
+    }
+    .left_header_bar {
+	border-left: 5px solid #cb0000;
+	background-color: #3d3d3d;
+	width: 100%;
+	height: 36px;
+	-moz-box-shadow: -4px 4px rgba(111, 111, 111, .5);
+	-webkit-box-shadow: -4px 4px rgba(111, 111, 111, .5);
+	box-shadow: -4px 4px rgba(111, 111, 111, .5);
+	padding: 8px 0px 4px 33px;
+	margin-left: -20px;
+	margin-top: 20px;
+
+    }
+    .right_header_bar {
+	border-right: 5px solid #cb0000;
+	background-color: #3d3d3d;
+	width: 100%;
+	height: 36px;
+	-moz-box-shadow: -4px 4px rgba(111, 111, 111, .5);
+	-webkit-box-shadow: -4px 4px rgba(111, 111, 111, .5);
+	box-shadow: -4px 4px rgba(111, 111, 111, .5);
+	padding: 8px 0px 4px 33px;
+	margin-left: -20px;
+	margin-top: 20px;
+    }
+    .header_triangle {
+	border-color: #555555 transparent transparent transparent;
+	border-style:solid;
+	border-width: 12px 0px 0px 19px;
+	width:0;
+	height:0;
+	margin-left: -20px;
+    }
+    #email_signup_step2_form {
+	margin-left: 10px;
+    }
+    #signup .signup_textbox {
+	border-top: 1px solid #a4a4a4;
+	border-right: 1px solid #a4a4a4;
+	border-bottom: 1px solid #a4a4a4;
+	border-left: 1px solid #a4a4a4;
+	color: #3d3d3d;
+	display: block;
+	background-color: #c8c8c8;
+	width: 210px;
+	height: 33px;
+	font-size: 100%;
+	padding: 0.4em 0.4em 0.4em 0.9em;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	margin-top: 0px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+	margin-left: 2px;
+    }
+    #signup .signup_textbox:hover {
+	color: #3d3d3d !important;
+	background-color: #eeeeee;
+    } 
+    #signup .signup_textbox:focus {
+	background-color: #EEEEEE;
+	color: #3d3d3d;
+	border: 1px solid #EEEEEE;
+    }
+    #email_signup_next {
+	margin-left: 2px;
+    }
+    #index_register_submit {
+	margin-left: 2px;
+    }
+    #index_background{
+	background-color: #f2f2f2;
+	background-image: url('/images/mainBackground2.png');
+	height: 520px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #d7d7d7;
+	margin-top: 0px;
+    }
+    #signup_pane {
+	display: inline-block;
+    }
+    #signup li {
+	margin: 4px 0px 4px 0px;
+    }
+    #register li {
+	margin: 15px 0px 0px 0px;
+    }
+    #register_box #twitter, #register_box #facebook {
+	display: block;
+    }
+    #register_box input[type=text],
+    #signup .signup_textbox {
+	border: 1px solid;
+	border-color: #8B8B8B #8B8B8B #7B7B7B #7B7B7B;
+	color: maroon;
+	display: block;
+	width: 230px;
+	font-size: 150%;
+	padding: .2em .4em;
+	margin: 10px 2px;
+	border-radius: 3px;
+	box-shadow: -2px 2px 1px 1px #B0B0B0 inset;
+	-moz-box-shadow: -2px 2px 1px 1px #B0B0B0 inset;
+	-webkit-box-shadow: -2px 2px 1px 1px #B0B0B0 inset;
+    }
+    #register_box input[type=text]:hover {
+	color: #3D3D3D !important;
+	box-shadow: -2px 2px 1px 1px #C0C0C0 inset;
+	-moz-box-shadow: -2px 2px 1px 1px #C0C0C0 inset;
+	-webkit-box-shadow: -2px 2px 1px 1px #C0C0C0 inset;
+    }
+    #register_box input[type=text]:focus {
+	box-shadow: -2px 2px 1px 1px #C0C0C0 inset;
+	-moz-box-shadow: -2px 2px 1px 1px #C0C0C0 inset;
+	-webkit-box-shadow: -2px 2px 1px 1px #C0C0C0 inset;
+	background-color: #EEEEEE;
+	color: maroon !important;
+    }
+    #register_box input[type=submit] {
+	background-color: #A72822;
+	color: white;
+	border: none;
+	padding: 6px 10px;
+	text-decoration: none;
+	font-size: 150%;
+	margin: 2px;
+	cursor: pointer;
+	border-top-left-radius: 10px; -moz-border-radius-topleft: 10px;
+	border-top-right-radius: 10px; -moz-border-radius-topright: 10px;
+	border-bottom-left-radius: 10px; -moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 0px; -moz-border-radius-bottomright: 0px;
+    }
+    .add_external_items {
+	float: left;
+	width: 420px;
+    }
+    .setup_top {
+	padding: 10px;
+	border-bottom: 1px solid #E5E5E5;
+	overflow: hidden;
+	position: relative;
+    }	
+    .setup_top h2{
+	    color: #fff;
+	    font-size: 20px;
+	    margin: 30px 0 0 45px;
+	}
+    .setup_middle {
+	/* overflow: hidden;*/
+    }
+    .setup_bottom {
+	height: 18px;
+    }
+    #signup_step_external {
+	margin-top: 20px;
+    }
+	#signup_step_external .setup_middle h2 {
+	    color: #3366cc;
+	    width: 295px;
+	    font-size: 20px;
+	    margin: 0 0 15px 10px;
+	}
+    #signup_step_external .signup_import_pic,
+    #signup_step_external .signup_import_interests,
+    #signup_step_external .signup_import_submit {
+	margin-left: 50px;
+    }
+    #signup_step_external .signup_import_pic {
+	margin-top: 20px;
+	margin-bottom: 10px;
+    }
+    #signup_step_external .signup_import_pic div {
+	vertical-align: middle;
+	margin: 0px 10px 0px 10px;
+    }
+    #signup_step_external #twitter_also,
+    #signup_step_external #fb_also {
+	margin-top: 5px;
+	margin-left: 57px;
+	display: block;
+    }
+    #signup_step_external #fb_also .fb_button {
+	margin: 4px;
+    }
+    
+    #signup_step_external .signup_import_submit {
+	margin-top: 15px;
+    }
+    #signup_step_external .add_external_items {
+	margin: 20px 10px 5px 0px;
+    }
+    #signup_step_external .add_external_items li {
+	margin-left: 20px;
+    }
+    .add_external_items .avatar {
+	vertical-align: middle;
+    }
+    #signup_step_external .preview_img {
+	max-width: 250px !important;
+    }
+    #signup_step_external #reg_status_frame {
+	margin-top: -25px;
+    }
+    #signup_step_external #reg_status_frame .reg_status_step {
+	/*margin: 6px;*/
+	margin: 3px;
+    }
+    
+    #facebook_login_button {
+	    cursor: pointer;
+    }
+    #provider_twitter_link {
+	    cursor: pointer;
+    }
+    
+    .css-vertical-text {
+	color:#333;
+	border:0px solid red;
+	writing-mode:tb-rl;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform: rotate(90deg);
+	white-space:nowrap;
+	display:block;
+	bottom:0;
+	width:20px;
+	height:20px;
+	font-family: ÔTrebuchet MSÕ, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:normal;
+	text-shadow: 0px 0px 1px #333;
+    }
+    #register .tmp_input_holder {
+	color: #A0A0A0;
+	margin-top: 1px;
+	top: 9px;
+    }
+    #email_signup_next {
+	margin-left: 2px;
+    }
+    
+    #error_fb, #error_twitter {
+	    color: red;
+	    font-weight: bold;
+	    margin-bottom: 20px;
+	    display: block;
+    }
+    
+    #socialContact_container {
+	margin: 90px 0 0 0;
+	text-align: center;
+    }
+    #fb_follow_container {
+	width: 300px;
+	margin-right: 20px;
+	display: inline-block;
+    }
+    #twitter_follow_container {
+	display: inline-block;
+    }
+    
+/*  ================================================================= */
+
+/*  ===== iFrame (--iFrame) ========================================= */
+
+    #signup_external {
+	/* background: url(/images/sxsw_background.gif) repeat; */
+	margin: 0 15px;
+	/*overflow: hidden !important;*/
+    }
+    #fandrop_signup {
+	width: 100%;
+	margin-bottom: -50px;
+	height: 180px;
+	/* width: 109%;		/* This should let it go full-screen */
+	/* margin: 0 0 0 -4.5%;	/* along with this bit here	     */
+    }
+    #signup_external {
+	    overflow: hidden !important;
+    }
+    #fandrop_signup body {
+	    overflow: hidden !important;
+    }
+    .fb_edge_comment_widget {
+	    top: -60px !important;
+    }
+    #fandrop_description {
+	color: #3D3D3D;
+	width: 47%;
+	height: 120px;
+	margin-top: 10px;
+	margin-left: 4%;
+	font-size: 26px;
+	text-shadow: 1px 1px #FAFAFA;
+	display: inline-block;
+    }
+    #fandrop_description .top_text {
+	    color: #3D3D3D;
+	    font-size: 26px;
+	    text-shadow: 1px 1px #FAFAFA;
+	    text-align: center;
+    }
+    #fandrop_description .bot_text {
+	    color: #3D3D3D;
+	    font-size: 24px;
+	    text-shadow: 1px 1px #FAFAFA;
+	    text-align: center;
+    }
+    
+    #fandrop_description2 {
+	color: #3D3D3D;
+	width: 42%;
+	height: 120px;
+	margin-top: 10px;
+	margin-left: 4%;
+	font-size: 28px;
+	text-shadow: 1px 1px #FAFAFA;
+	display: inline-block;
+    }
+    #invite_friends {
+	color: #FFFFFF;
+	margin-bottom: 8px;
+	font-size: 13px;
+	line-height: 17px;
+    }
+    #email_container,
+    #join_container {
+	/* background: #FFFFFF; */
+	padding: 0px;
+	/* border: 1px solid #A0A0A0; */
+	display: inline-block;
+	margin-bottom: 0px;
+	float: left;
+    }
+    #email_container {
+	width: 100%;
+	margin-top: 30px;
+    }
+    #join_container {
+	padding: 8px 0px 8px 0px !important;
+	margin-bottom: 10px !important;
+    }
+    #email_container p {
+	color: #FBB917;
+	margin-top: 5px;
+	margin-left: 2px;
+    }
+    #email_message {
+	/* color: #6699FF; */
+	color: #FFFFFF;
+	font-size: 20px;
+	padding-bottom: 20px;
+    }
+    .signup_email {
+	color: #656565;
+	width: 88%;
+	padding: 5px 10px !important;
+	border: 1px solid #B0B0B0;
+	border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	-webkit-border-radius: 4px !important;
+	margin-right: 8px;
+	margin-left: 2%;
+	font-size: 18px !important;
+    }
+    .signup_email:hover {
+	border-color: #3366CC;
+    }
+    .URL_copy {
+	width: 55%;
+	padding: 0px 10px !important;
+	border: 1px solid #C0C0C0;
+	border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	-webkit-border-radius: 4px !important;
+	margin-right: 15px;
+	font-size: 14px !important;
+	float: left;
+    }
+    #email_submit {
+	padding: 7px 25px;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-right: 5%;
+	/* margin-left: 72% !important; */
+	vertical-align: top;
+	background: #36C url("/images/blue_bg_grad_tall.png");
+	letter-spacing: .1em;
+	float: right;
+    }
+    #email_submit:hover {
+	background: #36C url("/images/blue_bg_grad_down_tall.png");
+    }
+    #external_network_info {
+	border: 1px solid #777;
+	margin: 5px;
+	padding: 10px;
+    }
+    .setup_middle {
+	display: inline-block;
+	width: 100%;
+    }
+    
+    #interests_main {
+	position: relative !important;
+	width: 100%;
+	border-right: none;
+	left: 0px;
+	right: 0px;
+    }
+    
+    #connect_popup {
+	padding: 7px 10px;
+	width: 455px;
+    }
+    #connect_popup #description {
+	color: #3D3D3D;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 17px;
+    }
+    #network_button_container {
+	width: 310px;
+	margin: 10px auto 0 auto;
+	text-align: center;
+    }
+    #network_or {
+	margin: 5px 0;
+	font-size: 13px;
+	text-align: center;
+	font-weight: bold;
+    }
+    #connect_popup #twitter_also,
+    #connect_popup #fb_also {
+	display: inline-block;
+    }
+    #connect_popup #twitter_also {
+	vertical-align: top;
+    }
+    #connect_popup #fb_also {
+	vertical-align: top;
+	margin-top: 8px;
+    }
+    #email_error {
+	color: #FF0000;
+	margin: 5px 0 0 10px;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+    }
+    
+    /* ----- MatchMeter ------------------------------------------------- */
+    
+	#friends_joined {color: #8CC63F;padding: 5px 5px 5px 0;margin-top: 5px;font-size: 14px;display: inline-block;float: left; text-shadow: 1px 1px #808080;}
+	#bar_container {width: 80%; display: inline-block; padding: 5px 0 0 0; margin: 5px 0 0 5px;}
+	.matchmeter{background: #8B8B8B; font-size:11px;line-height:1.18182em;padding:3px 5px 5px 3px;z-index:3;width:100%;margin-left:0px; margin-top:0px; display: inline-block;}
+	.matchmeter a {color: white;}
+	.matchmeter strong{text-transform:uppercase;}
+	.matchmeter span.similarityBar{background:#E0E0E0;width:100%;height:9px;display:block;border-top: 1px solid #B9B9B9;border-bottom: 1px solid #D6D6D6;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;margin: 0;}
+	.mini_similarityBar{width:100%;height:7px;display:block;background:#ccc; margin-top:2px;}
+	.matchmeter span.similarityBar span{background: #7AC943 !important;height:9px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;display:block;}   
+	.mini_similarityBar span{height:7px;display:block;}
+	.matchmeter span.similarityBar span.q75, .mini_similarityBar span.q75{background:#FF0101;}   
+	.matchmeter span.similarityBar span.q50, .mini_similarityBar span.q50{background:#E9C102;}   
+	.matchmeter span.similarityBar span.q25, .mini_similarityBar span.q25{background:#05BD4C;}   
+	.matchmeter span.similarityBar span.q1, .mini_similarityBar span.q1{background:#453E45;}
+	
+	#bubble_container {
+	    height: 50px;
+	    width: 100%;
+	    margin-left: 3px;
+	}
+	#ref_low {
+	    /*position: relative;
+	    top: -6px;*/
+	    float: left;
+	}
+	#ref_middle {
+	    /* position: relative;
+	    top: -6px;
+	    left: 82px; */
+	    margin-left: 22%;
+	    float: left;
+	}
+	#ref_max {
+	    /* position: relative;
+	    top: -6px;
+	    left: 369px; */
+	    float: right;
+	}
+	.meter_bubble {
+	    height: 0;
+	    width: 0;
+	    border-top: 5px solid #8B8B8B;
+	    border-right: 5px solid #8B8B8B;
+	    border-bottom: 5px solid #BDCCD4;
+	    border-left: 5px solid #8B8B8B;
+	    display: inline-block;
+	}
+	.meter_bubble#ref_max .bubble_box{
+	    right: 65px;
+	}
+	.bubble_box {
+	    background: #BDCCD4;
+	    width: 75px;
+	    padding: 5px 1px;
+	    border-bottom: 1px solid #ADBCC4;
+	    border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    position: relative;
+	    top: 5px;
+	    right: 15px;
+	    text-align: center;
+	    box-shadow: 2px 2px 3px 0px rgba(100,100,100,0.5);
+	    -moz-box-shadow: 2px 2px 3px 0px rgba(100,100,100,0.5);
+	    -webkit-box-shadow: 2px 2px 3px 0px rgba(100,100,100,0.5);
+	}
+	.bubble_box .friends_req {
+	    color: #505050;
+	    font-size: 11px;
+	    text-shadow: 1px 1px #CDDCE4;
+	    font-weight: bold;
+	}
+	.bubble_box .achievement {
+	    color: #6D7C84;
+	    font-size: 11px;
+	    text-shadow: 1px 1px #CDDCE4;
+	}
+	
+	.new_commentAvatar {
+	    width:25px;
+	}
+	.commentArea textarea {
+	    width: 68% !important;
+	}
+	.URL_copy {
+	    cursor: text;
+	}
+
+    /* -------------------------------------------------------------- */
+
+/*  ================================================================= */
+
+/*  ===== Landing Page (--landingPage) ============================== */
+    
+    #landing_page_top.container_24,
+    #landing_page .container_24 {
+	width: 100%;
+	min-width: 1009px;
+	margin-right: 0;
+	margin-left: 0;
+    }
+    #landing_page_top {
+	/*margin-top: 25px;*/
+	margin-top: 50px;
+	margin-bottom: 120px;
+	/*position: fixed;
+	top: 40px;*/
+	background: #f5f5f5;
+	z-index: 1030;
+	/*margin-bottom: 25px;*/
+    }
+    #landing_page_description/*,
+    #landing_page_login*/ {
+	/*background: #DEDEDE;*/
+	/*background: #FFFFFF url(/images/landingTexture2.png);*/
+	background: #F5F5F5;
+	color: #4D4D4D;
+	border-radius: 0;
+	/*box-shadow: 0 2px 4px -2px rgba(200, 200, 200, 0.25);
+	-moz-box-shadow: 0 2px 4px -2px rgba(200, 200, 200, 0.25);
+	-webkit-box-shadow: 0 2px 4px -2px rgba(200, 200, 200, 0.25);*/
+	/*text-align: center;*/
+    }
+    #landing_page_description {
+	width: 616px;
+	min-height: 97px;
+	padding: 10px 15px 10px 0;
+	display: inline-block;
+	text-align: left;
+    }
+    #landing_page_description.request_invite_TEMP {
+	padding: 30px 25px !important;
+    }
+    #landing_page_description_text,
+    #landing_page_description_text span {
+	font-size: 19px;
+	line-height: 23px;
+	text-shadow: 1px 1px #F5F5F5;
+    }
+    #landing_page_description_text {
+	min-height: 47px;
+	margin-top: 5px;
+    }
+    #landing_page_description_text span {
+	font-weight: bold;
+	text-transform: uppercase;
+    }
+    #link_to_video_wrapper {
+	color: #808080;
+	margin: 0 0 0 20px;
+	font-size: 11px;
+	line-height: 18px;
+	float: right;
+	text-align: center;
+    }
+    #link_to_video {
+		width: 160px;
+		border: 1px solid #DADADA;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		display: block;
+		overflow: hidden;
+		position: relative;
+		box-shadow: 0 1px 3px -1px rgba(100, 100, 100, 0.5);
+		-moz-box-shadow: 0 1px 3px -1px rgba(100, 100, 100, 0.5);
+		-webkit-box-shadow: 0 1px 3px -1px rgba(100, 100, 100, 0.5);
+    }
+    #landing_page_video_preview {
+		width:160px;
+		padding: 0;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+    }
+    #landing_page_play_button {
+		height: 51px;
+		width: 51px;
+		background: url("/images/play_button.png") no-repeat;
+		margin: -25px 0 0 -25px;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		opacity: 0.7;
+		transition: opacity ease-in 125ms;
+		-moz-transition: opacity ease-in 125ms;
+		-webkit-transition: opacity ease-in 125ms;
+    }
+    #link_to_video:hover #landing_page_play_button {
+		opacity: 1;
+    }
+    #landing_request_invite,
+    #landing_login_link {
+		height: 16px;
+		line-height: 16px;
+    }
+    #landing_page_login {
+		/*min-height: 44px;*/
+		min-height: 26px;
+		padding: 10px 25px 5px 0px;
+		/*text-align: center;*/
+    }
+    #landing_request_invite {
+		padding-right: 35px;
+		padding-left: 35px;
+		margin-right: 2%;
+		letter-spacing: 0em;
+		vertical-align: middle;
+    }
+    #landing_page_divider {
+		/*height: 36px;*/
+		height: 26px;
+		border-right: 1px solid #C0C0C0;
+		/*margin-right: 6%;*/
+		margin-right: 2%;
+		vertical-align: middle;
+    }
+    #landing_login {
+		vertical-align: middle;
+    }
+    #landing_login_link {
+		color: #FFFFFF;
+		padding-right: 35px;
+		padding-left: 35px;
+		display: inline-block;
+		vertical-align: top;
+		box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+		-moz-box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+		-webkit-box-shadow:0 1px 3px rgba(34, 25, 25, 0.4);
+    }
+    #landing_login_link:hover {
+	/*background: #656565;*/
+		box-shadow:0 3px 5px rgba(34, 25, 25, 0.4);
+		-moz-box-shadow:0 3px 5px rgba(34, 25, 25, 0.4);
+		-webkit-box-shadow:0 3px 5px rgba(34, 25, 25, 0.4);
+    }
+    /*
+    #landing_page_media_filter_new {
+	position: relative;
+	top: -2px;
+    }
+    */
+    #controls #popular_tab {
+	/*background: #A3C6FC;
+	color: #7396CC;
+	text-shadow: 1px 1px #A3E6FC;*/
+    }
+    #controls #topics_list.landing_page_topics {
+		top: 30px;
+		left: 19px;
+    }
+    #fb_facepile {
+		margin-top: 3px;
+		margin-bottom: 0;
+			border:none;  
+		overflow:hidden;
+		width:97%;
+		height:102px; /*RR - the height should be that because the names text may be on two rows or one and the images also can be on 1 or 2 rows and if its less they will appear cut off*/
+    }
+
+    /* ----- Left Side (--leftSide) --------------------------------- */
+    #landing_page_description_login,
+    #landing_page_left {
+	/* border-right: 1px solid #E5E5E5; */
+		margin-right: 0;
+		margin-left: 1%;
+    }
+    #landing_page_description_login {
+    	/*position: fixed;*/
+		position: absolute;
+    	z-index: 1030;
+    	top: 50px;
+		text-align: center;
+    }
+    /* ----- Right Side (--rightSide) ------------------------------- */
+    
+    #landing_page_FB_container,
+    #landing_page_right {
+	/*margin-right: 1%;  RR - breaks the layout in FF */ 
+		margin-left: 0;
+    }
+    
+    /*#landing_page_description_login,*/
+    #landing_page_FB_container {
+		padding-bottom: 25px;
+    }
+    #landing_page_FB_container,
+    #landing_page_right {
+	/*border-left: 1px solid #E5E5E5;*/
+    }
+    #landing_page_FB_container {
+		height: 86px;
+		min-width: 172px;
+		padding-left: 20px;
+		position: absolute;
+		top: 52px;
+		right: 0px;
+		left: 81%;
+		z-index: 1040;
+    }
+    #landing_page_right {
+		min-width: 240px;
+		width: 25%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+    }
+    #landing_page_right_title {
+		background: #C1DBF8;
+		color: #656565;
+		height: 30px;
+		padding: 6px 20px;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		font-size: 14px;
+		text-shadow: 1px 1px #D1EBF8;
+    }
+    #landing_page_right .badge_detail {
+		min-height: 45px;
+		width: 244px;
+		background: #FCFCFC;
+		border: 1px solid #E5E5E5;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		margin: 7px;
+    }
+    #landing_page_right .badge_detail .badge_left {
+		width: 38px;
+		min-height: 40px;
+		padding-top: 6px;
+		margin-left: 7px;
+    }
+    #landing_page_right .badge_detail .badge_left img {
+		height: 30px;
+		width: 30px;
+    }
+    #landing_page_right .badge_detail .badge_right {
+		height: 40px;
+		width: 190px;
+		padding-left: 4px;
+		border-left: none;
+		margin-left: 0px;
+    }
+    #landing_page_right .badge_detail .badge_right .badge_title a {
+		font-size: 11px;
+		font-weight: normal;
+    }
+    #landing_page_right .badge_detail .badge_right .count_titles {
+		font-size: 10px;
+    }
+    #landing_page_right .badge_detail .badge_right .badge_counts a {
+		font-size: 10px;
+    }
+    #landing_page_right .badge_detail .badge_right .follow_button_align {
+		margin-top: 8px;
+		float: left;
+		position: relative;
+		left: -38px;
+    }
+/*  ================================================================= */
+
+/*  ===== Logged Out Adjustment (--loggedAdjust) ==================== */
+
+    .logged_out #main_profile_content {
+		padding-top: 0px;
+    }
+
+/*  ================================================================= */
+
+/*  ===== Categories (--category) =================================== */
+
+    #categoryBody {
+		min-height: 615px;
+		padding-top: 25px;
+		margin-top: 5px;
+		text-align: center;
+    }
+	#categoryBody h2 {
+	    margin-bottom: 20px;
+	    text-align: center;
+	}
+    
+    #submit_categories {
+		padding-right: 35px;
+		padding-left: 35px;
+		line-height: 21px;
+		display: inline-block;
+    }
+
+/*  ================================================================= */
+
+/*  ===== Erlibird Access (--erlibirdAccess) ======================== */
+	
+	#erlibird.signup_container.signup_main {
+		width: 830px;
+	}
+	#erlibird .signup_content {
+		padding: 0;
+	}
+	.erlibirdTop {
+		padding: 15px 25px;
+		border-bottom: 1px solid #E0E0E0;
+		text-align: left;
+	}
+	.erlibirdTop h1 {
+		font-size: 48px;
+	}
+	.erlibirdBottom {
+		padding: 25px 25px 35px;
+		text-align: left;
+	}
+	.erlibird_bottomLeft {
+		width: 285px;
+		margin-right: 35px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.erlibird_bottomLeft h2 {
+		line-height: 26px !important;
+	}
+	#erlibird .authentication-header a,
+	#erlibird .authentication-header a span {
+		background: url('/images/login_button_sprites.pngpng') no-repeat;
+	}
+	#erlibird .authentication-header a {
+		height: 53px;
+		width: 269px;
+		position: relative;
+	}
+	#erlibird .authentication-header a span {
+		background-position: 0 -59px;
+	}
+	.animation_video_ff {
+		display: inline-block;
+		overflow-y: hidden;
+		position: relative;
+	}
+	.animation_video_ff embed {
+		position: absolute;
+		top: -39px;
+	}
+
+/*  ================================================================= */
+
+/*  ===== University Signup (--uniSignup) =========================== */
+
+	#universitySignup_wrapper {
+		min-height: 933px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+	}
+	#universitySignup {
+		width: 610px;
+		margin: 50px auto;
+		position: relative;
+	}
+	.universitySignup_top {
+		padding: 20px 15px 0px;
+		text-align: left;
+	}
+	.universitySignup_bottom {
+		padding: 25px 25px 35px;
+		text-align: left;
+		position: relative;
+		z-index: 1;
+	}
+	#universitySignup .signup_content {
+		border-radius: 15px;
+		border-width: 4px;
+		border-style: solid;
+	}
+	#universitySignup .universitySignup_watermark {
+		height: 100%;
+		width: 100%;
+		background-position: 50%;
+		opacity: .15;filter: alpha(opacity=15); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+		position: absolute;
+		top: 0;
+	}
+	#universitySignup .signupLogo {
+		height: 40px;
+		width: 76px;
+		background: url('/images/campaign_signup/fandropPresents.png');
+		display: block;
+		margin: 0 auto;
+	}
+	#universitySignup .universitySignup_title {
+		width: 100%;
+		position: relative;
+		text-align: center;
+		display: table;
+	}
+	#universitySignup .universitySignup_titleLine {
+		border-top-width: 1px;
+		border-top-style: solid;
+		display: table-cell;
+	}
+	#universitySignup .universitySignup_titleText {
+		padding: 0 15px;
+		font-size: 16px;
+		font-weight: bold;
+		position: relative;
+		top: -8px;
+		display: table-cell;
+	}
+	#universitySignup .universitySignup_bodyText {
+		margin-top: 8px;
+		line-height: 15px;
+	}
+	#universitySignup .universitySignup_prizeText {
+		
+	}
+	#universitySignup .signupLeaderboard_link {
+		margin-bottom: 10px;
+		display: block;
+		text-align: center;
+	}
+	
+	/* ----- University Colours (--uniColours) ---------------------- */
+		/***** Stanford *****/
+		#universitySignup_wrapper.stanfordU {
+			background: url('/images/campaign_signup/stanford/stanfordBG-1600x933.png');
+			background-position: center top;
+		}
+		#universitySignup_wrapper.stanfordU .universitySignup_watermark {
+			background-image: url('/images/campaign_signup/stanford/stanfordLogo.png');
+			background-repeat: no-repeat;
+		}
+		#universitySignup_wrapper.stanfordU .signup_content {
+			background-color: #9F0216;
+			color: #FFFFFF;
+			border-color: #FFFFFF;
+				box-shadow: 0 0 10px 3px rgba(100, 100, 100, 0.75);
+		   -moz-box-shadow: 0 0 10px 3px rgba(100, 100, 100, 0.75);
+		-webkit-box-shadow: 0 0 10px 3px rgba(100, 100, 100, 0.75);
+		}
+		#universitySignup_wrapper.stanfordU .universitySignup_titleLine {
+			min-width: 50px;
+			width: 28%;
+		}
+		
+	/* -------------------------------------------------------------- */
+	
+	/* ----- Special Theming (--specialTheme) ----------------------- */
+		/***** NyanDrop *****/
+		#universitySignup_wrapper.nyanDrop {
+			/*background: url('/images/campaign_signup/catathon/nyanCatBG.png');*/
+			background: url('/images/campaign_signup/catathon/nyanBG.png');
+			background-position: center top;
+		}
+		#universitySignup_wrapper.nyanDrop .universitySignup_watermark {
+			
+		}
+		#universitySignup_wrapper.nyanDrop .signupLogo {
+			
+			background: url('/images/campaign_signup/catathon/fandropPresents_cat-a-thon.png');
+		}
+		#universitySignup_wrapper.nyanDrop .signup_content {
+			background-color: #8ac4ec;
+			color: #003466;
+			border-color: #003466;
+		}
+		#universitySignup_wrapper.nyanDrop #signup_with_email {
+			border-width: 2px;
+			border-color: #003466;
+		}
+		#universitySignup_wrapper.nyanDrop .universitySignup_titleLine {
+			min-width: 50px;
+			width: 32%;
+			border-width: 2px;
+			border-color: #003466;
+		}
+		#universitySignup_wrapper.nyanDrop .universitySignup_bodyText {
+			font-weight: bold;
+		}
+		#universitySignup_wrapper.nyanDrop .universitySignup_prizeText {
+			width: 330px;
+			margin: 10px auto 0;
+		}
+		#universitySignup_wrapper.nyanDrop .universitySignup_prizeText span {
+			font-size: 13px;
+			font-weight: bold;
+		}
+		#universitySignup_wrapper.nyanDrop .universitySignup_prizeText span:nth-of-type(2) {
+			margin: 0 15px;
+		}
+		#universitySignup_wrapper.nyanDrop .meme img {
+			height: 168px;
+			padding: 0;
+		}
+		#universitySignup_wrapper.nyanDrop .universitySignup_titleText {
+			height: 35px;
+			width: 179px;
+			background: url('/images/campaign_signup/catathon/cat-a-thon_title.png') center 0 no-repeat;
+			top: -15px;
+		}
+		#universitySignup_wrapper.nyanDrop .signupLeaderboard_link {
+			color: #003466;
+			font-weight: bold;
+		}
+		#universitySignup_wrapper.nyanDrop .signupLeaderboard_link:hover {
+			text-decoration: underline;
+		}
+		
+		/***** Superbowl *****/
+		#universitySignup_wrapper.superBowl {
+			background: url('/images/campaign_signup/superbowl/footballBG4.jpg');
+			background-position: center top;
+		}
+		#universitySignup_wrapper.superBowl #universitySignup {
+			width: 925px;
+			margin-top: 100px;
+		}
+		#universitySignup_wrapper.superBowl .universitySignup_titleText {
+			font-size: 52px;
+		}
+		#universitySignup_wrapper.superBowl .universitySignup_bodyText {
+			width: 610px;
+			margin-right: auto;
+			margin-left: auto;
+			font-size: 15px;
+			line-height: 18px;
+		}
+		#universitySignup_wrapper.superBowl .signup_content {
+			background-color: rgba(30,30,30,0.75);
+			color: #FFFFFF;
+			border-color: #C0C0C0;
+			border-radius: 1px;
+			border-width: 2px;
+					box-shadow: 0 0 10px 3px rgba(100, 100, 100, 0.75);
+			   -moz-box-shadow: 0 0 10px 3px rgba(100, 100, 100, 0.75);
+			-webkit-box-shadow: 0 0 10px 3px rgba(100, 100, 100, 0.75);
+		}
+		#universitySignup_wrapper.superBowl .signupLogo {
+			height: 67px;
+			width: 126px;
+			background: url('/images/campaign_signup/fandropPresents_large.png');
+		}
+		#universitySignup_wrapper.superBowl .universitySignup_titleLine {
+			min-width: 50px;
+			width: 28%;
+		}
+		#universitySignup_wrapper.superBowl .signupLeaderboard_link {
+			color: #C0C0C0;
+			font-size: 16px;
+			font-weight: bold
+		}
+		#universitySignup_wrapper.superBowl .signupLeaderboard_link:hover {
+			color: #F0F0F0;
+		}
+		#universitySignup_wrapper.superBowl .auth_can,
+		#universitySignup_wrapper.superBowl #signup_with_email,
+		#universitySignup_wrapper.superBowl #account_already {
+			color: #FFFFFF; 
+		}
+		#universitySignup_wrapper.superBowl .auth_can a,
+		#universitySignup_wrapper.superBowl #signup_with_email a,
+		#universitySignup_wrapper.superBowl #account_already a {
+			color: #B0B0B0;
+		}
+		#universitySignup_wrapper.superBowl .auth_can a:hover,
+		#universitySignup_wrapper.superBowl #signup_with_email a:hover,
+		#universitySignup_wrapper.superBowl #account_already a:hover {
+			color: #F0F0F0;
+		}
+		#universitysignup_wrapper.superBowl .universitysignupfb_facepile {
+			width: 100%;
+		}
+		
+		/***** Mashable *****/
+		#universitySignup_wrapper.mashable {
+			background: url('/images/campaign_signup/mashable/mashableBG.jpg');
+			background-position: center top;
+		}
+		#universitySignup_wrapper.mashable #universitySignup {
+			width: 925px;
+			margin-top: -212px;
+			margin-left: -460px;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+		}
+		#universitySignup_wrapper.mashable .universitySignup_titleText {
+			font-size: 52px;
+		}
+		#universitySignup_wrapper.mashable .universitySignup_bodyText {
+			width: 610px;
+			margin-right: auto;
+			margin-left: auto;
+			font-size: 15px;
+			line-height: 18px;
+		}
+		#universitySignup_wrapper.mashable .signup_content {
+			background-color: rgba(30,30,30,0.65);
+			color: #FFFFFF;
+			border-color: #C0C0F0;
+			border-radius: 1px;
+			border-width: 2px;
+					box-shadow: 0 0 10px 3px rgba(150, 150, 190, 0.75);
+			   -moz-box-shadow: 0 0 10px 3px rgba(150, 150, 190, 0.75);
+			-webkit-box-shadow: 0 0 10px 3px rgba(150, 150, 190, 0.75);
+		}
+		#universitySignup_wrapper.mashable .signupLogo {
+			height: 71px;
+			width: 246px;
+			background: url('/images/campaign_signup/mashableFDLogo.png');
+			margin: 50px auto;
+		}
+		#universitySignup_wrapper.mashable .universitySignup_titleLine {
+			min-width: 50px;
+			width: 28%;
+		}
+		#universitySignup_wrapper.mashable .signupLeaderboard_link {
+			color: #C0C0C0;
+			font-size: 16px;
+			font-weight: bold
+		}
+		#universitySignup_wrapper.mashable .signupLeaderboard_link:hover {
+			color: #F0F0F0;
+		}
+		#universitySignup_wrapper.mashable .auth_can,
+		#universitySignup_wrapper.mashable #signup_with_email,
+		#universitySignup_wrapper.mashable #account_already {
+			color: #FFFFFF; 
+		}
+		#universitySignup_wrapper.mashable .auth_can a,
+		#universitySignup_wrapper.mashable #signup_with_email a,
+		#universitySignup_wrapper.mashable #account_already a {
+			color: #B0B0B0;
+		}
+		#universitySignup_wrapper.mashable .auth_can a:hover,
+		#universitySignup_wrapper.mashable #signup_with_email a:hover,
+		#universitySignup_wrapper.mashable #account_already a:hover {
+			color: #F0F0F0;
+		}
+		#universitySignup_wrapper.mashable .universitysignupfb_facepile {
+			width: 100%;
+		}
+		
+		/***** Valentine's Day *****/
+		#universitySignup_wrapper.vDay {
+			background: url('/images/campaign_signup/vday/valentinesDayBG.jpg');
+			background-position: center top;
+		}
+		#universitySignup_wrapper.vDay #universitySignup {
+			width: 925px;
+			margin-top: -267px;
+			margin-left: -460px;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+		}
+		#universitySignup_wrapper.vDay .universitySignup_titleText {
+			font-size: 52px;
+		}
+		#universitySignup_wrapper.vDay .universitySignup_bodyText {
+			width: 665px;
+			margin-right: auto;
+			margin-left: auto;
+			font-size: 15px;
+			line-height: 18px;
+		}
+		#universitySignup_wrapper.vDay .signup_content {
+			background-color: rgba(70,40,20,0.8);
+			color: #FFFFFF;
+			border-color: #F0C0C0;
+			border-radius: 1px;
+			border-width: 2px;
+					box-shadow: 0 0 10px 3px rgba(220, 140, 160, 0.5);
+			   -moz-box-shadow: 0 0 10px 3px rgba(220, 140, 160, 0.5);
+			-webkit-box-shadow: 0 0 10px 3px rgba(220, 140, 160, 0.5);
+		}
+		#universitySignup_wrapper.vDay .signupLogo {
+			height: 71px;
+			width: 246px;
+			background: url('/images/campaign_signup/mashableFDLogo.png');
+			margin: 25px auto 15px;
+		}
+		#universitySignup_wrapper.vDay .universitySignup_titleLine {
+			min-width: 50px;
+			width: 28%;
+		}
+		#universitySignup_wrapper.vDay .signupLeaderboard_link {
+			color: #C0C0C0;
+			font-size: 16px;
+			font-weight: bold
+		}
+		#universitySignup_wrapper.vDay .signupLeaderboard_link:hover {
+			color: #F0F0F0;
+		}
+		#universitySignup_wrapper.vDay .auth_can,
+		#universitySignup_wrapper.vDay #signup_with_email,
+		#universitySignup_wrapper.vDay #account_already {
+			color: #FFFFFF; 
+		}
+		#universitySignup_wrapper.vDay .auth_can a,
+		#universitySignup_wrapper.vDay #signup_with_email a,
+		#universitySignup_wrapper.vDay #account_already a {
+			color: #B0B0B0;
+		}
+		#universitySignup_wrapper.vDay .auth_can a:hover,
+		#universitySignup_wrapper.vDay #signup_with_email a:hover,
+		#universitySignup_wrapper.vDay #account_already a:hover {
+			color: #F0F0F0;
+		}
+		#universitySignup_wrapper.vDay .universitysignupfb_facepile {
+			width: 100%;
+		}
+		
+		/***** TechCrunch *****/
+		#universitySignup_wrapper.techCrunch {
+			background: url('/images/campaign_signup/techcrunch/tcBG.png');
+			background-position: center top;
+		}
+		#universitySignup_wrapper.techCrunch #universitySignup {
+			width: 925px;
+			margin-top: -203px;
+			margin-left: -460px;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+		}
+		#universitySignup_wrapper.techCrunch .universitySignup_titleText {
+			font-size: 52px;
+		}
+		#universitySignup_wrapper.techCrunch .universitySignup_bodyText {
+			width: 665px;
+			margin-right: auto;
+			margin-left: auto;
+			font-size: 15px;
+			line-height: 18px;
+		}
+		#universitySignup_wrapper.techCrunch .signup_content {
+			background-color: rgba(30,30,30,0.55);
+			color: #FFFFFF;
+			border-color: #50A050;
+			border-radius: 1px;
+			border-width: 2px;
+					box-shadow: 0 0 10px 3px rgba(90, 165, 90, 0.75);
+			   -moz-box-shadow: 0 0 10px 3px rgba(90, 165, 90, 0.75);
+			-webkit-box-shadow: 0 0 10px 3px rgba(90, 165, 90, 0.75);
+		}
+		#universitySignup_wrapper.techCrunch .signupLogo {
+			height: 71px;
+			width: 246px;
+			background: url('/images/campaign_signup/mashableFDLogo.png');
+			margin: 25px auto 15px;
+		}
+		#universitySignup_wrapper.techCrunch .universitySignup_titleLine {
+			min-width: 50px;
+			width: 28%;
+		}
+		#universitySignup_wrapper.techCrunch .signupLeaderboard_link {
+			color: #C0C0C0;
+			font-size: 16px;
+			font-weight: bold
+		}
+		#universitySignup_wrapper.techCrunch .signupLeaderboard_link:hover {
+			color: #F0F0F0;
+		}
+		#universitySignup_wrapper.techCrunch .auth_can,
+		#universitySignup_wrapper.techCrunch #signup_with_email,
+		#universitySignup_wrapper.techCrunch #account_already {
+			color: #FFFFFF;
+			margin-bottom: 5px;
+		}
+		#universitySignup_wrapper.techCrunch .auth_can a,
+		#universitySignup_wrapper.techCrunch #signup_with_email a,
+		#universitySignup_wrapper.techCrunch #account_already a {
+			color: #B0B0B0;
+		}
+		#universitySignup_wrapper.techCrunch .auth_can a:hover,
+		#universitySignup_wrapper.techCrunch #signup_with_email a:hover,
+		#universitySignup_wrapper.techCrunch #account_already a:hover {
+			color: #F0F0F0;
+		}
+		#universitySignup_wrapper.techCrunch .universitysignupfb_facepile {
+			width: 100%;
+			position: absolute;
+			left: 10px;
+		}
+		#universitySignup_wrapper.techCrunch .twitter-game {
+			width: 360px;
+			display:inline-block;
+			text-align: center;
+		}
+		
+	/* -------------------------------------------------------------- */
+	
+	#universitySignup .memeHolder {
+		margin: 20px 0 25px;
+		text-align: center;
+	}
+	#universitySignup .memeHolder li:last-child {
+		margin-right: 0;
+	}
+	#universitySignup .meme {
+		border-width: 3px;
+		border-style: solid;
+		margin-right: 5px;
+		display: inline-block;
+	}
+	#universitySignup .meme img {
+		height: 180px;
+		padding: 0;
+		vertical-align: top;
+	}
+	#universitySignup_wrapper #signup_social_wrapper {
+		text-align: center;
+	}
+	#universitySignup_wrapper .authentication-header a,
+	#universitySignup_wrapper .authentication-header a span {
+		background: url('/images/login_button_sprites.png') no-repeat;
+	}
+	#universitySignup_wrapper .authentication-header a {
+		position: relative;
+		background-position: -280px -65px;
+	}
+	#universitySignup_wrapper .authentication-header a span {
+		background-position: -280px 0px;
+	}
+	#universitySignup_wrapper .authentication-header a:hover span {
+		opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+	#facebook_login_button_old.loading:hover span {
+	    opacity: 1 !important; filter: alpha(opacity=0) !important; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;
+	}
+	#universitySignup_wrapper .universitySignupFB_facepile {
+		height: 50px;
+		padding: 10px 0 10px;
+	}
+
+/*  ================================================================= */
+
+/* -------------------------------------------------------------- */
+
+
+/* ````` Currently Unused ``````````````````````````````````` */
+#finish_signup_side {
+    position: absolute;
+    left: 926px;
+    top: 750px;
+}
+#landing_page_media_filter {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+/* ----- unknown usage ------------------------------------------ */
+.description {
+    margin-top:-1px;
+    z-index:-1;
+}
+.images {
+    overflow:hidden;
+}

@@ -1,0 +1,198 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		bookmarklet.css
+    -Description:	Formatting and styling for the Bookmarklet, but
+			seemingly no longer used as the internal_scraper.css
+			file in the "includes" folder is the new one
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --bookmarklet		Styling for Bookmarklet
+    ================================================================= */
+
+/* ===== Bookmarklet (--bookmarklet) ================================ */
+
+	#internal-scraper-loader {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		/*background: url(/images/loadingIcon_100.gif) no-repeat center 100px;*/
+		background: white url(/images/loading_icons/bigRoller_32x32.gif) no-repeat center 100px;
+	}
+
+	#bar.mode-select-opened, #bar.help-mode-select-opened  {
+		margin-top: 0; /* change this to correct iframe height for the external scraper */
+	}
+	
+    #scraper_modes {
+	margin: 17px 0 0 35px;
+	position: relative;
+    }
+    
+    #scraper_modes li {
+	    border-radius: 4px;
+	    -moz-border-radius: 4px;
+	    -webkit-border-radius: 4px;
+	    border: 1px solid #F0F0F0;
+	    margin-right: 20px;
+	    margin-bottom: 15px;
+	    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	    -moz-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+	    -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+    	float:left;
+    }
+    
+    #scraper_modes li:hover {
+	box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+	-moz-box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+	-webkit-box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+    }
+    
+	.postbox_mode {
+		display: block !important;
+	}
+	
+    .btn-list {
+	background: url('/images/save_link_u.png') no-repeat center center;
+	height: 25px !important;
+	width: 25px !important;
+	padding: 0 0;
+	display: block;
+    }
+    .btn-list:hover {
+	background: url('/images/save_link_d.png') no-repeat center center;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+    }
+    
+    .btn-bar {
+	background: url('/images/save_clip_u.png') no-repeat center center;
+	height: 25px !important;
+	width: 25px !important;
+	padding: 0 0;
+	display: block;
+    }
+    .btn-bar:hover {
+	background: url('/images/save_clip_d.png') no-repeat center center;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+    }
+    
+    .btn-screenshot {
+	background: url('/images/save_screenshot_u.png') no-repeat center center;
+	height: 25px !important;
+	width: 25px !important;
+	padding: 0 0;
+	display: block;
+    }
+    .btn-screenshot:hover {
+	background: url('/images/save_screenshot_d.png') no-repeat center center;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+    }
+    
+    .btn-page {
+	background: url('/images/page.png') no-repeat center center;
+	height: 35px !important;
+	width: 35px !important;
+	padding: 0 0;
+	display: block;
+    }
+    .done-tab {
+	color: #FFFFFF !important;
+    }
+    #bar #scraper_modes {
+	margin: 0 0 30px 25px;
+    	width: 50px;
+    }
+    #new_share_link_dialog #scraper_modes .tab_label {
+	background: #f9f9f9; 
+	color: #909090;
+	text-shadow: 1px 1px #FFFFFF;
+	text-align: center;
+	padding:5px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+	-moz-box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+	-webkit-box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+	position:absolute; 
+    }
+    #bar #scraper_modes .tab_label {
+	background: #f9f9f9;
+	color: #909090;
+	text-shadow: 1px 1px #FFFFFF;
+	text-align: center;
+	font: 11px "lucida grande",tahoma,helvetica,arial,sans-serif;
+	width: 70px;
+	padding: 5px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+	-moz-box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+	-webkit-box-shadow: 0 3px 5px rgba(34, 25, 25, 0.4);
+	position:absolute;
+    }
+    #new_share_link_dialog .postboxwrapper .postbox {
+	/*width: 99%;*/
+	border: 1px solid #ccc;
+	height: 20px;
+	min-height: 20px;
+	overflow: hidden;
+	float: left;
+    }
+    #new_share_link_dialog .postboxwrapper .postboxtoolbar {
+    }
+    
+    #new_share_link_dialog .linkbuilder .props {
+	width: 100%;
+    }
+    #new_share_link_dialog .linkbuilder .props .pagetitle {
+	margin-bottom: 10px;
+    }
+    #new_share_link_dialog .linkbuilder .props .pagetitle input {
+	width: 520px !important;
+    }
+    #new_share_link_dialog .linkbuilder {
+	position: relative;
+	display: block;
+    }
+    
+    #new_share_link_dialog .closebutton {
+	position: absolute;
+	top: 5px;
+	right: 0px;
+    }
+    #new_share_link_dialog .select_loops,
+    #new_share_link_dialog .select_topics,
+    #new_share_link_dialog .select_interests {
+	width: 300px;
+    }
+    #new_share_link_dialog .closebutton {
+	float:right;
+	margin-right: 7px;
+    }
+    #new_share_link_dialog .closebutton a {
+	background: url("/images/close_new.png") -0px 0px no-repeat;
+	width: 15px;
+	height: 15px;
+	display: block;
+	cursor: pointer;
+    }
+    #new_share_link_dialog .closebutton a:hover {
+	background: url("/images/close_new.png") -0px -48px no-repeat;
+    }

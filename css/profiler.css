@@ -1,0 +1,68 @@
+#codeigniter_profiler {
+	position: fixed;
+	left: 0; 
+	top: 46px;
+	display: none;
+	z-index: 1050;
+}
+#codeigniter_profiler img {
+	padding: 0;
+}
+
+#codeigniter_profiler fieldset {
+	display: none;
+	max-height: 500px;
+	overflow-y: auto;
+	background: white;
+}
+#codeigniter_profiler fieldset table td {
+	border: 1px solid;
+	padding: 2px;
+}
+
+#codeigniter_profiler ul {
+	background-color: #fff; /* layer fill content */
+	-moz-box-shadow: 0 1px 0 rgba(2,3,3,.11); /* drop shadow */
+	-webkit-box-shadow: 0 1px 0 rgba(2,3,3,.11); /* drop shadow */
+	box-shadow: 0 1px 0 rgba(2,3,3,.11); /* drop shadow */
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAyMDIwMiIgc3RvcC1vcGFjaXR5PSIwLjA2Ii8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwLjA2Ii8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+	background-image: -moz-linear-gradient(bottom, rgba(2,3,3,.06) 0%, rgba(255,255,255,.06) 100%); /* gradient overlay */
+	background-image: -o-linear-gradient(bottom, rgba(2,3,3,.06) 0%, rgba(255,255,255,.06) 100%); /* gradient overlay */
+	background-image: -webkit-linear-gradient(bottom, rgba(2,3,3,.06) 0%, rgba(255,255,255,.06) 100%); /* gradient overlay */
+	background-image: linear-gradient(bottom, rgba(2,3,3,.06) 0%, rgba(255,255,255,.06) 100%); /* gradient overlay */
+	overflow: hidden;
+}
+#codeigniter_profiler ul li {
+	display: block;
+	float: left;
+}
+#codeigniter_profiler ul li a {
+	font-size: 12px;
+	color: #3582ac;
+	padding: 12px 10px;
+	border-right: 1px solid #e5e5e5;
+	display: block;
+}
+#codeigniter_profiler ul li a:hover {
+	text-decoration: underline;
+}
+
+#codeigniter_profiler ul li.dev-toolbar-handler a {
+	padding: 0;
+	border: 0;
+}
+
+#ci_profiler_undefined_var {
+	float: left;
+	max-width: 700px;
+	max-height: 400px !important;
+	width: 700px;
+}
+
+#ci_profiler_undefined_var .row {
+	background-color: yellow;
+}
+
+#ci_profiler_undefined_var .item {
+	color: red;
+}

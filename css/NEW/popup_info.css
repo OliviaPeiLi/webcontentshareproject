@@ -1,0 +1,57 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		popup_info.css
+    -Description:	Basic formatting and styling for the simple alert
+					popup modal
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyle			General Style for the normal Header
+    
+    ================================================================= */
+
+/*  ===== General Style (--genStyle) ================================ */
+
+	#notification_bar {
+		position: fixed;
+		/*
+		right: 10px;
+		bottom: 0px;
+		*/
+		top: 50%;
+		left: 50%;
+	
+		width: 350px;
+		min-height: 50px;
+		
+		font-size: 15px;
+		background-color: #F5F5F5;
+		color: #656565;
+		padding: 15px;
+		/*border: 1px solid lightGreen;*/
+		border-radius: 5px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		margin-left: -175px;
+		text-align: center;
+		z-index: 1042;
+	}
+	#notification_overlay {
+		position: fixed;
+		z-index: 1041;
+		width: 100%;
+		height: 100%;
+		background: black;
+		opacity: 0.8;
+		top: 0;
+	}
+
+/*  ================================================================= */

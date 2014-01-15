@@ -1,0 +1,49 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		search_ugc.css
+    -Description:	Formatting and styling for the search
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyling	General Styling
+    
+    ================================================================= */
+
+/* ===== General Styling (--genStyling) ============================= */
+
+    #home .searchHeader {
+	height: 65px;
+	background: #FFFFFF;
+	padding: 15px 0;
+	position: fixed;
+	top: 45px;
+	right: 0;
+	left: 0;
+	z-index: 4;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+		box-shadow: 0 1px 1px 0px rgba(10,10,10,.125);
+	   -moz-box-shadow: 0 1px 1px 0px rgba(10,10,10,.125);
+	-webkit-box-shadow: 0 1px 1px 0px rgba(10,10,10,.125);
+    }
+    #home .searchHeader h1 {
+	width: 950px;
+	margin: 0 auto;
+	font-weight: 200;
+	display: block;
+	font-size: 33px;
+	color: #222;
+	font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+    }
+    #home #ScrollToTop {
+	top: 165px;
+    }

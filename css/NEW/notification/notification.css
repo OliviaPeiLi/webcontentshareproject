@@ -1,0 +1,267 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		notification.css
+    -Description:	Formatting and styling for the main Notification page
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+
+	--genStyle		General Styling for the Notifications
+	--notifEntry	Styling for each entry
+	--moreNotif		More Notification Button at the bottom of the page
+	
+    ================================================================= */
+
+/*  ===== General Style (--genStyle) ================================ */
+
+	#all_notifications_container {
+		/*background: #eee;*/
+	}
+	.notifications {
+		overflow: hidden;
+	}
+	/*
+	.notifications h1 {
+		padding: 10px;
+		margin: 0;
+		border-bottom: 1px solid #E6E6E6;
+		background: white;
+	}
+	*/
+	.notifications h6 {
+		float: left;
+		width: 100% !important;
+		padding-bottom: 0px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+	.notifications_list {
+		min-height: 450px;
+		width: 940px;
+		padding-left: 0px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.notifications_list .last{
+		border-bottom: none;
+	}
+	.notification_sections {
+		clear: both;
+		padding: 0px;
+		border: 1px solid #ddd;
+		color: #555555;
+		font-size: 18px;
+		background: white;
+		margin-top: 20px;
+		margin-bottom: 30px;
+				box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	}
+	.notification_sections .section_title {
+		padding: 5px 2px 5px 10px;
+		font-size: 18px;
+		border-bottom: 1px solid #ddd;
+	}
+	.notification_list_for_section {
+		/*padding-left: 40px;*/
+	}
+
+/*  ================================================================= */
+
+/*  ===== Notification Entry (--notifEntry) ========================= */
+
+	.notification_entry {
+		padding: 0px 0px 0px 9px;
+		border-bottom: 1px solid #D0D0D0;
+		color: #555555;
+		clear: both;
+	}
+	.notification_entry:hover {
+		background: #F0F0F0;
+		cursor: pointer;
+	}
+	.notification_entry small {
+		color: #B0B0B0;
+		font-size: 10px;
+		margin-top: 2px;
+		/*float: right;*/
+		display: none;
+	}
+	.notification_entry .read {
+		font-size: 12px;
+		margin-left: 5px;
+	}
+	.notification_entry .avatar_holder {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.notification_entry .avatar {
+		padding: 0;
+		vertical-align: middle;
+		width: 70px;
+		margin-top: 10px;
+		margin-right: 10px;
+				border-radius: 2px;
+		   -moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+	}
+	.notification_entry .notification_holder {
+		height: 90px;
+		padding-top: 13px;
+		display: inline-block;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.notification_entry .notification {
+		width: 794px;
+		display: block;
+		vertical-align: top;
+	}
+	.notification_entry .user_from_link {
+		vertical-align: top;
+	}
+	.notification_entry .req_status {
+		margin-top: 4px;
+		display: block;
+	}
+	.notification_entry .grayed {
+		color: #FFFFFF;
+		background: #A0A0A0;
+		padding: 4px 10px;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		white-space: nowrap;
+	}
+	.notification_entry .grayed:hover {
+		cursor: default;
+	}
+	.notification_entry .request_status,
+	.notification_entry .grayed {
+		width: auto;
+		display: inline-block;
+	}
+	.notification_entry .message_preview {
+		max-width: 490px;
+		display: inline-block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-style: italic;
+	}
+	.notification_entry .link-popup {
+		float: right;
+		overflow: hidden;
+		height: 50px;
+		border: 1px solid #B0B0B0;
+	}
+	.notification_entry .link-popup img {
+		width: 50px;
+		padding: 0;
+	}
+	.notification_entry .notification_iconHolder {
+		height: 90px;
+		width: 45px;
+		background: #F0F0F0;
+		padding: 33px 0;
+		border-left: 1px solid #E0E0E0;
+		float: right;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		text-align: center;
+	}
+	.notification_entry .notification_iconHolder .notification_icon {
+		height: 24px;
+		width: 24px;
+		background: url('/images/common_sprites.png') no-repeat;
+		display: inline-block;
+	}
+	.notification_entry .notification_iconHolder .notification_link_comm_like,
+	.notification_entry .notification_iconHolder .notification_link_like,
+	.notification_entry .notification_iconHolder .notification_folder_like,
+	.notification_entry .notification_iconHolder .notification_photo_like {
+		background-position: -64px 0;
+	}
+	.notification_entry .notification_iconHolder .notification_u_comm,
+	.notification_entry .notification_iconHolder .notification_comm,
+	.notification_entry .notification_iconHolder .notification_at_comm,
+	.notification_entry .notification_iconHolder .notification_reply_comm {
+		background-position: -64px -96px;
+	}
+	.notification_entry .notification_iconHolder .notification_at_drop,
+	.notification_entry .notification_iconHolder .notification_newsfeed {
+		background-position: -64px -32px;
+	}
+	.notification_entry .notification_iconHolder .notification_redrop { /* can't find a redrop variable, but here's the icon position in case it's needed */
+		    background-position: -64px -64px;
+	}
+	.notification_entry .notification_iconHolder .notification_follow,
+	.notification_entry .notification_iconHolder .notification_follow_folder {
+		background-position: -64px -128px;
+	}
+	.notification_entry .notification_iconHolder .notification_message {
+		background-position: -64px -160px;
+	}
+	.notification_entry .notification_iconHolder .notification_folder_contributor {
+		background-position: -64px -128px; /* Until we make a proper icon */
+	}
+	
+/*  ================================================================= */
+
+/*  ===== More Notifications (--moreNotif) ========================== */
+	
+	#more_notifications_btn {
+		/*margin-left: 40px;*/
+		margin-top: 10px;
+		cursor: pointer;
+	}
+	#more_notifications_btn a {
+		font-size: 11px;
+	}
+
+/*  ================================================================= */
+
+/* +++++ Referenced by JS, but seemingly not active +++++++++++++ */
+ul.typeViewGrid {
+    list-style:none;
+    margin: 0px 0px 0px 2px !important;
+    padding:10px !important;
+    background:#E9E9E9 !important;
+    float:left !important;
+    position:relative !important;
+    width:637px !important;
+}
+ul.typeViewGrid li.newsfeed_grid {
+    background:#fff !important;
+    float:left !important;
+    margin:5px !important;
+    padding:5px !important;
+    border-radius:5px !important;
+    width:192px !important;
+    clear: none !important;
+    overflow: none !important;
+    position: relative !important;
+}
+ul.typeViewGrid li.newsfeed_grid .picture {background-color: black}
+ul.typeViewGrid li.newsfeed_grid .picture a{width:100%;height:170px;display:block;overflow:hidden}
+ul.typeViewGrid li.newsfeed_grid .picture a img{width:100%; padding: 0px !important}
+ul.typeViewGrid li.newsfeed_grid .title{font-size: 14px;height: 35px;overflow: hidden;padding: 5px 10px;}
+ul.typeViewGrid li.newsfeed_grid .info{padding:5px 10px;}
+ul.typeViewGrid li.newsfeed_grid .info .totalUps{float:left;}
+ul.typeViewGrid li.newsfeed_grid .info .action{float:right;font-family:arial;}
+ul.typeViewGrid li.newsfeed_grid .info .action a.share{}
+ul.typeViewGrid li.newsfeed_grid .info .totalUps a.up{}
+ul.typeViewGrid li.newsfeed_grid .info .action a.save{background:#C3D993;padding:3px 10px;color:#fff;border-radius:5px;}
+
+.converted_time {
+	display: none;
+}

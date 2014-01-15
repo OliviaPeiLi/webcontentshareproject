@@ -1,0 +1,112 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		list.css
+    -Description:	Basic formatting and styling for the Contest List
+			page
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Radil Radenkov & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyle			General Style for the Drop Page
+    --topSide			
+    
+    ================================================================= */
+
+/*  ===== General Style (--genStyle) ================================ */
+
+    #contests {
+	width: 950px;
+	background: #FFFFFF;
+	margin: 30px auto 20px;
+	box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+    }
+    #contests .contestsHead {
+	background: url('/images/backgrounds/p6.png');
+	padding: 30px;
+	border-bottom: 5px solid #A5A5A5;
+    }
+    #contests .contestsHead H1 {
+	display: inline-block;
+    }
+    #contests li.contests_unit {
+	height: 131px;
+	padding: 25px;
+	border-bottom: 1px dashed #D0D0D0;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    #contests li.contests_unit:nth-of-type(2n) {
+	background: #F0F0F0;
+    }
+    #contests .contests_image {
+	height: 83px;
+	width: 313px;
+	border: 1px solid #C5C5C5;
+	margin-right: 25px;
+	display: inline-block;
+	vertical-align: top;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    #contests .contests_image img {
+	max-width: 311px;
+	padding: 0;
+    }
+    #contests .contests_sharesViews {
+	height: 83px;
+	width: 170px;
+	background: #FFFFFF;
+	padding: 15px 15px 10px;
+	border: 1px solid #C5C5C5;
+	margin-right: 25px;
+	display: inline-block;
+	vertical-align: top;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    #contests .contests_sharesViews strong {
+	max-width: 138px;
+	color: #707070;
+	margin-bottom: 5px;
+	font-size: 28px;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    }
+    #contests .contests_sharesViews small {
+	color: #909090;
+	display: block;
+	text-align: center;
+    }
+    #contests .contests_buttonHolder {
+	width: 160px;
+	display: inline-block;
+    }
+    #contests .contests_button {
+	min-width: 110px;
+	margin-bottom: 11px;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+    }
+    #contests .contests_newButton {
+	float: right;
+    }
+    #contests .contests_newContest_buttonHolder {
+	padding: 40px 25px;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+/*  ================================================================= */

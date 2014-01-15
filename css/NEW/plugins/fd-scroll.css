@@ -1,0 +1,32 @@
+/**
+ * CSS for the common/fd-scroll plugin
+ */
+
+/**
+ * The container has to be relative because the helper element is absolute
+ */
+.fd-scroll {
+	position: relative;
+	overflow: hidden;
+}
+.fd-scroll-helper {
+	position: absolute;
+	right: 1px;
+	width: 4px;
+	min-height: 30px;
+	background: gray;
+	border-radius: 2px;
+	margin: 2px 0;
+	opacity: 0.7;
+	/*to prevent text selection while dragging */
+	        user-select: none;
+	    -ms-user-select: none;
+	   -moz-user-select: -moz-none;
+	 -khtml-user-select: none;
+	-webkit-user-select: none;
+	top: 0; /* default top position - changed on js scroll*/
+}
+.fd-scroll-helper:hover {
+	border: 1px solid #afafaf;
+	right: 0;
+}

@@ -1,0 +1,11 @@
+[
+	{
+		"browserName": "chrome",
+		"platform": "Windows 2008"
+	},
+	{
+		"browserName": "firefox",
+		"version": "19",
+		"platform": "Windows 2008"
+	}
+]

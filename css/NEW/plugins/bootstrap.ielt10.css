@@ -1,0 +1,14 @@
+/*
+ * bobef: #FD-2116
+ * not needed in ie10 so put it in a separate file so we can load it seletively
+ */
+
+
+.fade.in {
+	filter: alpha(opacity=100);
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+	filter: alpha(opacity=80);
+}

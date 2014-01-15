@@ -1,0 +1,60 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		fb_friends_list.css
+    -Description:	Layout and styling for the Landing page and Sign up page
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant  
+    
+    ----- Anchors ------------------------------------------------------
+
+    --fbSend		Styling for the Facebook Send Button
+    
+    ================================================================= */
+
+/*  ===== FB Send Button (--fbSend) ================================= */
+
+	.fb-send-button {
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-o-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-khtml-border-radius: 3px;
+		border-radius: 3px;
+		cursor: pointer;
+		color: #3b5998;
+		-moz-outline-style: none;
+		text-decoration: none;
+		background: #eceef5;
+		border: 1px solid #cad4e7;
+		display: inline-block;
+		padding: 4px 5px;
+		white-space: nowrap;
+		padding: 2px 5px;
+		font-family: 'trebuchet ms', sans-serif;
+		font-size: 11px;
+	}
+	.fb-send-button:hover {
+		border-color: #9dacce;
+		text-decoration: none;
+		color: #3b5998;
+	}
+	.fb-send-button span {
+		line-height: 14px;
+		line-height: 13px;
+	}
+	.fb-send-button i, .fb-send-button img {
+		float: left;
+		height: 14px;
+		margin-right: 3px;
+		width: 14px;
+	}
+	.fb-send-button i {
+		background-image: url(http://static.ak.fbcdn.net/rsrc.php/v1/z7/r/ql9vukDCc4R.png);
+		background-position: -1px -47px;
+	}
+/*  ================================================================= */

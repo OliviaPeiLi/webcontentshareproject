@@ -1,0 +1,20 @@
+[
+	{
+		"path": "/",
+		"args": { "test": 1 }
+	},
+	{
+		"path": "/",
+		"args": { "test": 2 }
+	},
+	{
+		"selenium": "example3.js"
+	},
+	{
+		"path": "/",
+		"args": { "test": 3 }
+	},
+	{
+		"selenium": "example2.js"
+	}
+]

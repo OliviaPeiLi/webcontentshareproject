@@ -1,0 +1,254 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		coversheet_popup.css
+    -Description:	Styling for the newsfeed item edit popup.
+					Shows when you click on edit for any drop
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Radil Radenkov & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyling		Basic Styling
+		--popLeft		Left side of the Pop Up Modal
+		--popRight		Right side of the Pop Up Modal
+
+    ================================================================= */
+
+/*  ===== General Styling (--genStyling) ============================ */
+	
+	/* All rules should start with this ID to avoid any styling overwrites */
+	#newsfeed_edit {
+		width: 625px;
+		padding: 10px 10px 20px;
+	}
+	#newsfeed_edit.cropping {
+		width: 395px;
+		overflow-x: hidden;
+	}
+	#newsfeed_edit.cropping .left {
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+	#newsfeed_edit.cropping .right {
+		height: 0;
+	}
+	
+	#newsfeed_edit strong {
+		font-weight: bold;
+	}
+	#newsfeed_edit .left {
+		width: 250px;
+		overflow: hidden;
+	}
+	#newsfeed_edit .right {
+		width: 352px;
+	}
+	#newsfeed_edit .left, #newsfeed_edit .right {
+		float:left;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	
+	/* ----- Popup Left (--popLeft) --------------------------------- */
+	#newsfeed_edit .left {
+		padding: 0 10px 20px 15px;
+	}
+	#newsfeed_edit .left .cropTitles {
+		color: #656565;
+		margin-bottom: 5px;
+		font-weight: bold;
+		display: inline-block;
+	}
+	
+	#newsfeed_edit .left .thumbs-list {
+		/*width:370px;*/
+		width: 225px;
+		display: inline-block;
+	}
+	
+	#newsfeed_edit .left .newsfeed-thumb,
+	#newsfeed_edit .left .collection-thumb {
+		position: relative;
+		float:left;
+	}
+	#newsfeed_edit .left .newsfeed-thumb {
+		overflow: hidden;
+	}
+	#newsfeed_edit .left .collection-thumb {
+		margin-left: 50px;
+	}
+	
+	#newsfeed_edit .left .crop {
+		height: 25px;
+		display: inline-block;
+		/*width: 65px;*/
+		background: rgba(0, 0, 0, 0.8);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
+		padding: 5px 10px;
+		border-radius: 3px;
+		margin-top: 7px;
+		margin-left:70px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+				transition: background ease-in 125ms;
+		   -moz-transition: background ease-in 125ms;
+		-webkit-transition: background ease-in 125ms;
+	}
+	#newsfeed_edit .left .crop:hover {
+		background: rgba(175, 175, 175, 0.8);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccAFAFAF', endColorstr='#ccAFAFAF',GradientType=0 ); /* IE6-9 */
+	}
+	#newsfeed_edit .left .crop:hover .crop_contents {
+		opacity: 1; filter: alpha(opacity=100); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	}
+	
+	#newsfeed_edit .left .crop_contents_wrapper {
+		height: 15px;
+		width: 15px;
+		background: url(/images/common_sprites.png) -4px -352px no-repeat;
+		display: inline-block;
+		float: left;
+		position: relative;
+	}
+	#newsfeed_edit .left .crop .crop_contents {
+		background: url(/images/common_sprites.png) -4px -384px no-repeat;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				transition: opacity ease-in 125ms;
+		   -moz-transition: opacity ease-in 125ms;
+		-webkit-transition: opacity ease-in 125ms;
+	}
+	#newsfeed_edit .left .crop .actionButton_text {
+		color: #FFFFFF;
+	}
+	#newsfeed_edit .left img {
+		padding: 0;
+	}
+	#newsfeed_edit .left img.watermarked {
+		margin-bottom: -35px;
+	}
+
+	/* ----- Popup Right (--popRight) ------------------------------- */
+	#newsfeed_edit .right {
+		min-height: 250px;
+		color: #656565;
+		padding: 0 10px;
+		/*border-left: 1px solid #D0D0D0;*/
+	}
+	#newsfeed_edit .right .editSection_One, #newsfeed_edit .right .editSection_Two {
+		overflow: hidden;
+	}
+	
+	#newsfeed_edit .right label {
+		margin-bottom: 15px;
+		display: block;
+	}
+	#newsfeed_edit .right label:not(:first-of-type) {
+		border-top: 1px solid #D0D0D0;
+		padding-top: 10px;
+	}
+	#newsfeed_edit .right label:last-of-type {
+		margin-bottom: 20px;
+	}
+	#newsfeed_edit .right .editSection_One strong,
+	#newsfeed_edit .right .editSection_Two strong,
+	#newsfeed_edit .right .editSection_Three strong,
+	#newsfeed_edit .right .google-list {
+		margin-bottom: 5px;
+		display: block;
+	}
+	
+	#newsfeed_edit .right .editSection_One .imageEdit_moreOptions,
+	#newsfeed_edit .right #choose_file_btn {
+		height: 24px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#newsfeed_edit .right .editSection_One .imageEdit_moreOptions {
+		margin-bottom: 4px;
+	}
+	#newsfeed_edit .editSection_Four {
+		width: 100%;
+		padding-top: 20px;
+		border-top: 1px solid #D0D0D0;
+		text-align: center;
+		display: inline-block;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#newsfeed_edit .editSection_Four .data_status {
+		background: #40B040;
+		color: #FFFFFF;
+		line-height: 16px;
+		padding: 4px 10px;
+		border-radius: 3px;
+		margin: 10px 20px 10px 0;
+		font-weight: bold;
+		display: inline-block;
+	}
+	#newsfeed_edit .editSection_Four .blue_bg {
+		display: inline-block;
+	}
+	#newsfeed_edit .editSection_Four .delete_button {
+		margin-left: 10px;
+	}
+	#newsfeed_edit .right .caption {
+		width: 94%;
+		padding-top: 4px;
+		resize: none;
+	}
+	#newsfeed_edit .right textarea,
+	#newsfeed_edit .right input,
+	#newsfeed_edit .right .google-list {
+		margin-left: 5px;
+	}
+	#newsfeed_edit .right input.google-query {
+		width: 99%;
+		padding: 4px 10px;
+		margin-bottom: 15px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#newsfeed_edit .right .editSection_One input {
+		width: 94%;
+	}
+	#newsfeed_edit .right #imgupload_newimg_pane {
+		margin-bottom: 5px;
+		margin-left: 5px;
+	}
+	#newsfeed_edit .right .google-list {
+		background: #F0F0F0;
+		height: 200px;
+		padding: 4px;
+		border: 1px solid #C0C0C0;
+		border-radius: 2px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+	
+	#newsfeed_edit .right .google-list li {
+		width: 90px;
+		margin: 0 5px 5px 0;
+		float:left;
+		overflow: hidden;
+	}
+	
+	#newsfeed_edit .right .google-list li img {
+		height: 90px;
+		padding: 0;
+	}

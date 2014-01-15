@@ -1,0 +1,267 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		about_promoPub.css
+    -Description:	Formatting and styling for the promoters and publishers pages
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyling	General Styling
+    
+    ================================================================= */
+
+/* ===== General Styling (--genStyling) ============================= */
+    
+    #promoters strong,
+    #publishers strong {
+	font-weight: bold;
+    }
+    #promoters,
+    #publishers {
+	position: relative;
+    }
+    #promoters .container,
+    #publishers .container {
+	margin-bottom: 0;
+    }
+    #promoters .promo_colorEmphasis,
+    #publishers .pub_colorEmphasis {
+	color: #3382AB;
+    }
+    #promoters .promoTop,
+    #publishers .pubTop {
+    }
+    #promoters .promoTop .left,
+    #publishers .pubTop .left {
+	
+    }
+    #promoters .promoTop .right,
+    #publishers .pubTop .right {
+	display: none;
+    }
+    #promoters .promoMid1,
+    #publishers .pubMid1 {
+	background: #231F20;
+	position: relative;
+    }
+    #promoters .promoMid2,
+    #publishers .pubMid2 {
+	background: #FFFFFF;
+    }
+    #promoters .promoBottom,
+    #publishers .pubBottom {
+	background: #3382AB;
+    }
+    #thankyou-msg {
+	background: #231F20;
+	color: #FFFFFF;
+	padding: 70px 20px;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+		transition: ease-in 128ms;
+	   -moz-transition: ease-in 128ms;
+	-webkit-transition: ease-in 128ms;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+		box-shadow: 1px 1px 4px 0 rgba(100, 100, 100, 0.5);
+	   -moz-box-shadow: 1px 1px 4px 0 rgba(100, 100, 100, 0.5);
+	-webkit-box-shadow: 1px 1px 4px 0 rgba(100, 100, 100, 0.5);
+    }
+/* ================================================================== */
+
+/* ===== First Section Styling (--firstSect) ======================== */
+
+    #promoters .promoTop .row,
+    #publishers .pubTop .row {
+	padding: 50px 0;
+    }
+    #promoters .promo_header,
+    #publishers .pub_header {
+	background: #FFFFFF;
+	color: #3382AB;
+	padding: 30px 40px;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	font-size: 124px;
+    }
+    #promoters .promo_textBody,
+    #publishers .pub_textBody {
+	background: #3382AB;
+	color: #FFFFFF;
+	padding: 30px 40px;
+	font-size: 18px;
+    }
+    #promoters .promo_textBody strong,
+    #publishers .pub_textBody strong {
+	font-size: 18px;
+    }
+
+/* ================================================================== */
+
+/* ===== Second Section Styling (--secondSect) ====================== */
+
+    #promoters .promoMid1 .row,
+    #publishers .pubMid1 .row {
+	padding: 30px 0;
+    }
+    #promoters .promoMid1 .promoMid1_caption,
+    #publishers .pubMid1 .pubMid1_caption {
+	margin-bottom: 10px;
+    }
+    #promoters .promoMid1 .promoMid1_caption label,
+    #publishers .pubMid1 .pubMid1_caption label {
+	color: #FFFFFF;
+	font-size: 16px;
+    }
+    #promoters .promoMid1 .promo_emailEntry,
+    #publishers .pubMid1 .pub_emailEntry {
+	height: 40px;
+	width: 350px;
+	padding: 5px 15px;
+	margin-right: 15px;
+	border: none;
+	border-radius: 3px;
+	font-size: 18px;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    #promoters .promoMid1 .promo_emailSubmit,
+    #publishers .pubMid1 .pub_emailSubmit {
+	height: 40px;
+	width: 350px;
+	background: #3382AB;
+	color: #FFFFFF;
+	padding: 5px 15px;
+	border: none;
+	border-radius: 3px;
+	font-size: 18px;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    #promoters .promoMid1 .promo_emailSubmit:hover,
+    #publishers .pubMid1 .pub_emailSubmit:hover {
+	background: #4392BB;
+	cursor: pointer;
+    }
+    #promoters .promoMid1 .error,
+    #publishers .pubMid1 .error {
+	padding: 15px 0 0;
+	font-size: 14px;
+    }
+    #promoters .promoMid1 .promoMid1_captionLower,
+    #publishers .pubMid1 .pubMid1_captionLower {
+	color: #BCBEC0;
+	margin-top: 15px;
+	font-size: 16px;
+    }
+
+/* ================================================================== */
+
+/* ===== Third Section Styling (--secondSect) ======================= */
+
+    #promoters .promoMid2 .row,
+    #publishers .pubMid2 .row {
+	padding: 50px 0;
+    }
+    #promoters .promoMid2 .promoMid2_caption,
+    #promoters .promoMid2 .promo_colorEmphasis,
+    #publishers .pubMid2 .pubMid2_caption,
+    #publishers .pubMid2 .pub_colorEmphasis {
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+    }
+    #promoters .promoMid2 .promoMid2_caption,
+    #publishers .pubMid2 .pubMid2_caption {
+	margin-bottom: 50px;
+	text-align: center;
+    }
+    #promoters .promoMid2 .promo_colorEmphasis,
+    #publishers .pubMid2 .pub_colorEmphasis {
+	
+    }
+    #promoters .promoSteps,
+    #publishers .pubSteps {
+	text-align: center;
+    }
+    #promoters .promoSteps li,
+    #publishers .pubSteps li {
+	color: #FFFFFF;
+	display: inline-block;
+    }
+    #promoters .promoSteps li .promoNumbers,
+    #publishers .pubSteps li .pubNumbers {
+	height: 275px;
+	width: 275px;
+	background: #3382AB;
+	padding: 0px;
+	border-radius: 75px;
+	margin: 0 auto 25px;
+	font-size: 220px;
+	font-weight: bold;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: block;
+	text-align: center;
+    }
+    #promoters .promoSteps li .promoNumbers_caption,
+    #publishers .pubSteps li .pubNumbers_caption {
+	color: #231F20;
+	font-size: 22px;
+	font-weight: bold;
+    }
+
+/* ================================================================== */
+
+/* ===== Fourth Section Styling (--secondSect) ====================== */
+
+    #promoters .promoBottom .row,
+    #publishers .pubBottom .row {
+	padding: 35px 0;
+    }
+    #promoters .promoBottom .promoBottom_header,
+    #publishers .pubBottom .pubBottom_header {
+	color: #FFFFFF;
+	margin-bottom: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.1em;
+    }
+    #promoters .promoBottom_logos,
+    #publishers .pubBottom_logos {
+	width: 900px;
+	margin: 0 auto;
+    }
+    #promoters .promoBottom a,
+    #publishers .pubBottom a {
+	margin-bottom: 10px;
+	margin-right: 30px;
+    }
+    #promoters .promoBottom img,
+    #publishers .pubBottom img {
+	padding: 0;
+    }
+    
+/* ================================================================== */

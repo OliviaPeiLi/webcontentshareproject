@@ -1,0 +1,408 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		account_settings.css
+    -Description:	Formatting and styling for the Account Settings page
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStructure		Overall container and top to bottom width
+    --genColumns		Width for left and right columns
+    --sectionStyle		Styling for each section
+	--socNet		Social Network Connection styling
+	--email			Email Settings styling
+	--school		School Settings styling
+    --error			Error styling
+    ================================================================= */
+    
+/*  ===== General Structure (--genStructure ) ======================= */
+
+    #account{
+	overflow: hidden;
+    }
+    #accountSettings {
+	width: 943px;
+	background: #FFFFFF;
+	border: 1px solid #D0D0D0;
+	margin: 20px auto 0;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    .account_top{
+	height: 50px;
+	padding-left: 20px;
+	overflow: hidden;
+    }
+    .account_top h2 {
+	color: #656565;
+    }
+    .account_main{
+	overflow: visible;
+    }
+    .account_bot {
+	width: 710px;
+	height: 23px;
+    }
+
+/*  ================================================================= */
+
+/*  ===== General Columns (--genColumns) ============================ */
+
+    .personal_info_form {
+	padding-top: 10px;
+	padding-left: 20px;
+	margin: 0;
+    }
+    
+    .account_left_col {
+	    width: 420px;
+	    margin-right: 20px;
+	    display: inline-block;
+	    vertical-align: top;
+    }
+    .account_right_col {
+	    width: 460px;
+	    display: inline-block;
+	    vertical-align: top;
+    }
+    
+/*  ================================================================= */
+
+/*  ===== Section Styling (--sectionStyle) ========================== */
+
+    .account_section {
+	    background: #F0F0F0;
+	    border: 1px solid #CACACA;
+	    border-radius: 7px;
+    }
+    .account_section_title {
+	    border-bottom: 1px solid #CACACA;
+	    margin-bottom: 10px;
+    }
+    form .account_section {
+	padding-top: 5px;
+	padding-bottom: 10px;
+    }
+    form .account_section .form_row {
+    	padding: 0;
+    	padding-bottom: 5px;
+    }
+    form .account_section .form_row .valid,
+    form .account_section .form_row .error {
+    	background: transparent;
+    	display: none;
+    	margin-left: 114px;
+    	margin-bottom: 10px;
+    	position: static;
+    }
+    form .account_section .form_row .valid {
+    	color: #390;
+    }
+
+    /*BP: #FD-2996, commented for consistency
+    form .account_section .form_row .error {
+    	color: #C33;
+    }
+    */
+
+    form .account_section .form_row .score {
+    	left: 315px;
+		top: 10px;
+		position: absolute;
+    }
+
+    form .account_section .form_row .score span {
+		background-color: #DDD;
+		border-radius: 3px 3px 3px 3px;
+		display: inline-block;
+		height: 8px;
+		overflow: hidden;
+		vertical-align: middle;
+		width: 50px;
+	}
+	form .account_section .form_row .score span b {
+		background-color: #6EC02A;
+		display: block;
+		height: 8px;
+		width: 10%;
+	}
+    
+    .personal_info_form ul {
+	margin-bottom: 25px;
+    }
+    #account_profile_education ul {
+	margin-bottom: 0;
+    }
+    .personal_info_form #email_alert,
+    .personal_info_form #password_alert,
+    .personal_info_form #fb_alert,
+    .personal_info_form #twitter_alert {
+	margin: 0 0 10px 30px;
+	color: red;
+	font-weight: bold;
+    }
+    .personal_info_form #username_alert{
+	margin: 0 0 10px 15px;
+	color: red;
+	font-weight: bold;
+    }
+    .personal_info_form #email_alert p{		/* Invalid Email message adds a <p> */
+	font-weight: bold;
+    }
+    
+    .personal_info_form .label {
+	color: #888888;
+	width: 90px;
+	font-size: 13px;
+	padding-top: 4px;
+	padding-right: 10px;
+	vertical-align: top;
+	text-align: right;
+	text-shadow: 1px 1px #FFFFFF;
+    }
+    #change_password .label,
+    #email_change .label {
+	width: 100px;
+    }
+    #account_profile_basic .field{
+	margin-top: 5px;
+    }
+    .personal_info_form .field, .form_field, .detail_field {
+	text-align: left;
+	min-width: 250px;
+	margin-bottom: 10px;
+    }
+    .personal_info_form .field:not(.school_edit_mode):not(.add_school_field) input[type="text"],
+    .personal_info_form textarea,
+    .personal_info_form .field input[type="password"] {
+	width: 100%;
+	max-width: 100%;
+	font-size: 14px;
+    }
+    .personal_info_form .emailChecks {
+	padding-top: 8px;
+    }
+    
+    fieldset li {
+	vertical-align: top;
+    }
+    fieldset .save_email_setting li:nth-last-of-type(1) {
+	padding-top: 10px;
+    }
+    .account_main h6 {
+	font-size: 14px;
+	padding: 7px 15px;
+    }
+    /*#account_basic input[type="submit"]{
+	background-color: #3366CC;
+	color: #FFFFFF;
+	padding: 4px 10px;
+	border: none;
+    }
+    #account_basic input[type="submit"]:hover {
+	background-color: #003399;
+	cursor: pointer;
+    }*/
+    #account_basic input[type="checkbox"] {
+	margin-top: 8px;
+    }
+    /* ----- Social Network Connect (--socNet) ---------------------- */
+	#fb_connect_area,
+	#twitter_connect_area {
+	    margin: 0 0 20px 10px;
+	}
+	
+	#sharing_options .account_soc_connect, #sharing_options .account_soc_disconnect,
+	#sharing_options .sharelink_enable, #sharing_options .sharelink_disable  {
+	    min-width: 182px;
+	    border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    display: inline-block;
+	    font-weight: bold;
+	    padding: 5px 15px 5px 5px;
+	    /* width:165px; */
+	    text-align:left;
+	    text-shadow: 1px 1px #F9F9F9;
+	    cursor: pointer;
+	
+		/*background: linear-gradient(#F3F3F4, #D6D7D9) repeat scroll 0 0 transparent;/**/
+	    /*background: -moz-linear-gradient(#F3F3F4, #D6D7D9) repeat scroll 0 0 transparent;/**/
+	    /*background: -webkit-linear-gradient(#F3F3F4, #D6D7D9) repeat scroll 0 0 transparent;/**/
+	    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F3F3F4', endColorstr='#D6D7D9');/**/
+	    background-color: #E5E6E7;
+	    border: 1px solid #CCCCCC;
+	    color: #555555;
+	    box-shadow:0 2px 3px rgba(34, 25, 25, 0.4);
+	    -moz-box-shadow:0 2px 3px rgba(34, 25, 25, 0.4);
+	    -webkit-box-shadow:0 2px 3px rgba(34, 25, 25, 0.4);
+	}
+	
+	#sharing_options .account_soc_connect:hover, #sharing_options .account_soc_disconnect:hover,
+	#sharing_options .sharelink_enable:hover, #sharing_options .sharelink_disable:hover {
+	    /*background: linear-gradient(#E3E3E4, #C6C7C9) repeat scroll 0 0 transparent;/**/
+	    /*background: -moz-linear-gradient(#E3E3E4, #C6C7C9) repeat scroll 0 0 transparent;/**/
+	    /*background: -webkit-linear-gradient(#E3E3E4, #C6C7C9) repeat scroll 0 0 transparent;/**/
+	    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E3E3E4', endColorstr='#C6C7C9');/**/
+	    background-color: #C4C5C7;
+	    color: #3D3D3D;
+	    border: 1px solid #BDBDBD;
+	    text-shadow: 1px 1px #D9D9D9;
+	}
+	
+	#sharing_options .account_soc_disconnect:hover span {
+	    opacity: 1;
+	}
+	
+	#sharing_options .account_soc_disconnect span,
+	#sharing_options .account_soc_connect:hover span {
+	    opacity: 0.4;
+	}
+	
+	#sharing_options .account_soc_disconnect span, #sharing_options .account_soc_connect span {
+	    height: 27px;
+	    width: 26px;
+	    background: url('/images/common_sprites.png') no-repeat;
+	    margin-right: 5px;
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+	
+	#fb_connect_area .account_soc_disconnect span, #fb_connect_area .account_soc_connect span {
+	    background-position: -320px -128px;
+	    /* transition: opacity ease-in 125ms;
+	    -moz-transition: opacity ease-in 125ms;
+	    -webkit-transition: opacity ease-in 125ms; */
+	}
+	#twitter_connect_area .account_soc_disconnect span, #twitter_connect_area .account_soc_connect span {
+	    background-position: -320px -160px;
+	    /* transition: opacity ease-in 125ms;
+	    -moz-transition: opacity ease-in 125ms;
+	    -webkit-transition: opacity ease-in 125ms; */
+	}
+	
+	#sharing_options .sharelink_enable, #sharing_options .sharelink_disable  {
+	    margin-left: 15px;
+	    display: inline-block;
+	    line-height: 32px;
+	    text-align: center;
+	}
+	
+	#sharing_options .sharelink_enable span, #sharing_options .sharelink_disable span {
+	    height: 10px;
+	    width: 25px;
+	    border-radius: 7px;
+	    -moz-border-radius: 7px;
+	    -webkit-border-radius: 7px;
+	    margin-right: 10px;
+	    margin-bottom: 5px;
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+	#sharing_options .sharelink_enable span {
+	    background: linear-gradient(#FF3366, #D02050) repeat scroll 0 0 transparent;/**/
+	    background: -moz-linear-gradient(#FF3366, #D02050) repeat scroll 0 0 transparent;/**/
+	    background: -webkit-linear-gradient(#FF3366, #D02050) repeat scroll 0 0 transparent;/**/
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3366', endColorstr='#D02050');/**/
+	    border: 1px solid #D5A5A5;
+	    box-shadow: 0 0 8px 1px rgba(250, 125, 125, 0.75);
+	    -moz-box-shadow: 0 0 8px 1px rgba(250, 125, 125, 0.75);
+	    -webkit-box-shadow: 0 0 8px 1px rgba(250, 125, 125, 0.75);
+	}
+
+	#sharing_options .sharelink_disable span {
+	    background: linear-gradient(#33EE66, #20D050) repeat scroll 0 0 transparent;/**/
+	    background: -moz-linear-gradient(#33EE66, #20D050) repeat scroll 0 0 transparent;/**/
+	    background: -webkit-linear-gradient(#33EE66, #20D050) repeat scroll 0 0 transparent;/**/
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33EE66', endColorstr='#20D050');/**/
+	    border: 1px solid #C5D5C5;
+	    box-shadow: 0 0 8px 1px rgba(125, 250, 125, 0.75);
+	    -moz-box-shadow: 0 0 8px 1px rgba(125, 250, 125, 0.75);
+	    -webkit-box-shadow: 0 0 8px 1px rgba(125, 250, 125, 0.75);
+	}
+	
+    /* ----- Email (--email) ---------------------------------------- */
+	
+	#save_email_setting li > .field {
+	    min-width: 140px;
+	}
+	#save_email_setting .label {
+	    width: 185px;
+	    font-weight: bold;
+	    /*BP: #FD-2996*/
+	    padding-right: 0;
+	    /*end of #FD-2996*/
+	}
+
+	/*BP: #FD-2996*/
+	#save_email_setting .label > label {
+		font-weight: bold;
+		padding-right: 10px;
+	}
+
+	#account_profile_basic input[type="radio"] {
+		vertical-align: middle;
+	}
+
+	#account_profile_basic input[type="radio"] + label {
+		padding-left: 5px;
+		margin-right: 10px;
+	}
+	/*end of #FD-2996*/
+	
+    /* ----- School (--school) -------------------------------------- */
+	#school_entry_list .school_entry {
+		position: relative;
+	}
+	#school_entry_list .school_entry .editSchool {
+		position: absolute;
+		right:2px;
+		top: 22px;
+	}
+	#school_entry_list .school_entry .removeSchool {
+		position: absolute;
+		right:2px;
+		top: 2px;
+	}
+	.school_edit_mode input[name=school],
+	.add_school_field input[name=school] {
+		width: 250px;
+	}
+	.school_edit_mode input[name=major],
+	.add_school_field input[name=major] {
+		width: 250px;
+	}
+
+/*  ================================================================= */
+
+/*  ===== Error (--error ) ========================================== */
+
+	.account_ok, .account_err {
+		/* margin-left: 10px; */  /*FD-2425*/
+		font-weight: bold;
+		display: inline-block;	/*FD-2697*/
+		max-width: 240px;
+		vertical-align: middle;
+	}
+	.account_ok {
+		color: green;
+	}
+	.account_err {
+		color: red;
+	}
+
+/*
+form#save_email_setting li:first-of-type > .field {
+    min-width: 145px;
+}
+form#save_email_setting li:nth-of-type(2) > .label {
+    width: 125px;
+}
+*/

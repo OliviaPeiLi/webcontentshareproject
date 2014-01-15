@@ -1,0 +1,235 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		constes/create.css
+    -Description:	Formatting and styling for the base Newsfeed
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Radil Radenkov, & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyling		General Styling
+    
+    
+    ================================================================= */
+
+/* ===== General Styling (--genStyling) ============================= */
+
+.selfSubmission_container {
+	background: #FFFFFF;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 0 auto 30px;
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+}
+.selfSubmission_container.contestAdd_item {
+	/*width: 960px;*/ width: 395px;
+}
+.selfSubmission_container.createContest {
+	width: 960px;
+	padding: 0;
+}
+
+.selfSubmission_container .selfSubmission_loading {
+	background: url('/images/loading_icons/bigRoller_32x32.gif') no-repeat;
+	background-color: rgba(255,255,255,0.75);
+	background-position: 50%;
+	border-radius: 10px;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+.selfSubmission_container.createContest .createContest_title {
+	background: url('/images/backgrounds/p6.png');
+	padding: 30px;
+	border-bottom: 5px solid #A5A5A5;
+}
+.selfSubmission_container h2 {
+	color: #3D3D3D;
+	margin-bottom: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.selfSubmission_container form.loading .selfSubmission_loading {
+	display: inline-block;
+}
+.selfSubmission_container .error:not(form) {
+	display: inline-block;
+}
+.selfSubmission_container .error.error_under {
+	margin-top: 15px;
+	display: block;
+}
+.selfSubmission_container.createContest .form_row {
+	padding: 30px;
+	border-bottom: 1px dashed #D0D0D0;
+}
+.selfSubmission_container.createContest .form_row:last-of-type {
+	border-bottom: none;
+	text-align: center; /* Added at Shoba's suggestion http://dev.fantoon.com:8100/browse/FD-4172 */
+}
+.selfSubmission_container.createContest .form_row:nth-of-type(2n) {
+    background: #F0F0F0;
+}
+.selfSubmission_container .form_row .token-input-delete-token {
+	color: #909090;
+	margin-top: 0;
+	margin-left: 3px;
+	line-height: normal;
+	text-shadow: 1px 1px #E0E0E0;
+}
+.selfSubmission_container .form_row > span,
+.selfSubmission_container .form_row > .left span,
+.selfSubmission_container .form_row > .right span {
+	margin-top: 5px;
+	
+}
+.selfSubmission_container .selfSubmission_formRow .hidden_upload {
+	display: inline-block;
+}
+.selfSubmission_container .contestNumber {
+	height: 30px;
+	width: 30px;
+	background: #2BB673;
+	color: #FFFFFF;
+	padding: 20px;
+	border-radius: 35px;
+	margin-right: 40px;
+	line-height: 30px;
+	font-size: 42px;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+.selfSubmission_container.createContest .form_row_container {
+	display: inline-block;
+	vertical-align: top;
+}
+.selfSubmission_container.createContest .form_row > .left {
+	width: 51%;
+}
+.selfSubmission_container.createContest .form_row > .right {
+	width: 48%;
+}
+.selfSubmission_container label {
+	min-width: 100px;
+	color: #3D3D3D;
+	margin-bottom: 5px;
+	font-size: 24px;
+	display: inline-block;
+	vertical-align: top;
+}
+.selfSubmission_container.createContest input[type=text] {
+	min-width: 315px;
+}
+.selfSubmission_container textarea {
+	resize: none;
+}
+.selfSubmission_container .contestURL,
+.selfSubmission_container .add_category {
+	width: auto !important;
+}
+.selfSubmission_container .contestURL {
+	min-width: 170px !important;
+}
+.selfSubmission_container .token-input-list {
+	min-height: 85px;
+	border-radius: 0;
+}
+.selfSubmission_container .token-input-token {
+	background: #D0D0D0;
+	color: #3D3D3D;
+	border-radius: 3px;
+	display: inline-block;
+}
+.selfSubmission_container .add_category {
+	min-width: 215px !important;
+	margin-right: 10px;
+}
+.selfSubmission_container .formCaption {
+	color: #909090;
+	font-size: 11px;
+}
+.selfSubmission_container.createContest .form_row .blue_bg:not(.blue_bg_huge) {
+	padding: 6px 15px;
+}
+.blue_bg .upload_img_filename {
+	color: #FFFFFF;
+}
+.selfSubmission_container.createContest .URLPrefix {
+	font-size: 14px;
+}
+.selfSubmission_container.createContest .contestUpload_holder {
+	height: 85px;
+	width: 315px;
+	background: #FFFFFF;
+	border: 1px solid #D0D0D0;
+	display: block;
+}
+.selfSubmission_container.createContest .contestUpload_holder img {
+	width: 98%;
+}
+
+.selfSubmission_container.createContest .choiceLabel {
+	margin-left: 5px;
+	font-size: 14px;
+}
+.selfSubmission_save,
+.selfSubmission_save_top {
+	height: 100px;
+	width: 50%;
+	margin: 15px auto 0;
+	text-align: center;
+}
+.selfSubmission_save_top {
+	position: absolute;
+	top: 120px;
+	left: 25%;
+}
+.selfSubmission_save_top h1 {
+	color: #FFFFFF;
+	font-size: 40px;
+	font-weight: bold;
+	display: inline-block;
+}
+.selfSubmission_back {
+	height: 23px;
+	padding: 9px 25px 4px 20px;
+	display: inline-block;
+	vertical-align: top;
+			box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	float: left;
+}
+.selfSubmission_backIcon {
+	height: 18px;
+	width: 18px;
+	background: url('/images/common_sprites.png') no-repeat;
+	background-position: -192px -384px;
+	display: inline-block;
+	vertical-align: top;
+}
+.selfSubmission_backText {
+	font-size: 16px;
+	line-height: 20px;
+	vertical-align: top;
+}
+.selfSubmission_saveButton {
+	float: right;
+}
+.selfSubmission_save_top .selfSubmission_saveButton {
+	font-size: 20px !important;
+}

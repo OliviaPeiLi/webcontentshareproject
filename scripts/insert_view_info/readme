@@ -1,0 +1,7 @@
+please backup the file before apply this script.
+
+usage:
+	vim -s <path to the .vim script> <path to view file>
+
+ex:
+	vim -s scripts/insert_view_info.vim ./application/modules/folder/views/folder_buttons.php

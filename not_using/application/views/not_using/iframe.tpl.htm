@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" href="css/base.css" rel="stylesheet" />
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.13.custom.css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/parseur.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/jit.js"></script>
+<script type="text/javascript" src="js/jquery.timers.js"></script>
+<script type="text/javascript" src="js/canvas2image.js"></script>
+<script type="text/javascript" src="js/base64.js"></script> 
+<script type="text/javascript">
+						
+		var initvar = {
+				background: '#ffffff',
+				nodeColor: '#000',
+				captionColor: '#000',
+				captionTagColor: '#000',
+				edgeColor: '#ffffff',
+				edgeType: 'line',
+				nodeWidth: 50,
+				nodeHeight: 50,
+				fontSize: 11,			
+				numberOfCircles: 0,
+				width:  900,
+				height: 600,			
+			  	imagesSize: 50,
+			  	zoomInSteps: 100, //or auto
+			  	zoomOutSteps:100,
+			  	imageDelayZoomSize:100,			  				  	
+			  	ajaxFetchLevels: 1,
+			  	captionTruncateLimit: 15,
+			  	ajaxSubtreeMaxLength: 2
+		};
+		initvar = objmerge(initvar, {$Config});
+		var sizes = {normal:1, bigger: 1.5, smaller: 0.5, huge: 3};
+		sizes   = objmerge(sizes, {$Sizes});		
+		
+		
+
+	
+	var source = "{$Tree}";
+		if (!source) {
+			alert('Tree is not defined');
+		}
+		$(window).load(function() {
+			init(initvar);			
+		});
+
+		$(function(){
+
+			$('.save-btn').click(function(){
+				var img = getSnapshot($(this).attr('rel'));					
+				$('#save-form input[type="hidden"]').val(img.src);
+				$('#save-form').submit();
+			});
+
+			$('#save-all-btn').click(function(){
+			
+			var img = getBigSnapshot();				
+			$('#save-form input[type="hidden"]').val(img.src);
+				$('#save-form').submit();
+			});
+
+			$('#infovis-canvas').click(function(e){
+					console.log('dd');
+					e.stopPropagation();
+				});
+			
+		});			
+		
+				
+		
+		
+			
+	
+		
+	</script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+		<div id="infovis" style="posiiton: relative;">
+			<div id="zoomer" style="position: absolute; z-index: 20; right: 7px; margin-right: 60px; margin-top: 40px; top: 0px !important">
+				<div id="plus" class="unselectable"><div class="unselectable">+</div></div>
+				<div id="slider" class="slide" ></div>
+				<div id="minus" class="unselectable"><div class="unselectable">-</div></div>				
+			</div>
+			<div id="loading-div" class="slide" >NOW LOADING</div>
+		</div>		
+		<form id="save-form" action="/saveimg.php" method="post">
+	   <input class="save-btn" type="button" value="Save viewport as PNG" rel="png"/>
+	   <input class="save-btn" type="button" value="Save viewport as JPG" rel="jpg"/>	   
+	   <!--  <img src="/images/l.gif" alt="" />-->
+	  <!--  <input id="save-all-btn" type="button" value="Save all graph PNG"/>-->
+	   <input type="hidden" name="img"/>
+	   </form>
+</body>
+</html>

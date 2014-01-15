@@ -1,0 +1,138 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0; 
+border: 0;
+outline: 0;
+font-size: 100%;
+background: transparent;
+font-size: 12px;
+}
+body {
+line-height: 1;
+}
+ul {
+list-style: none;
+list-style-type: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+ 
+/* remember to define focus styles! */
+:focus {
+outline: 0;
+}
+ 
+/* remember to highlight inserts somehow! */
+ins {
+text-decoration: none;
+}
+del {
+text-decoration: line-through;
+}
+ 
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+img {
+	padding: 4px;
+}
+
+/*TOOLTIPS*/
+.tip {
+	
+    color: #111;
+    width: 139px;
+    background-color: white;
+    border:1px solid #ccc;
+    -moz-box-shadow:#555 2px 2px 8px;
+    -webkit-box-shadow:#555 2px 2px 8px;
+    -o-box-shadow:#555 2px 2px 8px;
+    box-shadow:#555 2px 2px 8px;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+    font-size:10px;
+    font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+    padding:7px;
+}
+
+.hyper-div{
+	border:1px solid red;
+	position:absolute;
+	top:-20px;
+	left:-15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.loader{
+	position:absolute;
+	top:-5px;
+	left:-3px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.hyper-image
+{
+	position:relative;	
+	border:0px;
+	
+}
+
+.hidden {display: none !important;}
+#loading-div {
+	position:absolute;
+	top:50;
+	left:350;
+	z-index:5;
+	display:none;
+	
+}
+
+.rounded, .rounded img {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+.semi-rounded, .semi-rounded img {
+	-webkit-border-radius: 10px;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius: 10px;
+	-moz-border-radius-bottomright: 0;
+	border-radius: 10px;
+	border-bottom-right-radius: 0;
+}
+
+.square, .square img {
+	border: 0px;
+}
+.node {
+	margin-top: -25px;
+	margin-left: -25px;	
+	cursor: pointer;
+}
+
+.typekit-badge { bottom:-100px !important; top: auto;}
+
+.absolute {
+	position: absolute;
+}

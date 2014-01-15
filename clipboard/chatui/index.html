@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  	<link rel="stylesheet" href="chatui.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script>
+function	friend_select()
+{
+	 alert('Click');
+}
+
+
+$(document).ready( function() {
+
+$(".button_friend_select").hover(
+	 function () {
+	 	$("#friend_select_mouse_over").css('display','block');
+	 },
+	 
+	 function () {
+	 	$("#friend_select_mouse_over").css('display','none');
+	 }
+);
+
+$("#friend_select_mouse_over").click ( function () {
+	$(".button_friend_select").css('display','none');
+ 	$("#chatinterface").css('display','none');
+	return false;
+});
+
+$(".button_friend_select").click( function() {
+ 	$("#chatinterface").css('display','block');
+	$(".button_friend_select").css('display','none');
+ 	$("#message").focus();
+});
+
+$(".chatboxtitle").click( function() {
+ 	$("#chatinterface").css('display','none');
+	$(".button_friend_select").css('display','block');
+});
+	 
+$(".chatboxtitle").hover( function() {}, function() {} );
+
+$("#typing").click ( function () {
+ 	$("#message").focus();
+});
+
+})  // $(document).ready
+
+</script>
+
+
+</head>
+
+<body>
+
+<div class="chatui">
+	<div class="chatinterface" id="chatinterface">
+		<div class="chatboxtitle">
+			<label>Phan Hai Quang
+			<label id="typing">(idle)</label>
+			</label>
+		</div>
+
+		<div class="chatbox">
+			This is a test meesage of chatbox.
+			I use it for testting the UI.
+
+			It does not intergrate the program
+			yet.
+		</div>
+		<div class="messagebox">
+			<input id="message" type="text" size="40" length="100">
+		</div>
+	</div>
+
+	<div class="button_friend_select">
+		<label id="friend_select">Phan Hai Quang</label>
+		<button class="close" id="friend_select_mouse_over"></button>
+	</div>
+</div>	
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<?php
+if(strpos(__DIR__, '/home/fandrop/') !== false) {
+   	define('ENVIRONMENT', 'production');
+}elseif(strpos(__DIR__, '/home/test.fandrop/') !== false){
+	define('ENVIRONMENT', 'staging');
+}else{
+   	define('ENVIRONMENT', 'development');
+}
+
+if(ENVIRONMENT == 'staging'){
+	define('BASEPATH', '/home/test.fandrop/current/system/');
+}elseif(ENVIRONMENT == 'production'){
+	define('BASEPATH', '/home/fandrop/current/system/');
+}else{
+	define('BASEPATH', __DIR__.'/../system/');
+}
+
+include(BASEPATH.'../application/libraries/fb_api/facebook.php');
+include(BASEPATH.'../application/config/config.php');
+include(BASEPATH.'../scripts/config.php');
+
+echo "Watch: fbtl-".ENVIRONMENT."\r\n";
+$pheanstalk->watch("fbtl-".ENVIRONMENT)->ignore("default");
+$last_version = end(glob(ROOTPATH.'/releases/*', GLOB_ONLYDIR));
+
+while(1) {
+	if ($last_version != end(glob(ROOTPATH.'/releases/*', GLOB_ONLYDIR))) break;
+	//Get a job to do
+	$start_time = time();
+	$job = $pheanstalk->reserve();
+	if (!$job) {
+		echo 'pass';
+		continue;
+	}
+	$data = json_decode($job->getData());
+	print_r($data);
+	
+	$config['fb_app_key']	= "315227451867064";
+	$config['fb_app_secret'] = "d13a9a8692fed202cf1d0d5388edae67";
+	$config['fb_app_namespace']	= "fandrop";
+	
+	$facebook = new Facebook(array('appId' => $config['fb_app_key'], 'secret' => $config['fb_app_secret']));
+	$fb_url = 'https://graph.facebook.com/me/'.$config['fb_app_namespace'].':'.$data->action.'?access_token='.$facebook->getAccessToken().'&method=post&picture='.urlencode($data->link_url);
+	
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $fb_url);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_NOBODY, true);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	curl_exec($ch);
+	$url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);	
+	curl_close($ch);
+	
+	$pheanstalk->delete($job);
+}

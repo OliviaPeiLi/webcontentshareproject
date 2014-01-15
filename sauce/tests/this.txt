@@ -1,0 +1,2 @@
+
+Fatal error: Call to undefined method PHPUnit_Framework_Warning::setupSpecificBrowser() in C:\xampp\htdocs\fantoon.loc\sauce-tutorial\vendor\phpunit\phpunit-selenium\PHPUnit\Extensions\SeleniumBrowserSuite.php on line 95

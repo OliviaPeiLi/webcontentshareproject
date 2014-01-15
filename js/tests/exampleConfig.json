@@ -1,0 +1,6 @@
+{
+	"platform": "SauceLabs",
+	"browsers": "tests/exampleBrowsers.json",
+	"suite": [ "tests/tests.json", "tests/tests2.json" ],
+	"sauce-noconnect": "true"
+}

@@ -1,0 +1,497 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		header_ugc.css
+    -Description:	Basic formatting and styling for the header
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Radil Radenkov & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --headerGen			Basic styling for the header
+
+    ================================================================= */
+
+/* ===== General (--headerGen) ====================================== */
+
+	#header {
+		width: 100%;
+		background-color: #000;
+		background-color: rgba(0,0,0,0.84);
+		position: fixed;
+		top: 0;
+		z-index: 9; /* increase if needed */
+	}
+	
+	#header .header_content {
+		height: 45px;
+		width: 960px;
+		padding: 0px 30px;
+		margin: 0 auto;
+		position: relative;
+	}
+	#header .header_logo {
+		position: absolute;
+		height: 28px;
+		width: 101px;
+		/* @todo - use svg */
+		background: url('/images/common_sprites.png');
+		background-position: -320px -416px;
+		display: block;
+		text-indent: -9999px;
+		left: 50%;
+		margin-left: -50px;
+		top: 9px;
+	}
+	
+	/*
+	#header .header_logo .ico {
+		/* @todo - use svg */
+		/* background: url('/images/common_sprites.png');
+		background-position: -320px -450px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				transition: opacity ease-in 250ms;
+		   -moz-transition: opacity ease-in 250ms;
+		-webkit-transition: opacity ease-in 250ms;
+	} */
+	
+	#header .arrow {
+		border-width: 0px 9px 7px;
+		border-style: solid;
+		border-color: transparent transparent rgba(255, 255, 255, 1) transparent;
+		position: absolute;
+		z-index: 1;
+		height: 
+	}
+	#about-dropdown .arrow,
+	#notifications_dropdown .arrow,
+	#list_options .arrow,
+	#account_options .arrow {
+		top: -7px;
+	}
+	#about-dropdown .arrow {
+		left: 17px;
+		display: none;
+	}
+	#notifications_dropdown .arrow,
+	#list_options .arrow,
+	#account_options .arrow {
+		right: 17px;
+		display: none;
+	}
+	#header .left,
+	#header .right {
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#header .left {
+		float: left;
+	}
+	
+	#header .right {
+		float: right;
+		position: relative;
+	}
+	
+	/* ========= Buttons - non logged in  ================= */
+	#header .header-btn {
+		padding: 14px 15px;
+		line-height: 18px;
+		display: inline-block;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#header .info-btn {
+		display: inline-block;	
+		width: 18px;
+		height: 12px;
+		padding: 22px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		vertical-align: middle;
+		float: left;
+		color: #FFF;
+		text-indent: -9999px;
+		background: url('/images/zachary-images/icon-menu.png') center no-repeat;
+		margin-right: 10px;
+	}
+	#header .info-btn:hover {
+	}
+	#header .info-btn .ico,
+	#header #hdr_notifications .ico {
+		background: url('/images/common_sprites.png');
+		display: inline-block;
+	}
+	#header .info-btn .ico {
+		height: 6px;
+		width: 10px;
+		background-position: -164px -544px;
+		margin-left: 10px;
+		display: inline-block;
+	}
+	#header #list_link {
+	}
+	#header #hdr_notifications .ico {
+		height: 16px;
+		width: 14px;
+		background-position: -96px -480px;
+	}
+	#header #hdr_notifications .ico.on {
+		background-position: -110px -480px;
+	}
+	#header #hdr_notifications.count .ico {
+		background-position: -112px -480px;
+	}
+	#header #hdr_notifications.count .buttonText {
+		height: 12px;
+		min-width: 12px;
+		background: #E41F1F;
+		color: #FFFFFF;
+		padding: 1px 3px;
+		border-radius: 2px;
+		display: inline-block;
+		position: absolute;
+		top: 7px;
+		left: 23px;
+		font-size: 9px;
+		text-align: center;
+		text-shadow: -1px 1px #E41F1F;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#header #hdr_notifications .buttonText {
+		display: none;
+	}
+	#about-dropdown,
+	#account_options,
+	#notifications_dropdown,
+	#list_options {
+		background-color:#FFFFFF;
+		z-index: 10;
+		display: none;
+		position: absolute;
+		top: 46px;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box; /* prevents bg color from leaking outside the border */
+		background-clip: padding-box;
+	}
+	#about-dropdown ul,
+	#account_options ul,
+	#notifications_dropdown ul,
+	#list_options ul {
+		padding: 10px 0;
+	}
+	#about-dropdown {
+		left: 35px;
+		}
+	#account_options {
+		right: 49px;
+		padding: 10px 0;
+	}
+	#list_options {
+		right: 127px;
+	}
+	#header #about-dropdown li, #header #account_options li, #header #list_options li {
+		display: block;
+		cursor: pointer;
+	}
+	#header #about-dropdown a, #header #account_options a, #header #list_options a {
+		height: 1.5em;
+		width: 124px;
+		color: #222222;
+		padding: 9px 15px 3px 22px;
+		display: block;
+		cursor: pointer;
+	}
+	#header #about-dropdown li a:hover, #header #account_options li a:hover, #header #list_options li a:hover {
+		background-color: #51a7d6;
+		color: #FFF;
+	}
+	#search {
+		height: 46px;
+		padding: 7px 10px 7px 0;
+		display: inline-block;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		position: relative;
+		vertical-align: middle;
+		float: left;
+		background-color: #3c3c3c;
+	}
+	
+	#search .search_button {
+		width: 16px;
+        height: 16px;
+		background: url('/images/common_sprites.png') no-repeat -96px -528px;
+    	position: absolute;
+    	left: 13px;
+    	top: 16px;
+        display: inline-block;
+        vertical-align: top;
+        text-indent: -9999px;
+		padding: 0px;
+		border: none;
+		margin-top: 0px;
+        cursor: pointer;
+    }
+	#search ul.token-input-list-search li input {
+		width: auto !important; /* http://dev.fantoon.com:8100/browse/FD-4462*/
+	}
+	.token-input-dropdown-search .token-input-dropdown-item-search:last-of-type {
+		padding: 10px 10px 10px 10px;
+		border-top: 1px solid #d4d5d9;
+		text-align: center;
+	}
+	.token-input-dropdown-search .token-input-dropdown-item-search:last-of-type span {
+		color: #4583aa;
+	}
+	#header .signin-btn {
+		color: #FFFFFF;
+				transition: ease-in 128ms;
+		   -moz-transition: ease-in 128ms;
+		-webkit-transition: ease-in 128ms;
+	}
+	#header .signin-btn:hover {
+	text-decoration: underline;
+	}
+	#header .signup-btn {
+	color: #fff; /* text color */
+	font-family: "Droid Sans", sans-serif;
+	font-size: 12px;
+	background-color: #389adf;
+	}
+	#header .signup-btn:hover {
+		background-color: #41a7ee;
+		}
+	
+	#header .signup-btn:active {
+		background-color: #2f82bc;
+		}
+	
+	/* ============== Buttons - logged in ================== */
+
+	#account_link,
+	#list_link,
+	#hdr_notifications,
+	#myFeed {
+		display: inline-block;
+		vertical-align: top;
+		float: right;
+	}
+	#account_link {
+		padding: 14px;
+		background: url('/images/zachary-images/icon-user.png') center no-repeat;
+		height: 14px;
+		width: 15px;
+		margin-right: 10px;
+	}
+	#list_link {
+		display: inline-block;
+		background-color: #389adf;
+		padding: 23px 25px 23px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		display: inline-block;
+		background: #4bb0db url('/images/zachary-images/add-list-icon.png') 9px center no-repeat;
+		height: 15px;
+		width: 29px;
+		text-indent: -9999px;
+	}	
+	#list_link:hover {
+		background-color: #41a7ee;
+		}
+	#list_link:active {
+		background-color: #2f82bc;
+		}
+	#account_link:hover,
+	#hdr_notifications:hover {
+	}
+	#account_link img {
+		height: 24px;
+		padding: 0;
+		border-radius: 3px;
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+	#account_link span {
+		color: #FFF;
+	}
+	#account_link .header_userName {
+		display: inline-block;
+		font-weight: bold;
+		vertical-align: middle;
+	}
+	#account_options,
+	#list_options {
+		display: none;
+	}
+	#hdr_notifications {
+		padding: 15px;
+		border-left: 1px solid #323232;
+		position: relative;
+				box-shadow: -1px 0 0px 0px rgba(0,0,0,1);
+		   -moz-box-shadow: -1px 0 0px 0px rgba(0,0,0,1);
+		-webkit-box-shadow: -1px 0 0px 0px rgba(0,0,0,1);
+		display: none;
+	}
+	#myFeed {
+		color: #FFFFFF;
+		padding: 15px;
+		background: url('/images/zachary-images/icon-myfeed.png') no-repeat center;
+		text-indent: -9999px;
+		display: block;
+		height: 16px;
+		width: 25px;
+	}
+
+/* ================================================================== */
+
+/* ===== General (--headerGen) ====================================== */
+
+	
+
+/* ================================================================== */
+
+
+/* ===== General (--headerGen) ====================================== */
+	
+	#notifications_dropdown {
+		width: 365px;
+		right: 184px;
+	}
+	#notifications_dropdown li {
+		padding: 10px;
+		border-bottom: 1px solid #e9e9e9;
+	}
+	#notifications_dropdown li:hover {
+		background-color: #f8f8f8;
+	}
+	#notifications_dropdown img {
+		padding: 0;
+	}
+	#notifications_dropdown .avatar_holder {
+		margin-right: 6px;
+		display: inline-block;
+	}
+	#notifications_dropdown img.avatar {
+		max-width: 40px;
+		max-height: 40px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+	}
+	#notifications_dropdown .notification_holder {
+		max-width: 292px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	#notifications_dropdown .notification {
+		max-width: 242px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	#notifications_dropdown .read {
+		font-size: 11px;
+		margin-top: 5px;
+		margin-left: 5px;
+		display: block;
+		text-align: right;
+	}
+	#notifications_dropdown .read.notification_post_image_container {
+		margin-top: 0;
+		float: none;
+		display: inline-block;
+	}
+	#notifications_dropdown .follow_box {
+		margin-top: 5px;
+		display: block;
+	}
+	#notifications_dropdown .request_status.blueButton,
+	#notifications_dropdown .followedButton {
+		height: 23px;
+		min-width: 75px;
+		padding: 4px 10px;
+		border-radius: 5px;
+		font-size: 12px;
+	}
+	#notifications_dropdown .link-popup img {
+		height: 40px;
+		moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px
+	}
+	#notifications_dropdown .converted_time {
+		color: #C0C0C0;
+		font-size: 11px;
+		display: block;
+		margin-top: 5px;
+	}
+
+/* Zorbas CSS */
+
+#notifications_dropdown .notification a:hover {
+	text-decoration: underline;
+	}
+	
+#notifications_dropdown .notification {
+	width: 245px;
+	margin-right: 5px;
+	line-height: 1.2em;
+	display: inline-block;
+	vertical-align: top;
+}
+	
+#notification_overlay	{
+	position: fixed;
+	z-index: 1041;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: .8;
+	top: 0;
+	display: none;
+}
+#notification_bar	{
+	min-height: 50px;
+	width: 350px;
+	font-size: 15px;
+	background-color: #f5f5f5;
+	color: #656565;
+	padding: 15px;
+	border-radius: 5px;
+	margin-left: -175px;
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	line-height: 1.2em;
+	text-align: center;
+	word-wrap: break-word;
+	position: fixed;
+	top: 50px;
+	left: 50%;
+	z-index: 99999;
+}    

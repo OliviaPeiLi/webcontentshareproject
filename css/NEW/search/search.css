@@ -1,0 +1,284 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		search.css
+    -Description:	Formatting and styling for the Search page
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+
+    --genStyle		General Styling for the Search Results
+	--searchTopics	For the Search Topics, but isn't used currently
+    --sortBy		Sort By menus above the Search Results
+    --numbering		Numbering for the Pagination
+    
+    ================================================================= */
+
+/* ===== General Styling (--genStyle) =============================== */
+
+    #main.search_results {
+	width: 1075px;
+	margin-top: 0;
+    }
+    
+    #main.search_results .messagesContainer {
+    	width: 620px;
+    	display: inline-block;
+    	margin-left: -60px;
+	}
+	
+	#main.search_results  .sidebar_comments {
+	width: 430px;
+    	float: right;
+	}
+	#main.search_results  .sidebar_comments h2 {
+		color: #D0D0D0;
+		margin-bottom: 15px;
+		font-size: 23px;
+		text-align: left;
+	}
+	#main.search_results  .sidebar_comments #folders {
+		width: auto;
+	}
+	#main.search_results  .sidebar_comments #folders .folder {
+		margin-left: 0;
+	}
+    
+    #created_collection_msg {
+	    position: absolute;
+	    z-index:1;
+		left: 50%;
+		width: 630px;
+		margin-left: -315px;
+		background: rgb(252,252,252); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+		padding: 25px;
+		border: 2px solid #909090;
+		border-radius: 7px;
+		top: -40px;
+		color: #656565;
+		font-size: 18px;
+		text-shadow: 1px 1px 0px #FFFFFF;
+    	text-align: center;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+		box-shadow: -5px 5px 6px 2px rgba(10, 10, 10, 0.35);
+	   -moz-box-shadow: -5px 5px 6px 2px rgba(10, 10, 10, 0.35);
+	-webkit-box-shadow: -5px 5px 6px 2px rgba(10, 10, 10, 0.35);
+	}
+	
+	#created_collection_msg a	{
+		color: #08BBE6 !important;
+		font-size: 16px !important;
+	}
+	#created_collection_msg a:hover	{
+		text-decoration: underline;
+	}
+	
+    #created_collection_msg .close {
+	height: 15px;
+	width: 15px;
+	background: url('/images/deleteIcon_b_d.png') no-repeat;
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	z-index: 1;
+	opacity: 0.4;
+    }
+    #created_collection_msg .close:hover {
+	opacity: 0.8;
+    }
+
+    .search_results #folder_contents ul.newsfeed.typeViewTimelineNew {
+	width: auto !important;
+	position: absolute !important;
+	right: -3px;
+	left: -33px;
+    }
+    .search_heading {
+	color: #656565;
+	margin-top: 15px;
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 1px 1px white;
+    }
+    .search_results {
+	min-height: 500px;
+	margin-top: 80px;
+	margin-bottom: 20px;
+    }
+    .search_results h6 {
+	float: left;
+	margin: 0 0 15px 20px;
+	    width: 100% !important;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #E6E6E6;
+	margin-left: 0px !important;
+    }
+    .top_container {
+	height: 37px;
+	border-bottom: 1px solid #E0E0E0;
+	margin-right: auto;
+	margin-bottom: 25px;
+	position: relative;
+		box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+    }
+    #folder_contents.messagesContainer {
+	width: 1045px;
+	padding-left: 0;
+	padding-bottom: 50px;
+	margin-left: -59px;
+	position: relative;
+    }
+    .search_body {
+	min-height: 365px;
+	padding: 8px;
+    }
+    .search_body > ul > li {
+	margin: 10px 0;
+    }
+    .search_body ul > li > div {
+	display:table-cell; 
+	vertical-align: middle;
+    }
+    .search_body > ul > li > div > img {
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin-right: 10px;
+    }
+    
+    /* ----- Search Topics (--searchTopics) ------------------------- */
+    .search_body #search_topics > li div {
+	background-color: #E0E0E0;
+	margin: 5px;
+	margin-left: 0px;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    }
+    .search_body #search_topics > li div a {
+	color: #909090;
+	font-size: 14px;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 11px;
+	padding-right: 11px;
+	text-decoration: none;
+	text-shadow: 1px 1px #F5F5F5;
+    }
+    .search_body #search_topics > li a:hover {
+	color: #cb0000;
+	background: #F0F0F0;
+	border-radius: 2px 0 0 2px !important;
+	-moz-border-radius: 2px 0 0 2px !important;
+	-webkit-border-radius: 2px 0 0 2px !important;
+    }
+
+/* ================================================================== */
+
+/* ===== Sort By (--sortBy) ========================================= */
+
+    #search_sort_by {
+	
+    }
+    #search_sort_by #filter_by_menu_trigger {
+	height: 36px;
+	padding: 10px 10px 11px;
+	text-transform: uppercase;
+    }
+    .search_results #collection_media_filter {
+	display: inline-block;
+	position: relative;
+    }
+    #results_sections #search_sort_by #media_filter_menu {
+	top: 28px;
+	left: -25px;
+	right: auto;
+    }
+    #results_sections #search_sort_by #media_filter_menu .sort_menu_arrow {
+	border-color: transparent transparent #555555 transparent;
+	border-style: solid;
+	border-width: 0px 5px 5px 5px;
+	margin-left: -5px;
+	position: absolute;
+	top: -5px;
+	left: 50%;
+    }
+    #results_sections {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+    }
+    #results_sections #search_sort_by,
+    #results_sections .search_result_drop,
+    #results_sections .search_result_collections,
+    #results_sections .search_result_people {
+	height: 36px;
+	padding: 10px;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: inline-block;
+	cursor: pointer;
+    }
+    #results_sections .search_result_collections:hover,
+    #results_sections .search_result_people:hover {
+	border-bottom: 1px solid #08BBE6;
+    }
+    #results_sections div > a,
+    #results_sections .search_result_middot {
+	color: #D0D0D0;
+	font-size: 12px;
+	text-transform: uppercase;
+    }
+    #results_sections .search_result_middot {
+	padding: 0 3px;
+    }
+    #results_sections .active a:first-of-type {
+	color: #08BBE6;
+    }
+    #results_sections .active a:first-of-type:hover {
+	color: #28DBF6;
+    }
+    #results_sections .search_result_collections:hover a:first-of-type,
+    #results_sections .search_result_people:hover a:first-of-type,
+    #results_sections a:first-of-type:hover {
+	color: #08BBE6;
+    }
+    
+/* ================================================================== */
+
+/* ===== Page Numbering (--numbering) =============================== */
+
+    #search_page_numbers {
+	text-align: center;
+	text-shadow: 1px 1px #FFFFFF;
+	position: relative;
+	top: 30px;
+    }
+    #search_page_numbers a,
+    #search_page_numbers strong {
+	font-size: 14px;
+    }
+    #search_page_numbers strong {
+	font-weight: bold;
+    }
+
+/* ================================================================== */

@@ -1,0 +1,29 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		embed.css
+    -Description:	Basic formatting and styling for embed not
+			handled by folder.css
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --folder			Basic styling for the Embedded Folder
+
+    ================================================================= */
+
+/* ===== Folders (--folder) ========================================= */
+    
+    body {
+        background: none !important;
+    }
+    .folder {
+	margin: 10px !important;
+    }
+
+/* ================================================================== */

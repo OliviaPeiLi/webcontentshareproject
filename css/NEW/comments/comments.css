@@ -1,0 +1,330 @@
+/* ===== Single Comments (--commentSingle) ========================== */
+    
+    .newsfeed_entry_comment {		/* Also used in Home.php, Share_link_popup.php, */
+	display: block;			/* Newsfeed_link_popup.php, Profile.php,        */
+	padding: 6px 2px 6px 3px;	/* Topic_feeds.php, Popup.php, and Custom.js	*/
+	position: relative;
+	margin-left: 14px;
+	margin-bottom: 7px;
+	
+	background: #F5F5F5;
+	border: 1px solid #E0E0E0;
+    }
+    
+    .newsfeed_entry_comment_avatar {
+	float: left;
+    }
+    .comments ul li.newsfeed_entry a,
+    #comments_container ul.home_comments_list li .posted_by_when a,
+    .sidebar_comments > ul > li a,
+    .interests_comments ul.newsfeed li a,
+    #notification_newsfeed li .user_name a,
+    .blockLevel .user_name a,
+    #folder_contents .newsfeed li a,
+    #profile_info #profile_newsfeeds_placeholder li a,
+    .timeline_comments .num_comments {
+        font-weight: bold;
+    }
+
+/* ================================================================== */
+
+/* ===== Comment Options (--commentOptions) ========================= */
+
+    .comments ul li.newsfeed_entry a.close,
+    a.close,
+    #comments_container ul.home_comments_list li a.close,
+    .sidebar_comments > ul > li a.close,
+    .interests_comments ul li a.close,
+    .newsfeed_entry_comment a.close,
+    #notification_newsfeed a.close{
+	width: 15px; 
+	height: 15px;
+	top: 0px;
+	right: 0px;
+	text-indent: -9999px;
+	display: block;
+	background: url('/images/common_sprites.png') no-repeat;
+	background-position: -160px -16px;
+	position: absolute;
+    }
+    .comments ul li.newsfeed_entry a.close:hover,
+    a.close:hover,
+    #comments_container ul.home_comments_list li a.close:hover,
+    .sidebar_comments > ul > li a.close:hover,
+    .interests_comments ul li a.close:hover,
+    .newsfeed_entry_comment a.close:hover,
+    #notification_newsfeed a.close:hover{
+	background-position: -176px -16px;
+    }
+    .newsfeed_entry_comment_options {
+	display: inline-block;
+	clear: both;
+	margin-top: 3px;
+	/*margin-left: 25px;*/
+	margin-left: 0px;
+	vertical-align: middle;
+    }
+    .newsfeed_entry_comment .newsfeed_entry_comment_options {
+	/*width: 88%;*/
+	/*margin-left: 40px;*/
+	height: 12px;
+	/*border-left: 1px solid #BCBCBC;
+	padding-left: 7px;
+	margin-left: 5px;*/  /* Bring back when timestamps are brought back */
+	display: inline-block;
+	vertical-align: top;
+    }
+    .actionButton_text {
+	color: #888888;
+	margin-top: 1px;
+	/*margin-left: 6px;*/
+	font-size: 11px;
+	/*float: left;*/
+    }
+    .comm_count_wrapper,
+    .add_comment_wrapper,
+    .replyComment_wrapper,
+    .view_comments_wrapper,
+    .redrop_wrapper,
+    .edit_wrapper,
+    .up_wrapper,
+    .undo_up_wrapper,
+    .permalink_wrapper {
+	height: 17px;
+	width: 17px;
+	display: inline-block;
+	position: relative;
+	float: left;
+    }
+    /*.edit_wrapper {
+	width: 13px !important;
+    }*/
+    .up_wrapper,
+    .undo_up_wrapper {
+	height: 10px;
+	width: 10px !important; /* The icon is narrower as to help the spacing */
+	
+	margin-top: 2px;
+    }
+    .up_contents,
+    .undo_up_contents {
+	
+    }
+    .comm_count_wrapper {
+	background: url(/images/common_sprites.png) 0 0px no-repeat;
+    }
+    .add_comment_wrapper,
+    .replyComment_wrapper {
+	background: url(/images/common_sprites.png) 0 0px no-repeat;
+    }
+    .view_comments_wrapper {
+	background: url(/images/common_sprites.png) 0 0px no-repeat;
+    }
+    .redrop_wrapper {
+	background: url(/images/common_sprites.png) 0 -128px no-repeat;
+    }
+    .edit_wrapper {
+	background: url(/images/common_sprites.png) -4px -192px no-repeat;
+    }
+    .up_wrapper {
+	background: url(/images/common_sprites.png) -96px -0px no-repeat;
+	margin-right: 2px;
+    }
+    .undo_up_wrapper {
+	background: url(/images/common_sprites.png) -96px -16px no-repeat;
+	margin-right: 2px;
+    }
+    .permalink_wrapper {
+	/*background: url(/images/action_button_sprites3.png) 0 -240px no-repeat;*/
+	height: 16px;
+	width: 16px;
+    }
+    .permalink_wrapper #link_favicon {
+	padding: 0;
+    }
+    .reply_to_comment_lnk {
+    	padding-left: 5px;
+		line-height: 16px;
+	}
+    .comm_count_wrapper .comm_count_contents,
+    .add_comment_wrapper .add_comment_contents,
+    .replyComment_wrapper .replyComment_contents,
+    .view_comments_wrapper .view_comments_contents,
+    .redrop_wrapper .redrop_contents,
+    .edit_wrapper .edit_contents,
+    .up_wrapper .up_contents,
+    .undo_up_wrapper .undo_up_contents,
+    .permalink_wrapper .permalink_contents {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	transition: opacity ease-in 125ms;
+	-moz-transition: opacity ease-in 125ms;
+	-webkit-transition: opacity ease-in 125ms;
+    }
+    .comm_count_wrapper .comm_count_contents {
+	background: url(/images/common_sprites.png) 0 -32px no-repeat;
+    }
+    .add_comment_wrapper .add_comment_contents,
+    .replyComment_wrapper .replyComment_contents {
+	background: url(/images/common_sprites.png) 0 -32px no-repeat;
+    }
+    .view_comments_wrapper .view_comments_contents {
+	background: url(/images/common_sprites.png) 0 -32px no-repeat;
+    }
+    .redrop_wrapper .redrop_contents {
+	background: url(/images/common_sprites.png) 0 -160px no-repeat;
+    }
+    .edit_wrapper .edit_contents {
+	background: url(/images/common_sprites.png) -4px -256px no-repeat;
+    }
+    .up_wrapper .up_contents {
+	background: url(/images/common_sprites.png) -96px -16px no-repeat;
+    }
+    .undo_up_wrapper .undo_up_contents {
+	background: url(/images/common_sprites.png) -96px 0px no-repeat;
+    }
+    .postcard_entry .postcard_comment .up_button .upvote_text,
+    .postcard_entry .postcard_comment .undo_up_button .upvote_text,
+    .newsfeed_entry_comment .up_button .upvote_text,
+    .newsfeed_entry_comment .undo_up_button .upvote_text{
+	/*position: absolute;
+	left: 15px;*/
+	float: left;
+    }
+    .newsfeed_entry_comment_options .middot {
+	color: #A0A0B0;
+	padding: 0 4px;
+	font-size: 14px;
+	line-height: 12px;
+	float: left;
+    }
+    .permalink_wrapper .permalink_contents,
+    #permalinks:hover .permalink_contents {
+	/*background: url(/images/action_button_sprites3.png) 0 -260px no-repeat;*/
+	background: rgba(175,175,175,0.5);
+	border-radius: 3px;
+    }
+    
+    .add_comment_wrapper .add_comment_contents:hover,
+    .replyComment_wrapper .replyComment_contents:hover,
+    .newsfeed_entry_add_comment_lnk:hover .add_comment_contents,
+    .view_comments_wrapper .view_comments_contents:hover,
+    .newsfeed_hide_comments_lnk:hover .view_comments_contents,
+    .newsfeed_view_comments_lnk:hover .view_comments_contents,
+    .redrop_wrapper .redrop_contents:hover,
+    .newsfeed_collect_lnk:hover .redrop_contents,
+    .edit_wrapper .edit_contents:hover,
+    .newsfeed_edit_lnk:hover .edit_contents,
+    .newsfeed_up_lnk:hover .up_contents,
+    .newsfeed_undo_up_lnk:hover .up_contents,
+    .up_wrapper .up_contents:hover,
+    .up_button:hover .up_contents,
+    .undo_up_wrapper .undo_up_contents:hover,
+    .undo_up_button:hover .undo_up_contents,
+    .permalink_wrapper .permalink_contents:hover,
+    #permalinks:hover .permalink_contents {
+	opacity: 1; filter: alpha(opacity=100); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+    
+    #comments_container ul.home_comments_list li div.rate a.add, div.rate a.add,
+    div.newsfeed_entry_comment_options a.add, #newsfeed_link_popup_newcomment_lnk a
+    {
+	/* background: url(/images/comment_u.png) no-repeat left center !important;
+	padding-left: 20px !important; 
+	padding-bottom: 5px;*/
+	cursor: pointer;
+    }
+    /*#comments_container ul.home_comments_list li div.rate a.add:hover, div.rate a.add:hover,
+    div.newsfeed_entry_comment_options a.add:hover, #newsfeed_link_popup_newcomment_lnk a:hover
+    {
+	background: url(/images/comment_d.png) no-repeat left center !important;
+    }*/
+    #newsfeed_link_popup_options .comm_count {
+	/* background: url(/images/comment_count_u.png) no-repeat scroll 1px 2px !important;
+	padding-top: 2px;
+	padding-left: 20px !important;
+	padding-bottom: 5px;*/
+    }
+    
+    /*#comments_container ul.home_comments_list li div.rate a.newsfeed_collect_lnk, div.rate a.newsfeed_collect_lnk,
+    div.newsfeed_entry_comment_options a.newsfeed_collect_lnk, #newsfeed_link_popup_collect_lnk a
+    {
+	background: url(/images/collect_u.png) no-repeat left 2px !important;
+	padding-left: 20px;
+	padding-bottom: 5px;
+    }*/
+    /*#comments_container ul.home_comments_list li div.rate a.newsfeed_collect_lnk:hover, div.rate a.newsfeed_collect_lnk:hover,
+    div.newsfeed_entry_comment_options a.newsfeed_collect_lnk:hover, #newsfeed_link_popup_collect_lnk a:hover
+    {
+	background: url(/images/collect_d.png) no-repeat left 2px !important;
+    }*/
+    /*#comments_container ul.home_comments_list li div.rate a.edit_button, div.rate a.edit_button,
+    div.newsfeed_entry_comment_options a.edit_button, #newsfeed_link_popup_edit_lnk>a
+    {
+	background: url(/images/edit_icon2_u.png) no-repeat left center !important;
+	padding-left: 14px !important;
+	padding-bottom: 5px;
+	margin-top: 0;
+    }*/
+    /*#comments_container ul.home_comments_list li div.rate a.edit_button:hover, div.rate a.edit_button:hover,
+    div.newsfeed_entry_comment_options a.edit_button:hover, #newsfeed_link_popup_edit_lnk>a:hover
+    {
+	background: url(/images/edit_icon2_d.png) no-repeat left center !important;
+    }*/
+    /*#comments_container ul.home_comments_list li div.rate a.hide, div.rate a.hide,
+    div.newsfeed_entry_comment_options a.hide{
+	background: url(/images/hide_u.png) no-repeat left center !important;
+	padding-left: 20px; 
+	padding-bottom: 5px;
+    }*/
+    /*#comments_container ul.home_comments_list li div.rate a.hide:hover, div.rate a.hide:hover,
+    div.newsfeed_entry_comment_options a.hide:hover{
+	background: url(/images/hide_d.png) no-repeat left center !important;
+    }*/
+    #comments_container ul.home_comments_list li div.rate a:hover,
+    div.rate a.up:hover,
+    div.rate a.add:hover,
+    div.rate a.hide:hover,
+    div.newsfeed_entry_comment_options a.up:hover{
+	text-decoration: underline;
+    }
+    .newsfeed_entry_options {
+	visibility: hidden;
+    }
+    .newsfeed_entry_options a,
+    .newsfeed_entry_comment_options a,
+    #newsfeed_link_popup_options a.up,
+    #newsfeed_link_popup_newcomment_lnk>a,
+    #newsfeed_link_popup_options .comm_count,
+    #newsfeed_link_popup_collect_lnk>a,
+    #newsfeed_link_popup_edit_lnk>a
+    {
+	margin-left: 0px !important;
+    }
+    #comments_container ul.home_comments_list li div.rate a,
+    #landing_page_newsfeed ul.home_comments_list li div.rate a, 
+    div.rate a.up,
+    div.rate a.add,
+    div.rate a.hide,
+    div.rate a.edit_button,
+    div.newsfeed_entry_comment_options a.up,
+    div.newsfeed_entry_comment_options a.add,
+    div.newsfeed_entry_comment_options a.hide,
+    div.newsfeed_entry_comment_options a.edit_button,
+    /*#newsfeed_link_popup_options a.up, */
+    /* #newsfeed_link_popup_options .comm_count, */
+    #newsfeed_link_popup_newcomment_lnk>a,
+    #newsfeed_link_popup_collect_lnk>a,
+    #newsfeed_link_popup_edit_lnk>a,
+    .newsfeed_entry_options .newsfeed_collect_lnk {
+	color: #888;
+	font-size: 11px;
+	text-decoration: none !important;
+	font-weight: normal !important;
+    }
+
+/* ================================================================== */

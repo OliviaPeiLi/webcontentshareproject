@@ -1,0 +1,230 @@
+#chatbutton {
+    background-color: #71B8FF;
+    bottom: 10px;
+    color: #FFFFFF;   /*white*/
+    float: left;
+    height: 27px;
+    padding-top: 0;
+    position: fixed;
+    right: 70px;
+    text-align: center;
+    width: 70px;
+}
+#chatbutton:hover {
+    background-color: #71B8FF;
+    bottom: 10px;
+    color: #FFFFFF;   /*white*/
+    float: left;
+    height: 27px;
+    padding-top: 0;
+    position: fixed;
+    right: 70px;
+    text-align: center;
+    width: 70px;
+}
+.active_friend {
+    background-color: #71A0F0;
+    color: #FFFFFF;   /*white*/
+    float: right;
+    font-size: small;
+    height: 25px;
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-top: 5px;
+    position: relative;
+    text-align: left;
+    width: 140px;
+}
+.active_friend:hover {
+    background-color: #71B8FF;
+    color: #F4F4F4;
+    float: right;
+    font-size: small;
+    height: 25px;
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-top: 5px;
+    position: relative;
+    text-align: left;
+    width: 140px;
+}
+.active_friend .close {
+    background: url("images/close.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: none;
+    float: right;
+    height: 25px;
+    padding-right: 0;
+    padding-top: 0;
+    width: 30px;
+}
+
+.active_friend .close:hover {
+    background: url("images/close.png") no-repeat scroll 0 0 transparent;
+    border: 1px solid #ADD8E6;  /*lightblue*/
+    display: none;
+    float: right;
+    height: 25px;
+    padding-right: 0;
+    width: 30px;
+}
+.chatboxlayout {
+    background-color: #71A0F0;
+    bottom: 50px;
+    display: none;
+    height: 250px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    position: fixed;
+    right: 200px;
+    width: 300px;
+}
+.chatboxtitle {
+    background-color: #71A0F0;
+    color: #FFFFFF;   /*white*/
+    float: left;
+    height: 25px;
+    margin-right: 2px;
+    padding-left: 5px;
+    padding-top: 5px;
+    text-align: left;
+    width: 297px;
+}
+.chatboxtitle:hover {
+    background-color: #71B8FF;
+    color: #F4F4F4;
+    float: left;
+    height: 25px;
+    margin-right: 2px;
+    padding-left: 5px;
+    padding-top: 5px;
+    text-align: left;
+    width: 297px;
+}
+.chatboxtitle:hover .close {
+    background: url("images/close.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    float: right;
+    height: 25px;
+    padding-right: 0;
+    padding-top: 0;
+    width: 30px;
+    display: block;
+}
+.chatboxtitle .close:hover {
+    background: url("images/close.png") no-repeat scroll 0 0 transparent;
+    border: 1px solid #ADD8E6;  /*lightblue*/
+    float: right;
+    height: 25px;
+    padding-right: 0;
+    padding-top: 0;
+    width: 30px;
+    display: block;
+}
+.chatboxtitle .close {
+    display: none;
+}
+#chatbox {
+    background-color: #FFFFFF;   /*white*/
+    float: left;
+    font-family: Tahoma;
+    font-size: small;
+    height: 147px;
+    margin-top: 2px;
+    overflow: auto;
+    padding: 10px 20px 10px 5px;
+    width: 275px;
+    word-wrap: break-word;
+}
+.messagebox {
+    background-color: #71B8FF;
+    height: 45px;
+    padding-left: 0;
+}
+#message {
+    float: left;
+    font-family: tahoma;
+    font-size: small;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 1px;
+    resize: none;
+    width: 294px;
+	 overflow: hidden;
+}
+
+#active_friend_layout {
+    bottom: 10px;
+    float: right;
+    position: fixed;
+    right: 200px;
+    width: 900px;
+}
+.buddy_select {
+    background-color: #71B8FF;
+    border: 0 none;
+    color: #FFFFFF;  /*white*/
+    font-family: tahoma;
+    font-size: smaller;
+    height: 40px;
+    margin-left: 5px;
+    padding-top: 0;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: 124px;
+}
+.buddy_select:hover {
+    background-color: #71B8FF;
+    /* border: 1px solid yellow; */
+    border: 1px solid #FF0;
+    color: blue;
+    font-size: smaller;
+    height: 40px;
+    margin-left: 5px;
+    padding-left: 0;
+    padding-top: 0;
+    position: relative;
+    text-align: left;
+    width: 124px;
+}
+#nav {
+    background-color: #71B8FF;
+    bottom: 45px;
+    display: none;
+    position: fixed;
+    right: 10px;
+    width: 150px;
+}
+#nav_title {
+    background-color: #71B8FF;
+    height: 40px;
+    position: relative;
+    width: 130px;
+}
+#nav_title:hover {
+    background-color: #5ECBFF;
+    height: 40px;
+    position: relative;
+    width: 150px;
+}
+#nav_content {
+    background-color: #71B8FF;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 150px;
+}
+#online_toggle {
+    height: 26px;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 26px;
+}
+#sound_toggle {
+    height: 26px;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 26px;
+}

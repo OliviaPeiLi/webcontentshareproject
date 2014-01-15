@@ -1,0 +1,3 @@
+PHPUnit 3.7.21 by Sebastian Bergmann.
+
+Terminate batch job (Y/N)? 

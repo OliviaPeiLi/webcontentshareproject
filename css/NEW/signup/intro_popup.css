@@ -1,0 +1,84 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		intro_popup.css
+    -Description:	Layout and styling for the various intro popups
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant  
+    
+    ----- Anchors ------------------------------------------------------
+
+	--catathon - style relavant to catathon intro popup
+	    
+    ================================================================= */
+
+/*  ===== Catathon popup (--catathon) ======================================== */
+    
+#catathon_intro_popup {
+	color: #444;
+	padding: 10px;
+	transition: margin ease-in 325ms;
+	-moz-transition: margin ease-in 325ms;
+	-webkit-transition: margin ease-in 325ms;
+}
+#catathon_intro_popup .modal-body > .close {
+	background: url('/images/deleteIcon_b_d.png') no-repeat;
+	top: 4px;
+	right: 5px;
+	z-index: 1;
+}
+#catathon_intro_popup .modal-body {
+	padding: 20px;
+	overflow: hidden;
+}
+#catathon_intro_popup .cat_title {
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+}
+#catathon_intro_popup .cat_body_label,
+#catathon_intro_popup .cat_pts_table .cat_pt_col,
+#catathon_intro_popup .cat_pts_table .cat_text_col {
+	font-size: 20px;
+}
+#catathon_intro_popup .cat_body_label {
+	font-weight: bold;
+	margin: 20px 0px 5px 0px;
+}
+#catathon_intro_popup .cat_pts_table {
+	margin: 0px 10px;
+}
+#catathon_intro_popup .cat_pts_table .cat_row {
+	margin: 20px;
+}
+#catathon_intro_popup .cat_pts_table .cat_pt_col {
+	width: 100px;
+	color: #08BBE6;
+	font-weight: bold;
+}
+#catathon_intro_popup .cat_pts_table .cat_text_col {
+	width: 320px;
+}
+#catathon_intro_popup .cat_pts_table .cat_example_col {
+	width: 275px;
+}
+#catathon_intro_popup .cat_pts_table .cat_example_col .cat_example {
+	display: inline-block;
+	font-weight: bold;
+	color: #aaa;
+	font-size: 16px;
+	padding: 0px 20px 5px 20px;
+}
+#catathon_intro_popup .cat_pts_table .cat_row .cat_row_col{
+	vertical-align: top;
+}
+#catathon_intro_popup .cat_pts_table .cat_icon {
+	width: 18px;
+	vertical-align: middle;
+}
+
+

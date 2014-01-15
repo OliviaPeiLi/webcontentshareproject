@@ -1,0 +1,135 @@
+* {
+	font: 14px "HelveticaNeue", Droid Sans, Helvetica, Arial, sans-serif;
+	color: white;
+	text-decoration: none;
+	font-stretch: normal;
+}
+body {
+	margin: 0;
+	float:left;
+	overflow: hidden;
+}
+
+#bar {
+	height: 28px;
+}
+#bar a {
+	float:left;
+	display: block;
+	height: 100%;
+
+	padding: 5px 10px;
+	
+	color: #3D3D3D;
+	font-size: 12px;
+	vertical-align: middle;
+
+	border: 1px solid #B6B6B6;
+	border-left: none;
+	
+	background-color: #FFF;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…Igd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjaGF0MCkiIC8+Cjwvc3ZnPg==);
+	background-image: -moz-linear-gradient(bottom, rgba(16, 18, 16, .1) 0%, rgba(255, 255, 255, .1) 100%);
+	background-image: -o-linear-gradient(bottom, rgba(16, 18, 16, .1) 0%, rgba(255, 255, 255, .1) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgba(16, 18, 16, .1) 0%, rgba(255, 255, 255, .1) 100%);
+	background-image: linear-gradient(bottom, rgba(16, 18, 16, .1) 0%, rgba(255, 255, 255, .1) 100%);
+	        background-clip: padding-box;
+	   -moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+			box-shadow: inset 0 1px 0 #FFF;
+	   -moz-box-shadow: inset 0 1px 0 #fff;
+	-webkit-box-shadow: inset 0 1px 0 #FFF;
+			box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#bar a:hover {
+	background-color: #DFDFDF;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+	background-image: -moz-linear-gradient(bottom, rgba(16, 18, 16, .15) 0%, rgba(255, 255, 255, .15) 100%);
+	background-image: -o-linear-gradient(bottom, rgba(16, 18, 16, .15) 0%, rgba(255, 255, 255, .15) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgba(16, 18, 16, .15) 0%, rgba(255, 255, 255, .15) 100%);
+	background-image: linear-gradient(bottom, rgba(16, 18, 16, .15) 0%, rgba(255, 255, 255, .15) 100%);
+	        box-shadow: inset 0 1px 0 #FFF;
+	   -moz-box-shadow: inset 0 1px 0 #fff;
+	-webkit-box-shadow: inset 0 1px 0 #FFF;
+}
+#bar a.mode_button .ico {
+	height: 18px;
+	background: url('/images/listmanager_sprites.png') no-repeat;
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#bar a.mode_button.image_mode .ico {
+	width: 22px;
+	background-position: -64px -192px;
+}
+#bar a.mode_button.video_mode .ico {
+	width: 20px;
+	background-position: -64px -128px;
+}
+#bar a.mode_button.drop_page .ico {
+	width: 18px;
+	background-position: -64px -64px;
+}
+#bar a.close {
+	padding: 5px;
+}
+#bar a.close .ico {
+	display: block;
+	height: 16px;
+	width: 16px;
+	background: url('/images/common_sprites.png') no-repeat -160px -32px;
+}
+
+#bar a.avatar {
+	padding: 0 1px 1px 1px;
+}
+
+#bar a.first {
+	border: 1px solid #B6B6B6;
+	        border-radius: 3px 0 0 3px;
+	   -moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;	 
+}
+#bar a.last { 
+	        border-radius: 0 3px 3px 0;
+	   -moz-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;	 
+}
+
+/* ======= Tooltips ==================================================== */
+	.ui-tooltip {
+    	position: absolute;
+    	width: 280px;
+		display: none;
+		z-index: 1;
+    }
+    .ui-tooltip-content {
+		border: 1px solid #353535;
+		background-color: #3D3D3D;
+		color: #C0C0C0;
+		font-size: 11px;
+		text-shadow: 1px 1px #4D4D4D;
+		border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+		padding: 5px;
+    }
+    .ui-tooltip .ui-tooltip-tip {
+		width: 0; height: 0;
+		position: absolute;
+		left: 40px; top: -7px;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-bottom: 8px solid #3D3D3D;
+    }
+	.ui-tooltip .ui-tooltip-tip.right_tip {
+		right:40px;
+		left: auto;
+    }
+    .ui-tooltip .ui-tooltip-tip.far_right_tip {
+		right: 0px;
+		left: auto;
+    }

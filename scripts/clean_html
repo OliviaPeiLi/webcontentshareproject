@@ -1,0 +1,236 @@
+<?php
+if (!isset($_SERVER['argv'][1]) || !isset($_SERVER['argv'][2])) {
+	die('Syntax: php clean_html <num:instance> <string:environment> (optional)<int:newsfeed_id>');
+}
+define('BASEPATH', __DIR__.'/');
+define('ENVIRONMENT', $_SERVER['argv'][2]=='production' ? 'production' : 'staging');
+$self_server = true;
+include(BASEPATH.'config.php');				        //Load beanstalkd
+include(BASEPATH.'../application/config/s3.php');   //S3 config
+include(BASEPATH.'../application/config/config.php');   //S3 config
+include(BASEPATH.'../application/config/mimes.php');   //S3 config
+require_once BASEPATH.'../application/modules/fantoon-extensions/libraries/S3.php';  //S3 library
+require_once BASEPATH.'../application/modules/fantoon-extensions/libraries/Scraper.php';  //S3 library
+include(BASEPATH.'db.php');					//Database
+include(BASEPATH.'../application/config/uploads.php');			   //Upload paths config
+
+$s3 = new S3($config);
+
+function get_ext($mime) {
+	global $mimes;
+	foreach($mimes as $ext=>$data) {
+		if (is_array($data) && in_array($mime, $data)) return $ext;
+		elseif ($data == $mime) return $ext;  
+	}
+}
+
+function make_full($url, $src) {
+	$src = trim($src); $url = trim($url);
+	if (strpos($url, '#') !== false) {
+		list($url,) = explode('#', $url, 2);
+	}
+	if (!$src) {
+		return '';
+	} elseif (strpos($src, 'javascript:') === 0) {
+		return '';
+	} elseif (strpos($src,'http') === 0) {
+		return $src;
+	} elseif (substr($src,0,2) == '//') {
+		return 'http:'.$src;
+	} elseif ($src[0] == '/') {
+		$domain = str_replace(array('http://','https://'),'',$url);
+		$domain = strpos($domain,'/') !== false ? substr($domain,0, strpos($domain,'/')) : $domain;
+		return 'http://'.$domain.$src;
+	} elseif (substr($src,0,3) == '../') {
+		$domain = str_replace(array('http://','https://'),'',$url);
+		$domain = str_replace(array('http://','https://'),'',$domain);
+		if (strpos($domain,'/') !== false) {
+			list($domain, $path) = explode('/',$domain, 2);
+			$path = trim($path, '/');
+		} else {
+			$path = '';
+		}
+		
+		while (substr($src,0,3) == '../') {
+			$path = substr($path, 0, strrpos($path, '/'));
+			$src = substr($src, 3);
+		}
+		return 'http://'.$domain.'/'.$path.'/'.$src;
+	} else {
+		$domain = str_replace(array('http://','https://'),'',$url);
+		$domain = strpos($domain, '/') !== false ? substr($domain,0,strrpos($domain,'/')) : $domain;
+		$domain = rtrim($domain, '/').'/';
+		return 'http://'.$domain.$src;
+	}
+}
+
+function update_css_images($link, $newsfeed_id, $contents, & $copied_images) {
+	global $config;
+	preg_match_all('#url\((.*?)\)#msi', $contents, $matches);
+	foreach($matches[0] as $key=>$match) {
+		$url = trim(trim(trim($matches[1][$key], '"\' '), '"\' '), '"\' ');
+		if (strpos($url, 'http') === 0 || strpos($url, '//') === 0 || strpos($url, 'data:image') === 0) {
+			continue; //do not copy absolute links - they are probably ads or other third party shit
+		}
+		$url = make_full($link, $url);
+		if (isset($copied_images[$url])) {
+			$newfilename = $copied_images[$url];
+		} else {
+			$info = getimagesize($url);
+			$ext = get_ext($info['mime']);
+			if (!$ext) continue;
+			$newfilename = uniqid().'.'.$ext;
+			$file_contents = file_get_contents($url);
+			
+			if ( ! S3::putObject($file_contents, $config['s3_bucket'], 'uploads/screenshots/drop-'.$newsfeed_id.'/'.$newfilename, S3::ACL_PUBLIC_READ, array(), $info['mime'])) {
+		    	echo "Could not upload file: ".$matches[1][$key]."\r\n";
+		    	continue;	
+			}
+			echo '    '.$matches[1][$key]." replaced \r\n";
+			$copied_images[$url] = $newfilename;
+		}
+		$contents = str_replace($match, str_replace($matches[1][$key], $newfilename, $match), $contents);
+	}
+	return $contents;
+}
+
+function doJob($data, $config) {
+	$contents = file_get_contents(str_replace('https', 'http', $config['s3_url']).'/uploads/screenshots/drop-'.$data->newsfeed_id.'/index.php');
+	$link = $data->link;
+	$contents = Scraper::clean_html($contents, $link);
+
+	//download css
+	$copied_images = array();
+	preg_match_all('#<link[^>]*type="text/css"[^>]*href="(.*?)"|<link[^>]href="(.*?)"[^>]*type="text/css"#msi', $contents, $matches);
+	foreach($matches[0] as $key=>$match) {
+		$matches[1][$key] = $matches[1][$key] ? $matches[1][$key] : $matches[2][$key];
+		$newfilename = uniqid().'.css';
+		
+		if (strpos($matches[1][$key], 'http') === 0 || strpos($matches[1][$key], '//') === 0) {
+			continue; //do not copy absolute links - they are probably ads or other third party shit
+		}
+		$url = make_full($link, $matches[1][$key]);
+		$file_contents = file_get_contents($url);
+		
+		$file_contents = update_css_images($url, $data->newsfeed_id, $file_contents, $copied_images);
+		
+		if ( ! S3::putObject($file_contents, $config['s3_bucket'], 'uploads/screenshots/drop-'.$data->newsfeed_id.'/'.$newfilename, S3::ACL_PUBLIC_READ, array(), 'text/css')) {
+	    	echo "Could not upload file: ".$matches[1][$key]."\r\n";
+	    	continue;
+		}
+		$contents = str_replace($match, str_replace($matches[1][$key], $newfilename, $match), $contents);
+		echo $matches[1][$key]." replaced \r\n";
+	}
+
+	//download js
+	preg_match_all('#<script[^>]*type="text/javascript" src="(.*?)"#msi', $contents, $matches);
+	foreach($matches[0] as $key=>$match) {
+		$newfilename = uniqid().'.js';
+		
+		if (strpos($matches[1][$key], 'http') === 0 || strpos($matches[1][$key], '//') === 0) {
+			continue; //do not copy absolute links - they are probably ads or other third party shit
+		}
+		$url = make_full($link, $matches[1][$key]);
+		$file_contents = file_get_contents($url);
+		
+		if ( ! S3::putObject($file_contents, $config['s3_bucket'], 'uploads/screenshots/drop-'.$data->newsfeed_id.'/'.$newfilename, S3::ACL_PUBLIC_READ, array(), 'application/x-javascript')) {
+	    	echo "Could not upload file: ".$matches[1][$key]."\r\n";
+	    	continue;
+		}
+		$contents = str_replace($match, str_replace($matches[1][$key], $newfilename, $match), $contents);
+		echo $matches[1][$key]." replaced \r\n";
+	}
+
+	//download images
+	preg_match_all('#<img[^>]*src="(.*?)"|<input[^>]type="image"[^>]src="(.*?)"#msi', $contents, $matches);
+	foreach($matches[0] as $key=>$match) {
+		$matches[1][$key] = $matches[1][$key] ? $matches[1][$key] : $matches[2][$key]; 
+		if (strpos($matches[1][$key], 'http') === 0 || strpos($matches[1][$key], '//') === 0 || strpos($matches[1][$key], 'data:image') === 0) {
+			continue; //do not copy absolute links - they are probably ads or other third party shit
+		}
+		$url = make_full($link, $matches[1][$key]);
+		if (isset($copied_images[$url])) {
+			$newfilename = $copied_images[$url];
+		} else {
+			$info = getimagesize($url);
+			$ext = get_ext($info['mime']);
+			if (!$ext) continue;
+			$newfilename = uniqid().'.'.$ext;
+			$file_contents = file_get_contents($url);
+			
+			if ( ! S3::putObject($file_contents, $config['s3_bucket'], 'uploads/screenshots/drop-'.$data->newsfeed_id.'/'.$newfilename, S3::ACL_PUBLIC_READ, array(), $info['mime'])) {
+		    	echo "Could not upload file: ".$matches[1][$key]."\r\n";
+		    	continue;	
+			}
+			echo $matches[1][$key]." replaced \r\n";
+			$copied_images[$url] = $newfilename;
+		}
+		$contents = str_replace($match, str_replace($matches[1][$key], $newfilename, $match), $contents);
+	}
+
+	if ( ! S3::putObject($contents, $config['s3_bucket'], 'uploads/screenshots/drop-'.$data->newsfeed_id.'/index_updated.php', S3::ACL_PUBLIC_READ, array(), 'text/html')) {
+    	echo "Could not upload file: ".$matches[1][$key]."\r\n";
+    	continue;
+	}
+	echo "\r\nReady";
+}
+
+if (isset($_SERVER['argv'][3])) {
+	//For testing purposes
+	$newsfeed_id = $_SERVER['argv'][3];
+	$res = mysql_pquery("SELECT link_url FROM newsfeed WHERE newsfeed_id = ".$newsfeed_id);
+	$row = mysql_fetch_object($res);
+	echo "Testing with: ".$newsfeed_id." ".$row->link_url."\r\n";
+	$data = json_decode(json_encode(array(
+				'newsfeed_id' => $newsfeed_id,
+				'link' => $row->link_url
+			)));
+	doJob($data, $config);
+} else {
+	echo "Watch: cl-bm-".ENVIRONMENT."\r\n";
+	$pheanstalk->watch("cl-bm-".ENVIRONMENT)->ignore("default");
+	
+	while(1) {
+		$start_time = time();
+		//Get a job to do
+		$job = $pheanstalk->reserve();
+		if (!$job) {
+			//print_r($job, $config);
+			continue;
+		} else {
+			$result = array();
+			try {
+				$job_id = $job->getId();
+				$started = time();
+				echo "Starting job: ".$job_id."\r\n";
+				if (!mysql_pquery("UPDATE beanstalk_jobs SET started_at = now() WHERE job_id = ".$job_id." AND type = 'cl-bm'")) {
+					throw new Exception( 'MySql error: ' . mysql_error() );
+				}
+		
+				$data = json_decode($job->getData());
+				//Do the job
+				$result['status'] = true;
+				
+				doJob($data, $config);
+			} catch(Exception $e) {
+				$result['status'] = false;
+				$result['error'] = $e->getMessage();
+			}
+			
+			if (!mysql_pquery("UPDATE beanstalk_jobs SET started_at = '".date('Y-m-d H:i:s', $started)."', finished_at = now() WHERE job_id = ".$job_id." AND type = 'cl-bm'")) {
+				throw new Exception( 'MySql error: ' . mysql_error() );
+			}
+			if (!$pheanstalk->delete($job)) {
+				$result['status'] = false;
+				$result['error'] = 'Cannot remove job';
+			}
+
+			$end_time = time();
+			$duration = $end_time-$start_time;
+			$result['duration'] = $duration;
+			$result['date'] = date('Y-m-d H:i:s');
+				
+			echo json_encode($result),"\n";
+		}
+	}
+}

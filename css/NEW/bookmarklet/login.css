@@ -1,0 +1,242 @@
+#login {
+	top: 30px;
+}
+body {
+	margin: 0;
+	overflow: hidden;
+}
+#login * {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight:300;
+	font-stretch:normal;
+}
+a {
+	text-decoration: none;
+	color: #08BBE6;
+}
+a:hover {
+	color: #28DBF6;
+}
+
+.form_row.login a {
+	display:inline-block;
+	width: 30%;
+	font-size: 10px;
+	margin-left: 3px;
+}
+.form_row.login input {
+	float: right;
+}
+
+.form_row.external-login {
+	color: #808080;
+	padding-top: 5px;
+	font-size: 11px;
+}
+.clipboard-popup .error {
+	color: #FF0000;
+	font-size: 12px;
+	font-weight: bold !important;
+	margin-left: 3px;
+	width: 315px;
+}
+
+/** =============== Form styling ===============================*/
+#login_logoContainer {
+	margin: 30px auto;
+	text-align: center;
+}
+#login_logoImage {
+	height: 51px;
+	width: 171px;
+	background: url(/images/bookmarklet/fandropHeaderLogo_new.png) no-repeat;
+	display: inline-block;
+}
+.form_row {
+	font: 12px 'lucida grande', helvetica, arial, sans-serif;
+	padding: 7px 0;
+}
+.form_row.login {
+	
+}
+.form_row input {
+	padding: 9px 10px;
+	color: #666;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.form_row input[type=text],
+.form_row input[type=password] {
+	width: 300px;
+	background: #F5F5F5;
+	font-size: 18px;
+}
+.form_row.external-login {
+	padding: 0;
+}
+#provider_twitter_link,
+#provider_twitter_link span,
+#facebook_login_button_header,
+#facebook_login_button_header span {
+	background: url('/images/login_button_sprites.png') no-repeat;
+}
+#provider_twitter_link,
+#facebook_login_button_header {
+	height: 60px;
+	width: 278px;
+	display: inline-block;
+}
+#facebook_login_button_header {
+	background-position: 0 0;
+}
+#provider_twitter_link,
+#provider_twitter_link span {
+	background-position: 0 -65px;
+}
+#facebook_login_button_header.loading span,
+#provider_twitter_link.loading span {
+	background: rgba(255,255,255,.75) url('/images/loading_icons/loading_basic.gif') no-repeat;
+	background-position: 240px 26px !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	cursor: default;
+}
+#facebook_login_button_header.loading,
+#provider_twitter_link.loading {
+	position: relative;
+}
+.form_row .blue_btn {
+	line-height: 20px;
+	color: white;
+    text-shadow: 1px 1px #73A6FC;
+    padding: 41px 22px;
+    border: 0px;
+	font-size: 20px;
+	letter-spacing: 2px;
+    cursor: pointer;
+    /*Experimental Rounding*/
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+    /*Experimental Shadow*/
+    box-shadow: 0 1px 4px 0px rgba(75,75,75,0.5);
+    -moz-box-shadow: 0 1px 4px 0px rgba(75,75,75,0.5);
+    -webkit-box-shadow: 0 1px 4px 0px rgba(75,75,75,0.5);
+	/* Background */
+	background: rgb(41,171,226); /* Old browsers */
+	/*background: -moz-linear-gradient(top, rgba(41,171,226,1) 0%, rgba(0,113,188,1) 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(41,171,226,1)), color-stop(100%,rgba(0,113,188,1))); /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* IE10+ */
+	/*background: linear-gradient(to bottom, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29abe2', endColorstr='#0071bc',GradientType=0 ); /* IE6-9 */
+}
+.form_row .blue_btn:hover {
+	background: rgb(47,195,249); /* Old browsers */
+	/*background: -moz-linear-gradient(top, rgba(47,195,249,1) 0%, rgba(0,134,211,1) 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(47,195,249,1)), color-stop(100%,rgba(0,134,211,1))); /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* IE10+ */
+	/*background: linear-gradient(to bottom, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fc3f9', endColorstr='#0086d3',GradientType=0 ); /* IE6-9 */
+	color: #FFFFFF;
+}
+
+/** =============== Popup Styling ============================== */
+
+	.clipboard-popup {
+		position: absolute;
+		max-height: 80%;
+		max-width: 99%;
+
+		padding: 0 10px 10px 10px;
+	
+		background: #FFFFFF;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666666), to(#333333));/**/
+		background-image: -webkit-linear-gradient(top, #666666, #333333); /**/
+		background-image: -moz-linear-gradient(top, #666666, #333333);/**/
+		background-image: -ms-linear-gradient(top, #666666, #333333);/**/
+		background-image: -o-linear-gradient(top, #666666, #333333);/**/
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#666666, endColorstr=#333333);/**/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#666666, endColorstr=#333333)";/**/
+		
+		border: 1px solid #333;
+		border-radius: 0 0 7px 7px; -moz-border-radius: 0 0 7px 7px; -webkit-border-radius: 0 0 7px 7px;
+	
+		box-shadow: 0 3px 10px rgba(34, 25, 25, 0.4);
+		-moz-box-shadow: 0 3px 10px rgba(34, 25, 25, 0.4);
+		-webkit-box-shadow: 0 3px 10px rgba(34, 25, 25, 0.4);
+		opacity: 1; filter:Alpha(Opacity=100);
+		z-index: 2147483647;
+	}
+	
+	.clipboard-popup .clipboard-popup-header {
+		position: absolute; top: -29px; left: -1px;
+		background: #666666;
+		width: 98%;
+		height: 19px;
+		padding: 7px 0 2px 2%;
+		border: 1px solid #333;
+		border-bottom: none;
+		border-radius: 7px 7px 0 0; -moz-border-radius: 7px 7px 0 0; -webkit-border-radius: 7px 7px 0 0;
+		margin: 0;
+	}
+	.clipboard-popup .loginLeft,
+	.clipboard-popup .loginRight {
+		display: inline-block;
+		vertical-align: top;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.clipboard-popup .loginLeft {
+		min-height: 150px;
+		width: 320px;
+		padding: 5px 20px 10px;
+		border-right: 1px solid #C0C0C0;
+	}
+	.clipboard-popup .loginRight {
+		width: 510px;
+		padding: 5px 20px 5px 25px;
+	}
+	.clipboard-popup .loginRight .emailPassword,
+	.clipboard-popup .loginRight .loginButton {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.clipboard-popup .loginRight .emailPassword {
+		margin-right: 25px;
+	}
+	.clipboard-popup .forgotPass {
+		font-size: 16px;
+	}
+	.clipboard-popup .loginRight .loginButton {
+		vertical-align: top;
+	}
+	.clipboard-popup .clipboard-popup-content {
+		min-width: 835px;
+		position: relative;
+		background: #FFFFFF;
+		
+		padding: 5px;
+		border: 1px solid #333;
+		border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	
+	.clipboard-popup .clipboard-popup-close {
+		display: block;
+		width: 25px; height: 25px;
+		position:absolute;
+		right: -1px; top: -29px;
+		background: url('/images/bookmarklet/close_black.png') center no-repeat;
+		border-radius: 0 7px 0 0; -moz-border-radius: 0 7px 0 0; -webkit-border-radius: 0 7px 0 0;
+	}
+	.clipboard-popup .clipboard-popup-close:hover {
+		background-color: #D0D0D0;
+	}   

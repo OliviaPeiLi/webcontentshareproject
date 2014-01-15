@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation Plugin</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css"/>
+	<link href="css/popup_errors.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+	<script type="text/javascript" src="js/popup_errors.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('form').validate();
+		})
+	</script>
+</head>
+<body>
+	<form action="#" method="post" id="test_form_1">
+		<fieldset>
+			<legend>Form validation plugin (errors displayed inline)</legend>
+			<dl>
+				<dd class="form_row">
+					<label for="name">Username <small>(required)</small></label>
+					<input 
+						type="text" 
+						name="name"
+						value="" 
+						data-validate="required|maxlength" 
+						data-error-required="Name can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="name">Username <small>(required - unique)</small></label>
+					<input 
+						type="text" 
+						name="name"
+						value="" 
+						maxlength="10"
+						data-validate="required|maxlength|unique"
+						data-unique-url="/opensource/validation/data/get_unique.php?q="
+						data-error-unique="Username should be unique"
+						data-error-required="Name can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+						<span class="loading"></span>
+					<span class="error"></span>
+				</dd>				
+				<dd class="form_row">
+					<label for="name">URL <small>(required)</small></label>
+					<input 
+						type="text" 
+						name="name" 
+						value="" 
+						data-validate="required|url" 
+						data-error-url="Invalid Url" 
+						data-error-required="Url can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+					<span class="error"></span>
+				</dd>				
+				<dd class="form_row">
+					<label for="name">Name <small>(required)</small></label>
+					<input 
+						type="text" 
+						name="name" 
+						value="" 
+						data-validate="required|maxlength" 
+						data-error-required="Name can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="email">Email <small>(required)</small></label>
+					<input 
+						type="text" 
+						name="email" 
+						value="" 
+						data-validate="required|email|unique" 
+						data-unique-url="/opensource/validation/data/get_unique_email.php?q="
+						data-error-unique="Email is already registered"
+						data-error-email="You have to provide a valid email"
+						data-error-required="Email can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+					<span class="score"><span></span></span>
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="password">Password <small>(required)</small></label>
+					<input 
+						type="password" 
+						name="password" 
+						value=""
+						minlength="6"
+						autocomplete="off" 
+						data-validate="required|password|minlength" 
+						minlength="6" 
+						data-error-confirm="Passwords don't match." 
+						data-error-required="Password can't be blank." 
+						data-error-minlength="Password must be at least 6 characters." 
+						data-error-password="Your password is too obvious." 
+						data-password-ok="Your password is okay!" 
+						data-password-weak="Your password could be more secure." 
+						data-password-perfect="Your password is perfect!" />
+
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="password">Confirm Password <small>(required)</small></label>
+					<input 
+						type="password" 
+						name="re-password" 
+						value=""
+						minlength="6"
+						autocomplete="off" 
+						data-validate="required|password|minlength|confirm" 
+						data-error-confirm="Passwords don't match." 
+						data-error-required="Confirm password can't be blank." 
+						data-error-minlength="Confirm password must be at least 6 characters." 
+						data-error-password="Your password is too obvious." 
+						data-password-ok="Your password is okay!" 
+						data-password-weak="Your password could be more secure." 
+						data-password-perfect="Your password is perfect!" />
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="textarea_with_limit">Write some description <small>(required)</small></label>
+					<textarea 
+						name="description"
+						id="textarea_with_limit"
+						rows="3" 
+						cols="67" 
+						maxlength="150" 
+						data-validate="required|maxlength" 
+						data-error-required="The Description cannot be blank" 
+					></textarea>
+					<span class="textLimit">150</span>
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="textarea_with_fixed_limit">Write some description <small>(required)</small></label>
+					<textarea 
+						name="description_2"
+						id="textarea_with_fixed_limit"
+						rows="3" 
+						cols="67" 
+						data-maxlength="150" 
+						data-validate="required|maxlength" 
+						data-error-required="The Description cannot be blank" 
+					></textarea>
+					<span class="textLimit">150</span>
+					<span class="error"></span>
+				</dd>				
+				<dd>
+					<input type="submit" name="submit" value="Submit Form" />
+				</dd>
+			</dl>
+		</fieldset>
+	</form>
+	<br /><br />
+	<form action="#" method="post" id="test_form_2">
+		<fieldset>
+			<legend>Form validation plugin (errors displayed in popup)</legend>
+			<dl>
+				<dd class="form_row">
+					<label for="name">Username <small>(required)</small></label>
+					<input 
+						type="text" 
+						name="name"
+						value=""
+						data-error="popup"
+						data-validate="required|maxlength" 
+						data-error-required="Name can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="name">URL <small>(required)</small></label>
+					<input 
+						type="text" 
+						name="name" 
+						value="" 
+						data-error="popup"
+						data-validate="required|url" 
+						data-error-url="Invalid Url" 
+						data-error-required="Url can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+					<span class="error"></span>
+				</dd>				
+				<dd class="form_row">
+					<label for="name">Name <small>(required)</small></label>
+					<input 
+						type="text" 
+						name="name" 
+						value="" 
+						data-error="popup"
+						data-validate="required|maxlength" 
+						data-error-required="Name can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="email">Email <small>(required)</small></label>
+					<input 
+						type="text" 
+						name="email" 
+						value="" 
+						data-error="popup"
+						data-validate="required|email|unique"
+						data-unique-url="/opensource/validation/data/get_unique_email.php?q="
+						data-error-unique="Email is already registered"
+						data-error-email="You have to provide a valid email"
+						data-error-required="Email can't be empty" 
+						data-error-maxlength="You have reached maximum of allowed length" />
+					<span class="score"><span></span></span>
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="password">Password <small>(required)</small></label>
+					<input 
+						type="password" 
+						name="password" 
+						value=""
+						minlength="6"
+						autocomplete="off" 
+						data-validate="required|password|minlength" 
+						minlength="6" 
+						data-error="popup"
+						data-error-confirm="Passwords don't match." 
+						data-error-required="Password can't be blank." 
+						data-error-minlength="Password must be at least 6 characters." 
+						data-error-password="Your password is too obvious." 
+						data-password-ok="Your password is okay!" 
+						data-password-weak="Your password could be more secure." 
+						data-password-perfect="Your password is perfect!" />
+
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="password">Confirm Password <small>(required)</small></label>
+					<input 
+						type="password" 
+						name="re-password" 
+						value=""
+						minlength="6"
+						autocomplete="off" 
+						data-validate="required|password|minlength|confirm" 
+						minlength="6" 
+						data-error="popup"
+						data-error-confirm="Passwords don't match." 
+						data-error-required="Confirm password can't be blank." 
+						data-error-minlength="Confirm password must be at least 6 characters." 
+						data-error-password="Your password is too obvious." 
+						data-password-ok="Your password is okay!" 
+						data-password-weak="Your password could be more secure." 
+						data-password-perfect="Your password is perfect!" />
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="textarea_with_limit">Write some description <small>(required)</small></label>
+					<textarea 
+						rows="3" 
+						cols="67" 
+						maxlength="150" 
+						data-error="popup"
+						id="textarea_with_limit" 
+						data-validate="required|maxlength" 
+						data-error-required="The Description cannot be blank" 
+						name="description"></textarea>
+					<span class="textLimit">150</span>
+					<span class="error"></span>
+				</dd>
+				<dd class="form_row">
+					<label for="textarea_with_fixed_limit">Write some description <small>(required)</small></label>
+					<textarea 
+						name="description_2"
+						id="textarea_with_fixed_limit"
+						rows="3" 
+						cols="67" 
+						data-error="popup"
+						data-maxlength="150" 
+						data-validate="required|maxlength" 
+						data-error-required="The Description2 cannot be blank" 
+					></textarea>
+					<span class="textLimit">150</span>
+					<span class="error"></span>
+				</dd>				
+				<dd>
+					<input type="submit" name="submit" value="Submit Form" />
+				</dd>
+			</dl>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,312 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		full_scraper.css
+    -Description:	Basic formatting and styling for the Full Scraper
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Geno Genov & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyle			General Style for the Drop Page
+    --topSide			
+    
+    ================================================================= */
+
+
+/*  ===== General Style (--genStyle) ================================ */
+
+/** Style definitions form full scraper page - they should be separated from internal scraper logic **/
+	#full_scraper {
+		width: 510px;
+		background: #FFFFFF;
+		margin: 120px auto 45px;
+		border-radius: 10px;
+				box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	}
+	#full_scraper .scraper_header {
+		padding: 25px 35px;
+		border-bottom: 3px solid #D0D0D0;
+	}
+	#full_scraper .scraper_headContainer {
+		margin-bottom: 20px;
+	}
+	#full_scraper .scraper_mainIcon {
+		height: 28px;
+		width: 50px;
+		background: url('/images/profile_sprites.png') 0px -160px no-repeat;
+		display: inline-block;
+		margin-right: 13px;
+	}
+	#full_scraper .scraper_header h1 {
+		display: inline-block;
+	}
+	#full_scraper .scraper_header .token-input-token-fd_dropdown {
+		background-position: 320px -480px;
+	}
+	#full_scraper .type_to_add {
+		padding: 25px 35px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#full_scraper .type_to_add h2 {
+		margin-bottom: 20px;
+	}
+	#full_scraper .type_to_add li.mode_button {
+		/*width: 107px;*/
+		display: inline-block;
+		text-align: center;
+	}
+	#full_scraper .type_to_add .vert-split {
+		height: 50px;
+		border-right: 1px solid #C0C0C0;
+		display: inline-block;
+	}
+	#full_scraper .type_to_add li a {
+		width: 103px;
+		color: #656565;
+		display: inline-block;
+				transition: ease-in 128ms;
+		   -moz-transition: ease-in 128ms;
+		-webkit-transition: ease-in 128ms;
+	}
+	#full_scraper .type_to_add li a:hover {
+		background: #EAEAEA;
+	}
+	#full_scraper .type_to_add .ico {
+		display: block;
+		margin: 10px auto 5px;
+		width: 36px;
+		height: 36px;
+		background: url('/images/internalscraperIcons.png') no-repeat top left;
+		border-radius: 8px;
+	}
+	
+	#full_scraper .type_to_add .ico.image {
+		background-color: #48C441;
+		background-position: 6px 6px;
+	}
+	#full_scraper .type_to_add .ico.url {
+		background-color: #70C0F0;
+		background-position: 6px -23px;
+	}
+	#full_scraper .type_to_add .ico.video {
+		background-color: #9837BC;
+		background-position: 6px -52px;
+	}
+	#full_scraper .type_to_add .ico.text {
+		background-color: #939598;
+		background-position: 6px -81px;
+	}
+	#full_scraper .type_to_add .ico.RSS {
+		background-color: #F05A28;
+		background-position: 6px -106px;
+	}
+	#full_scraper .type_to_add strong {
+		width: 100%;
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	#full_scraper_templates {
+		display: none;
+	}
+	
+	dt {
+		font-size: 18px;
+		display: block;
+		color: #fff;
+	}
+	
+	#drops_elements form {
+		position: relative;
+		padding-bottom: 30px;
+	}
+
+	#drops_elements form div.image_preview	{
+		position: absolute;
+		right: 25px;
+		top: 57px;
+		border: 4px solid #BCBCBC;	
+		width: 165px;
+		height: 165px;
+	}
+
+	#drops_elements form div.image_preview img.screenshot_template	{
+		width: 165px;
+		padding: 0;
+	}	
+
+	#drops_elements form:nth-of-type(n+2) {
+		margin-top: 20px;
+	}
+	dt.titleBanner {
+		padding: 5px 35px;
+		margin-bottom: 25px;
+		position: relative;
+	}
+	dt.image {
+		background: #48C441;
+	}
+	dt.video {
+		background: #9837BC;
+	}
+	dt.url {
+		background: #F05A28;
+	}
+	dt.text {
+		background: #939598;
+	}
+	dt.titleBanner .close {
+		background-position: -160px -64px;
+		top: 7px;
+		right: 7px;
+	}
+	dt.titleBanner .close:hover {
+		background-position: -160px -64px;
+	}
+	#drops_elements form.scraper_template dd {
+		padding: 0 25px 5px;
+	}
+	#drops_elements form.scraper_template dd.submit_buttons {
+		padding-top: 10px;
+		padding-bottom: 25px;
+	}
+	#drops_elements form.scraper_template dd.submit_buttons .cancel_button {
+		margin-right: 10px;
+	}
+	#drops_elements form.scraper_template textarea {
+		width: 100%;
+	    resize: none;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#drops_elements form.scraper_template .textLimit {
+		width: 100%;
+		margin-top: 5px;
+		display: inline-block;
+		text-align: left;
+	}
+	#drops_elements form .halfwidth	{
+		max-width: 60%;
+	}
+	#drops_elements form dd.js_image_upload .hidden_upload {
+		max-width: 100%;
+		overflow: visible;
+		margin-bottom: 5px;
+	}
+	#drops_elements form dd.js_image_upload .hidden_upload:hover .upload_img_filename {
+		background: rgb(47,195,249);
+	}
+	#drops_elements form dd.js_image_upload .hidden_upload .upload_img_filename {
+		height: 23px;
+		padding: 7px 25px 6px;
+		text-shadow: 1px 1px #39BBF2;
+		font-size: 16px;
+		line-height: 23px;
+	}
+	#drops_elements form dd.js_url_upload {
+		display: none;
+		width: 265px;
+	}
+	#drops_elements form dd.js_url_upload label {
+		margin-bottom: 5px;
+		display: block;
+	}
+	
+	#drops_elements form.scraper_template dd.error {
+		font-size: 14px;
+		color: red;
+		padding: 5px 10px;
+		display: none;
+	}
+	
+	#drops_elements form.scraper_template dd.success {
+		font-size: 14px;
+		color: green;
+		padding: 0 25px 100px 20px;
+		display: none;
+	}
+	#drops_elements form.scraper_template.upload_image dd.success {
+		padding-bottom: 185px;
+	}
+	#drops_elements form.scraper_template.add_url dd.success,
+	#drops_elements form.scraper_template.add_video dd.success {
+		padding-bottom: 162px;
+	}
+	#drops_elements form.scraper_template.add_text dd.success {
+		padding-bottom: 207px;
+	}
+	#drops_elements .form_row	{
+		box-sizing: none;
+	}
+	#drops_elements form.scraper_template.upload_image textarea,
+	#drops_elements form.scraper_template.add_video textarea {
+		width: 240px;
+	}
+
+	#drops_elements	.submit_all {
+		border-top: 1px solid silver;
+		padding: 20px 20px;
+		text-align: right;		
+		margin-top: 20px;
+		display: none;
+	}
+
+	#drops_elements form.scraper_template textarea {
+		width: 410px;
+	}
+
+	#drops_elements form.scraper_template .preloaders img {
+		display: none;
+		/*float: right;*/
+		margin-top: 5px;
+	}
+
+	#drops_elements div.error	{
+		display: none;
+	}
+
+	#drops_elements input.redroping	{
+		opacity: 0.6;
+	}
+
+	#drops_elements div.image_preview	{
+		background-size: 100% !important;
+		background-repeat: no-repeat !important;
+		background-position: center !important;
+		display: block;		
+	}
+
+	#drops_elements form.add_video textarea.with_preloader	{
+		width: 210px;
+	}
+
+	#drops_elements .hidden_upload input {
+		font-size: 1px !important;;
+		float: left;
+	}
+
+	#drops_elements form.upload_image span.preloaders,
+	#drops_elements form.add_video span.preloaders  {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -26px;
+		margin-left: -18px;
+	}
+
+
+	#drops_elements .status_ok	{
+		margin-left: 5px;
+		margin-top: 10px;		
+	}

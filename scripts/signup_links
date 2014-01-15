@@ -1,0 +1,183 @@
+<?php
+if (!isset($_SERVER['argv'][1])) {
+	die('Syntax: php test_ff.php <num:instance>');
+}
+if(strpos(__DIR__, '/home/fandrop/') !== false) {
+   	define('ENVIRONMENT', 'production');
+}elseif(strpos(__DIR__, '/home/test.fandrop/') !== false){
+	define('ENVIRONMENT', 'staging');
+}else{
+   	define('ENVIRONMENT', 'development');
+}
+
+if(ENVIRONMENT == 'staging'){
+	define('ROOTPATH', '/home/test.fandrop');
+	define('BASEPATH', ROOTPATH.'/current/system/');
+}elseif(ENVIRONMENT == 'production'){
+	define('ROOTPATH', '/home/fandrop');
+	define('BASEPATH', ROOTPATH.'/current/system/');
+}else{
+	define('BASEPATH', __DIR__.'/../system/');
+}
+include(BASEPATH.'../scripts/config.php');
+include(BASEPATH.'../scripts/db.php');
+include(BASEPATH.'../application/config/s3.php');
+include(BASEPATH.'../application/config/config.php');
+include(BASEPATH.'../application/config/uploads.php');
+
+require_once BASEPATH.'libraries/Image_lib.php';
+require_once BASEPATH.'../application/modules/fantoon-extensions/libraries/S3.php';
+//require_once BASEPATH.'../application/libraries/cutycapt.php';
+require_once BASEPATH.'../application/modules/fantoon-extensions/libraries/FF_Screenshot.php';
+$s3 = new S3($config);
+
+function do_the_job($data, $config) {
+	
+	$fb_links = (array)$data->fb_links;
+	
+	if(count((array)$fb_links['like'])>0)
+    {
+        foreach((array)$fb_links['like'] as $k=>$v)
+        {
+            if (!isset($v->url)) continue;
+            $links[] = (array)$v;
+        }
+    }
+    if(count((array)$fb_links['share'])>0)
+    {
+        foreach((array)$fb_links['share'] as $k=>$v)
+        {
+            if (!isset($v->url)) continue;
+            $links[$v->created_time] = (array)$v;
+        }
+    }
+    if(count((array)$fb_links['post'])>0)
+    {
+        foreach((array)$fb_links['post'] as $k=>$v)
+        {
+            if (!isset($v->url)) continue;
+            $links[$v->created_time] = (array)$v;
+        }
+    }
+
+    if(isset($links) && count($links)>0)
+    {
+		
+		//var_dump($links);
+        krsort($links);
+        $links_data = array_slice($links, 0, 100);
+
+		$i = 0;
+        foreach($links_data as $k=>$v)
+        {
+        	//if ($this->fb_link_model->count_by(array('fb_id'=>$fb_id, 'link'=>$v['url'])) > 0) continue;
+        	//$url_source = parse_url($v['url']);
+            if (isset($v['url'])){
+            	//put into fast script
+            	if($i<=5){
+	                //$this->fb_link_model->insert(array('u_id'=>$user_id, 'fb_id'=>$fb_id, 'link'=>$v['url']));
+	                
+	                //check the new_server module is enable or not
+	                include(BASEPATH.'../application/config/modules.php');
+	                if(in_array(ENVIRONMENT, $config['modules']['new_server']) || empty($config['modules']['new_server'])){
+	                	$new_server = true;
+	                }
+	                include(BASEPATH.'../scripts/config.php');
+	                if ($pheanstalk) {
+		    			$new_data = array(
+		    				'id'=> $i,
+		    				'link' => $v['url'],
+		    				'user_id' => $data->user_id,
+		    				'time' => date("Y-m-d H:i:s", strtotime(' -'.$i.' second ')),
+		    				'folder' => $data->folder
+		    			);
+	
+	    				$tube_name = 'tfl-fast-';
+	    			
+		    			try {
+							$pheanstalk->useTube($tube_name.ENVIRONMENT);
+		    				$job_id = $pheanstalk->put(json_encode($new_data));
+	
+		    				if(!mysql_pquery("INSERT INTO beanstalk_jobs (job_id, data, type, created_at) VALUES ('".$job_id."', '".mysql_real_escape_string(serialize($new_data))."', '".$tube_name."', '".date("Y-m-d H:i:s")."')")){
+		    					throw new Exception( 'MySql error: ' . mysql_error() );
+		    				}
+
+		    			} catch (Exception $e) {
+		    				//If beanstalk is not accessible (never) 
+		    				//we will upload the image later
+		    				echo 'something wrong';
+		    			}
+	    			
+	    			}
+    			}else{
+    				//insert into database wait for processed by tfl script
+    				mysql_pquery("INSERT INTO fb_links (u_id, fb_id, link) VALUES ('".$data->user_id."', '".$data->fb_id."', '".$v['url']."')");
+    			}
+            }
+            $i++;
+        }
+    
+    }
+}
+
+$debug = false;
+if ($debug) {
+	echo "Debug mode";
+	$config['uploads']['log'] = true;
+	$data = json_decode(json_encode(array(
+				'id'=> '187',
+				'link' => 'http://www.vesti.bg/index.phtml'
+			)));
+	do_the_job($data, $config);
+} else {
+	echo "Watch: signup-".ENVIRONMENT."\r\n";
+	$pheanstalk->watch("signup-".ENVIRONMENT)->ignore("default");
+	$last_version = end(glob(ROOTPATH.'/releases/*', GLOB_ONLYDIR));
+	while(1) {
+		if ($last_version != end(glob(ROOTPATH.'/releases/*', GLOB_ONLYDIR))) break;
+	    $start_time=time();
+		//Get a job to do
+		$job = $pheanstalk->reserve();
+		if (!$job) {
+			//print_r($job);
+			continue;
+		}
+		$job_id = $job->getId();
+		if (!mysql_pquery("UPDATE beanstalk_jobs SET started_at = now() WHERE job_id = ".$job_id." AND type = 'signup'")) {
+			throw new Exception( 'MySql error: ' . mysql_error() );
+		}
+		$data = json_decode($job->getData());
+		//Do the job
+		$result = array(
+			'user_id' => $data->user_id,
+			'folder' => $data->folder
+		);
+		try {	
+			//var_dump($data);	
+			do_the_job($data, $config);
+		} catch (Exception $e) {
+			$result['status'] = $e->getMessage();
+		}
+	
+		//Finalize job
+		if (!mysql_pquery("UPDATE beanstalk_jobs SET finished_at = now() WHERE job_id = ".$job_id." AND type = 'scr'")) {
+			throw new Exception( 'MySql error: ' . mysql_error() );
+		}
+		$delete_job = $pheanstalk->delete($job);
+		if( $delete_job && !@$result['status'] ) {
+			$result['status'] = 'Success';
+		} elseif( !$delete_job ) {
+			$result['status'] = 'Cannot remove job';
+		}
+		$end_time = time();
+		$duration = $end_time-$start_time;
+		$result['duration'] = $duration;
+		$result['date'] = date('Y-m-d H:i:s');
+			
+		echo json_encode($result),"\n";
+	}
+}
+
+
+
+

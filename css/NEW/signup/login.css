@@ -1,0 +1,119 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:			login.css
+    -Description:		Basic formatting and styling for the Login Page
+    -Version:			Unspecified Beta
+    -Site:				Fandrop.com
+    -Author/s:			Dmitry Kashlev & Michael Eng  
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --loginGen		General styling for the login page
+
+    ================================================================= */
+
+/* ===== Login General (--loginGen) ================================= */
+
+	body {
+		/*background: #F5F5F5;*/
+		/*background: url('/images/backgrounds/grey.png');*/
+		background: url('/images/backgrounds/low_contrast_linen.png');
+	}
+	
+	#external_login {
+		display: inline-block;
+		vertical-align: top;
+	}
+	#external_login #signup_social_wrapper {
+		min-height: 150px;
+		padding: 20px 35px 20px 0;
+	}
+	#email_login {
+		min-height: 147px;
+		width: 330px;
+		border-left: 1px solid #C0C0C0;
+		display: inline-block;
+		padding: 23px 0 20px 30px;
+		text-align: left;
+		vertical-align: top;
+	}
+	#login {width: 330px; color:#AAA;text-align: left;}
+	#login a:link{font-weight:bold; color: #888;  font-size:11px;}
+	#login a:hover{ color:#AAA;}
+	#login a:visited{color:#AAA;}
+	#login a { padding:1px; border:0px solid #000;}
+	#login_input {
+		width: 330px;
+		display: inline-block;
+	}
+	#login_field_container {
+		width: 210px;
+		margin-right: 10px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#login_field_container p {
+		color: #F03030;
+		margin-top: 5px;
+		margin-left: 10px;
+		font-weight: bold;
+	}
+	#login_field_container .error {
+		margin-top: 5px;
+	}
+	#login #login_input #login_user,
+	#login #login_input #login_pass {
+		width: 185px;
+		padding: 5px 8px;
+		border-radius: 5px;
+		border: 1px solid #E0E0E0;
+		margin-bottom: 0;
+		font-size: 16px;
+	}
+	#login .login {
+		width: 100px;
+		padding: 22px 15px;
+		margin-top: 6px;
+		font-size: 21px;
+		display: inline-block;
+		vertical-align: middle;
+		text-shadow: 1px 1px #83B6DC;
+	}
+	#login .login:hover {
+		
+	}
+	#login_remember {
+		color: #A0A0A0;
+		margin-top: 10px;
+		display: inline-block;
+	}
+	#remember {
+		margin-right: 5px;
+	}
+	#login_error {
+		margin: 2px 0 0 18px;
+	}
+	#login_links {
+		margin-top: 5px;
+		margin-left: 18px;
+	}
+	#login_links a {
+		color: #C0C0C0 !important;
+		font-size: 12px;
+		display: inline-block;
+	}
+	#login_links a:hover {
+		color: #A0A0A0 !important;
+	}
+	#login_divider {
+		height: 10px;
+		padding: 0 7px;
+		/*border-left: 1px solid #C0C0C0;
+		margin: 0 20px;*/
+		font-weight: bold;
+	}
+/* ================================================================== */

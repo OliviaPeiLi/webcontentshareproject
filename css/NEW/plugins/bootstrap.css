@@ -1,0 +1,303 @@
+/*!
+ * Bootstrap v2.0.3 (General popup styling)
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+
+.well {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #eee;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	-webkit-border-radius: 4px;
+		 -moz-border-radius: 4px;
+					border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+		 -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+					box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.well blockquote {
+	border-color: #ddd;
+	border-color: rgba(0, 0, 0, 0.15);
+}
+
+.well-large {
+	padding: 24px;
+	-webkit-border-radius: 6px;
+		 -moz-border-radius: 6px;
+					border-radius: 6px;
+}
+
+.well-small {
+	padding: 9px;
+	-webkit-border-radius: 3px;
+		 -moz-border-radius: 3px;
+					border-radius: 3px;
+}
+
+.fade {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: opacity 0.15s linear;
+		 -moz-transition: opacity 0.15s linear;
+			-ms-transition: opacity 0.15s linear;
+			 -o-transition: opacity 0.15s linear;
+					transition: opacity 0.15s linear;
+}
+
+.fade.in {
+	opacity: 1;
+}
+
+.collapse {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 0.35s ease;
+		 -moz-transition: height 0.35s ease;
+			-ms-transition: height 0.35s ease;
+			 -o-transition: height 0.35s ease;
+					transition: height 0.35s ease;
+}
+
+.collapse.in {
+	height: auto;
+}
+
+.close {
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 18px;
+	color: #000000;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.4;
+	-moz-opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+
+.close:hover {
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.8;
+	-moz-opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.new_close,
+.new_close1 {
+	height: 16px;
+	width: 16px;
+	background: url(/images/common_sprites.png) no-repeat -160px -32px;
+	float: right;
+}
+.new_close:hover,
+.new_close1:hover {
+	background-color: #B0B0B0;
+	background-position: -176px -32px;
+	cursor: pointer;
+}
+
+button.new_close,
+button.new_close1 {
+	padding: 0;
+	cursor: pointer;
+	border: 0;
+	-webkit-appearance: none;
+}
+
+button.close {
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
+}
+
+
+.modal-open .dropdown-menu {
+	z-index: 2050;
+}
+
+.modal-open .dropdown.open {
+	*z-index: 2050;
+}
+
+.modal-open .popover {
+	z-index: 2060;
+}
+
+.modal-open .tooltip {
+	z-index: 2070;
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1041;
+	background-color: #000000;
+}
+
+.modal-backdrop.fade {
+	opacity: 0;
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+	opacity: 0.8;
+}
+
+.modal {
+	position: fixed;
+	left: 50%; top: 50%;
+	z-index: 10050;
+	margin: -250px 0 0 -280px;
+	overflow: hidden;
+	
+	max-width: 99%; max-height: 99%;
+	border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;
+	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+			box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-webkit-background-clip: padding-box;
+	   -moz-background-clip: padding-box;
+	        background-clip: padding-box;
+					
+	background: rgb(85,85,85); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(85,85,85,1) 0%, rgba(51,51,51,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(85,85,85,1)), color-stop(100%,rgba(51,51,51,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(85,85,85,1) 0%,rgba(51,51,51,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(85,85,85,1) 0%,rgba(51,51,51,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(85,85,85,1) 0%,rgba(51,51,51,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(85,85,85,1) 0%,rgba(51,51,51,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
+	padding: 10px 10px 10px;
+}
+
+.modal.fade {
+	top: 50%;
+	-webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+	   -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+	    -ms-transition: opacity 0.3s linear, top 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+			transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+
+.modal.fade.in {
+	top: 50%;
+}
+
+.modal-header,
+.modal-header1 {
+	margin: 0;
+	margin-bottom: 5px;
+}
+.modal-header h3 {
+	color: #F1F2F2;
+	margin: 0 0 5px;
+	text-shadow: none;
+	display: inline-block;
+}
+
+.modal-header .close {
+ 	display: block;
+	width: 19px; height: 19px;
+	position:absolute;
+	right: -1px; top: -19px;
+	background: url('/images/bookmarklet/close_black.png') no-repeat center;
+	border-radius: 0 7px 0 0; -moz-border-radius: 0 7px 0 0; -webkit-border-radius: 0 7px 0 0;
+}
+
+.modal-body {
+	position: relative;
+	background: #FFFFFF;
+	
+	padding: 10px;
+	border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal-body .form_row label {
+	color: #656565;
+	font-weight: bold;
+}
+.modal-form {
+	margin-bottom: 0;
+}
+
+.modal-footer {
+	padding: 14px 15px 15px;
+	margin-bottom: 0;
+	text-align: right;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	-webkit-border-radius: 0 0 6px 6px; -moz-border-radius: 0 0 6px 6px; border-radius: 0 0 6px 6px;
+	*zoom: 1;
+	-webkit-box-shadow: inset 0 1px 0 #ffffff;
+	   -moz-box-shadow: inset 0 1px 0 #ffffff;
+	        box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.modal-footer:before,
+.modal-footer:after {
+	display: table;
+	content: "";
+}
+
+.modal-footer:after {
+	clear: both;
+}
+
+.modal-footer .btn + .btn {
+	margin-bottom: 0;
+	margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+	margin-left: -1px;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+/*
+bobef: this is not needed for IE10, but there could be cache problems if we have different css
+for different browsers so at this point i put it back here
+*/
+
+.fade.in {
+	filter: alpha(opacity=100);
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+	filter: alpha(opacity=80);
+}

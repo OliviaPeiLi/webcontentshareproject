@@ -1,0 +1,185 @@
+/*Palette*/
+/*
+ #2D2D2D
+ #474749
+ #585858
+ #969696
+ #DD4B39 Red
+ #41B349 Green
+ #ED8B43 Orange
+ #3366CC Blue
+*/
+body {
+    background-color: #fff;
+    margin: 0px;
+    font-family: Lucida Grande, Verdana, Sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+a {
+    color: #FFFFFF;
+    background-color: transparent;
+    font-weight: normal;
+}
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+.content {
+    height: 500px;
+    width: 100%;
+}
+
+.circleboxes {
+    height: 100%;
+    /*width: 45%;*/
+    /*float: right;*/
+    position: absolute;
+    /*overflow: auto;*/
+    right: 0px;
+    border-left: 1px dashed #C2C2C2;
+}
+.circlebase {
+}
+
+.newcirclebox {
+    float: left;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+}
+
+.newcirclebox .circle_title {
+    background: none repeat scroll 0 0 #3D3D3D;
+    display: inline;
+    height: 98px;
+    width: 100px;
+    padding: 2px 0px 0px 0px;
+    top: 33px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.newcirclebox .circle_title a{
+    margin: 0 5px 0 5px;
+}
+
+.circlebox {
+    float: left;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+}
+
+.circle_boundary {
+    background: none repeat scroll 0 0 #C2C2C2;
+    height: 120px;
+    width: 120px;
+    filter: progid:DXImageTransform.Microsoft.dropShadow(color=#EBEBEB, offX=0, offY=0, positive=true);
+    position: absolute;
+    cursor: move;
+}
+
+.circle_boundary:hover {
+    border: 5px solid #3D3D3D;
+    filter: progid:DXImageTransform.Microsoft.dropShadow(color=#EBEBEB, offX=0, offY=0, positive=true);
+}
+
+.circle_boundary.friendcontained {
+    background-color: #A0A0A0;
+    border: 3px solid #C0C0C0;
+    filter:progid:DXImageTransform.Microsoft.dropShadow(color=#C0C0C0, offX=0, offY=0, positive=true);
+}
+
+.circlebox .circle_title {
+    background: none repeat scroll 0 0 #CC0001;
+    display: inline;
+    height: 98px;
+    width: 100px;
+    padding: 2px 0px 0px 0px;
+    top: 33px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.circle_element {
+    height: 30px;
+    width:30px;
+    position: absolute;
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+ 
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+ 
+    overflow:hidden; 
+}
+
+.circle_element.newadded {
+    height: 30px;
+    width:30px;
+    position: absolute;
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+ 
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+ 
+    overflow:hidden; 
+}
+
+.circle_element:hover {
+    border: 2px solid #606060;
+    cursor: move;
+    filter:progid:DXImageTransform.Microsoft.dropShadow(color=#666666, offX=3, offY=3, positive=true);
+}
+
+.circle_element.newadded.eselected,
+.circle_element.eselected_click.eselected {
+    border: 2px solid #CC0001;
+    cursor: move;
+    filter:progid:DXImageTransform.Microsoft.dropShadow(color=#555555, offX=3, offY=3, positive=true);
+}
+
+.circle_element.eselected_click {
+    border: 2px solid #3266CC;
+    cursor: move;
+}
+
+.friendlist {
+    display:none;
+    height:120px;
+    width:120px;
+}
+
+#element-container {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+ 
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+ 
+    overflow:hidden; 
+
+    height: 60px;
+    width: 170px;
+}
+

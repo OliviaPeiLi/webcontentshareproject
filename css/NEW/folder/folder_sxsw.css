@@ -1,0 +1,59 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		folder_sxsw.css
+    -Description:	Overrides for the SXSW page
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --folder			Basic styling for the folder
+
+    ================================================================= */
+
+/* ===== Folders (--folder) ========================================= */
+
+    .folder {
+	/*height: 207px !important;*/
+    }
+    .folder .folderbase .collectionUpbox {
+	border-right: 1px solid #C0C0C0;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    .folder .folder_info {
+	/*min-height: 67px !important;*/
+    }
+    .folder .folderbase .folder_title .folder_name {
+        font-weight: bold !important;
+    }
+    .profile_contents_top_bar {
+	margin-top: 20px;
+    }
+    .profile_contents_top_bar .collections-dropdown {
+       color: #D0D0D0;
+       font-size: 14px;
+    }
+    .profile_contents_top_bar .tab_arrow {
+	height: 0;
+	width: 0;
+	border-width: 7px 7px 2px 7px;
+	border-color: #A0A0A0 transparent transparent transparent;
+	border-style: solid;
+	margin-left: 5px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	transition: border-color ease-in 250ms;
+	-moz-transition: border-color ease-in 250ms;
+	-webkit-transition: border-color ease-in 250ms;
+    }
+    .profile_contents_top_bar .tab_arrow:hover, .profile_contents_top_bar:hover .tab_arrow {
+	border-color: #08BBE6 transparent transparent transparent;
+    }

@@ -1,0 +1,741 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		about.css
+    -Description:	Basic formatting and styling for the About Page
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --aboutTabs			Styling for Tabs on the left side
+    --aboutBody			Styling for Body of the pages
+
+    ================================================================= */
+
+/* ===== About Tabs (--aboutTabs) =================================== */
+
+    body.logged_out #about_container {
+	margin-top: 48px;
+    }
+    .special_effects {
+	border-color: #DDDDDD #DDDDDD #DDDDDD #4A4A4A;
+	border-style: solid;
+	border-width: 16px;
+	height: 0;
+	position: relative;
+	margin: -5px -10px -4px -4px;
+	float: left;
+	z-index: 0;
+    }
+    #about_title {
+	color: #D0D0D0;
+	margin-top: 10px;
+	font-size: 20px;
+	margin-bottom: 10px;
+	text-shadow: 1px 1px #303030;
+    }
+    #about_tabs {
+	width: 140px; /*necessary to not break it*/
+	margin-top: 10px;
+    }
+    #about_tabs li {
+	background-color: #CACACA;
+	padding: 2px 5px 2px 5px !important;
+	border: 1px solid #909090;
+		border-radius: 2px;
+	   -moz-border-radius: 2px;
+	-web-kit-border-radius: 2px;
+	margin-bottom: 4px;
+	position: relative;
+	width: 100%;
+	float: left;
+	z-index: 0;
+		transition: border ease-in 125ms;
+	   -moz-transition: border ease-in 125ms;
+	-webkit-transition: border ease-in 125ms;
+    }
+    #about_tabs li a {
+	color: #3366cc;
+	font-size: 14px;
+	line-height: 16px;
+	text-decoration: none;
+	display: block;
+	text-shadow: 1px 1px #E0E0E0;
+    }
+    #about_tabs li:hover {
+	background-color: #DDDDDD;
+	padding: 3px 0px 3px 8px;
+	border: 1px solid #D0D0D0;
+		border-radius: 2px;
+	   -moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	/* box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);
+	-moz-box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);
+	-webkit-box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);*/
+		transition: ease-in 125ms;
+	   -moz-transition: ease-in 125ms;
+	-webkit-transition: ease-in 125ms;
+    }
+    .about_tabs_selected {
+	padding: 3px 5px 3px 5px !important;
+	background-color: #DDDDDD !important;
+	border: 1px solid #DDDDDD !important;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-web-kit-border-radius: 2px;
+	text-shadow: 1px 1px #EFEFEF;
+    }
+    .about_tabs_selected a {
+	text-shadow: 1px 1px #F0F0F0 !important;
+    }
+    .special_effects {
+	border-color: transparent transparent transparent #DDDDDD;
+	border-style: solid;
+	border-width: 11px;
+	height: 0;
+	position: relative;
+	margin: -19px -10px -4px 145px;
+	float: left;
+	z-index: 1;
+    }
+    .about_tabs_hoverClear {
+	border: none !important;
+	padding: 0 !important;
+	margin-top: -4px;
+    }
+    #about_tabs > .about_tabs_selected a {
+	color: #26466D;
+    }
+    
+/* ================================================================== */
+    
+/* ===== About Body (--aboutBody) =================================== */
+
+    #about_motto,
+    .about_header {
+	color: #D0D0D0;
+	font-size: 32px;
+	line-height: 115%;
+	width: 675px;
+	padding: 5px 5px 25px 0px;
+	border-bottom: 1px solid;
+	border-color: #DDDDDD;
+	margin-bottom: 10px;
+	text-shadow: 1px 1px #303030;
+    }
+    #about_description {
+	padding: 0px 5px 75px 0px;
+	width: 675px;
+    }
+    #about_page_video_wrapper {
+	color: #D0D0D0;
+	margin: 0 0 0 20px;
+	font-size: 11px;
+	line-height: 18px;
+	float: right;
+	text-align: center;
+	text-shadow: 1px 1px #505050;
+    }
+    #about_page_video {
+	width: 100px;
+	border: 1px solid #555555;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+		box-shadow: -1px 3px 10px 0px rgba(10, 10, 10, 0.5);
+	   -moz-box-shadow: -1px 3px 10px 0px rgba(10, 10, 10, 0.5);
+	-webkit-box-shadow: -1px 3px 10px 0px rgba(10, 10, 10, 0.5);
+    }
+    #about_page_video_preview {
+	width: 100px;
+	padding: 0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	display: block;
+    }
+    #about_page_play_button {
+	height: 26px;
+	width: 26px;
+	background: url("/images/play_button_small.png") no-repeat;
+	margin: -13px 0 0 -13px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0.7;
+	transition: opacity ease-in 125ms;
+	-moz-transition: opacity ease-in 125ms;
+	-webkit-transition: opacity ease-in 125ms;
+    }
+    #about_page_video:hover #about_page_play_button {
+	opacity: 1;
+    }
+    #about_description p {
+	margin: 20px 0px 0px 0px;
+	font-size: 18px;
+	line-height: 125%;
+	text-align: left;
+	color: #D0D0D0;
+	text-shadow: 1px 1px #505050;
+    }
+    #about_description .example_left,
+    #about_description .example_right {
+	margin-top: 45px;
+	margin-bottom: 15px;
+	display: inline-block;
+    }
+    #about_description .example_left img,
+    #about_description .example_right img {
+	width: 430px;
+	padding: 0;
+		box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		border-radius: 5px;
+	   -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    }
+    #about_description .example_left img {
+	float: left;
+	margin-right: 20px;
+    }
+    #about_description .example_right img{
+	float: right;
+	margin-left: 20px;
+    }
+    #about_description .example_text {
+	margin-top: 10px;
+    }
+    #about_description .example_text p {
+	margin: 7px 0 0 0;
+	line-height: 135%;
+	font-size: 14px;
+	text-shadow: 1px 1px #404040;
+    }
+    .example_text h4 {
+	color: #D0D0D0;
+	font-size: 15px;
+	font-weight: bold;
+	text-shadow: 1px 1px #303030;
+    }
+    #about_description .employee_span {
+	margin-right: 13px;
+	display: inline-block;
+    }
+    #about_description .employee_span>img {
+	height: 150px;
+	width: 133px;
+	/*width: 150px;*/
+	padding: 0px;
+	/*border: 1px solid #E0E0E0;*/
+	margin-right: 17px;
+    }
+    #about_description .employee_name {
+	color: #C0C0C0;
+	font-size: 18px;
+	margin: 10px 10px 20px 10px;
+	text-shadow: 1px 1px #3D3D3D;
+    }
+    #about_description .employee_image_wrapper {
+	height: 150px;
+	width: 150px;
+	/*border: 1px solid #E0E0E0;*/
+	position: relative;
+    }
+    .employee_image2,
+    .employee_image3 {
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity ease-in 250ms;
+	-moz-transition: opacity ease-in 250ms;
+	-webkit-transition: opacity ease-in 250ms;
+    }
+    .employee_image2 {
+	z-index: 1;
+    }
+    .employee_image2:hover,
+    #about_description .employee_span:hover .employee_image3 {
+	opacity: 1;
+    }
+    .about_label {
+	text-align: left;
+	margin-top: 5px;
+	margin-left: 15px;
+	width: 85px;
+    }
+    .about_field {
+	text-align: left;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+    }
+    .about_field .error {
+    color: #ff0000;
+    display: none;
+    }
+    .error_field .error {
+    display: block;
+    }
+    #send_msg_btn {
+	margin-top: 5px;
+	float: right;
+    }
+    #about_contact_info {
+	    width: 100%;
+	margin-top: 25px;
+	margin-left: 20px;
+	vertical-align: top;
+    }
+    #about_contact_map {
+	margin-top: 20px;
+	margin-left: 120px;
+    }
+    #about_contact_details {
+	margin-bottom: 50px;
+    }
+    .about_label, .about_field {
+	font-size: 16px;
+	color: #D0D0D0;
+	line-height: 150%;
+	text-shadow: 1px 1px #505050;
+	vertical-align: top;
+    }
+    .contactus_field {
+	width: 400px;
+    }
+    #contactus_body {
+	width: 400px;
+	height: 100px;
+	font-size: 12px;
+	padding: 2px;
+    }
+    
+    #about_contact_form {
+	margin: 20px 0 30px 0;
+    }
+    
+    #about_contact_form input[type=text], #contactus_body {
+	border: 1px solid #CCCCCC;
+	display: block;
+	width: 355px;
+	font-size: 14px;
+	padding: 2px 5px 0 5px;
+	margin: 5px 2px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	resize: none;
+    }
+    #contact_us_form {
+	margin-left: 15px;
+    }
+    #contact_us_form.loading {
+	opacity: 0.5;
+	transition: opacity ease-in 250ms;
+	-moz-transition: opacity ease-in 250ms;
+	-webkit-transition: opacity ease-in 250ms;
+    }
+    /*#about_contact_form input[type=text]:focus, #contactus_body:focus {
+	border: 1px solid;
+	border-color: #999999 #999999 #CCCCCC #CCCCCC;
+	color: maroon;
+	display: block;
+	width: 355px;
+	font-size: 12px;
+	padding: .4em;
+	margin: 5px 2px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	box-shadow: -1px 1px 8px -1px #666666 inset;
+	-moz-box-shadow: -1px 1px 8px -1px #666666 inset;
+	-webkit-box-shadow: -1px 1px 8px -1px #666666 inset;
+    }*/
+    #about_contact_form li:last-of-type .about_field {
+	width:369px;
+    }
+    #contact_form_result {
+	width: 500px;
+	text-align: center;
+	padding: 10px;
+	background-color: #e0e0e0;
+	border: 1px solid #ccc;
+	border-radius: 5px; -moz-border-radius: 5px;
+	margin-bottom: 5px;
+    }
+    .border {
+	border-bottom: 1px solid;
+	border-color: #DDDDDD;
+    }
+    #jobs_description,
+    .copyright_and_privacy_text {
+	padding: 0 5px 20px 0;
+	width: 625px;
+    }
+    #jobs_description .intro_text,
+    .copyright_and_privacy_text .body_text {
+	color: #D0D0D0;
+	line-height: 120%;
+	padding: 5px 5px 5px 0;
+    }
+    #jobs_description .intro_text, #jobs_description a {font-size: 17px;}
+    .copyright_and_privacy_text .body_text, .copyright_and_privacy_text a {font-size: 15px;}
+    #jobs_description .body_text {
+	margin-top: 10px;
+	color: #D0D0D0;
+    }
+    #jobs_description .position_title {
+	font-weight: bold;
+	color: #D0D0D0;
+	text-shadow: 1px 1px #303030;
+    }
+    #jobs_description .position {
+	border-color: #DDDDDD;
+	border-top: 1px solid #DDDDDD;
+	margin-top: 10px;
+	padding-top: 15px;
+    }
+    #jobs_description .position .position_title, #jobs_description .position .position_body {
+	font-size: 14px;
+    }
+    #jobs_description .position .position_title {
+	padding-bottom: 5px;
+    }
+    #jobs_description .position .position_body {
+	margin-left: 10px;
+	line-height: 20px;
+    }
+    #jobs_description .emailus {
+	margin-top: 20px;
+    }
+    #jobs_description .emailus a {
+	font-size: 17px;
+	text-decoration: none;
+    }
+    #about_container #bookmarklet_walkthrough_container {
+	min-width: initial;
+	margin-left: 0;
+    }
+    #about_container #partners_text {
+	/*width: 625px;*/
+	padding: 0 5px 20px 0;
+    }
+    #about_container .aboutPartners,
+    #about_container .aboutPress {
+	width: 675px;
+	padding: 0 10px 30px;
+	text-align: center;
+    }
+    #about_container .aboutPartners {
+	background: #FFFFFF;
+    }
+    #about_container .aboutPress {
+	background: #48ABD6;
+    }
+    #about_container .partnersAndPress_title {
+	padding: 20px 0 20px;
+	font-size: 18px;
+	display: block;
+	text-transform: uppercase;
+    }
+    #about_container .aboutPartners .partnersAndPress_title {
+	color: #656565;
+    }
+    #about_container .aboutPress .partnersAndPress_title {
+	color: #FFFFFF;
+    }
+    #about_container .aboutPartners .partnerLogo,
+    #about_container .aboutPress .pressLogo {
+	height: 46px;
+	margin-bottom: 10px;
+	display: inline-block;
+	position: relative;
+    }
+    #about_container .aboutPartners .partnerLogo {
+	margin-right: 35px;
+    }
+    #about_container .aboutPress .pressLogo {
+	margin-right: 25px;
+    }
+    #about_container .aboutPartners .partnerLogo1 {
+	width: 142px;
+	background: url("/images/landingpage_headerimages/partners/ventureBeatLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo2 {
+	width: 142px;
+	background: url("/images/landingpage_headerimages/partners/pickyEaterLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo3 {
+	width: 190px;
+	background: url("/images/landingpage_headerimages/partners/JKFLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo4 {
+	width: 118px;
+	background: url("/images/landingpage_headerimages/partners/jackfrootLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo5 {
+	width: 177px;
+	background: url("/images/landingpage_headerimages/partners/travelOCafeLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo6 {
+	width: 82px;
+	background: url("/images/landingpage_headerimages/partners/publicEnemyLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo7 {
+	width: 106px;
+	background: url("/images/landingpage_headerimages/partners/1000fightsLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo8 {
+	width: 442px;
+	background: url("/images/landingpage_headerimages/partners/backpackingMattLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo9 {
+	width: 99px;
+	background: url("/images/landingpage_headerimages/partners/gqTrippinLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo10 {
+	width: 190px;
+	background: url("/images/landingpage_headerimages/partners/kwingLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo11 {
+	width: 78px;
+	background: url("/images/landingpage_headerimages/partners/hackers&FoundersLogo.png") no-repeat;
+    }
+    #about_container .aboutPartners .partnerLogo12 {
+	width: 88px;
+	background: url("/images/landingpage_headerimages/partners/demoLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo1 {
+	width: 188px;
+	background: url("/images/landingpage_headerimages/press/techCrunchLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo2 {
+	width: 230px;
+	background: url("/images/landingpage_headerimages/press/ventureBeatLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo3 {
+	width: 154px;
+	background: url("/images/landingpage_headerimages/press/pandoDailyLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo4 {
+	width: 118px;
+	background: url("/images/landingpage_headerimages/press/dailytekkLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo5 {
+	width: 69px;
+	background: url("/images/landingpage_headerimages/press/cbsNewsLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo6 {
+	width: 155px;
+	background: url("/images/landingpage_headerimages/press/sfGateLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo7 {
+	width: 205px;
+	background: url("/images/landingpage_headerimages/press/techvibesLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo8 {
+	width: 342px;
+	background: url("/images/landingpage_headerimages/press/newsObserverLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo9 {
+	width: 104px;
+	background: url("/images/landingpage_headerimages/press/24-7PressReleaseLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo10 {
+	width: 210px;
+	background: url("/images/landingpage_headerimages/press/bostonLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo11 {
+	width: 347px;
+	background: url("/images/landingpage_headerimages/press/columbusDispatchLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo12 {
+	width: 213px;
+	background: url("/images/landingpage_headerimages/press/businessPress24Logo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo13 {
+	width: 156px;
+	background: url("/images/landingpage_headerimages/press/elPasoTimesLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo14 {
+	width: 199px;
+	background: url("/images/landingpage_headerimages/press/dailyHeraldLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo15 {
+	width: 362px;
+	background: url("/images/landingpage_headerimages/press/dealBreakerLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo16 {
+	width: 132px;
+	background: url("/images/landingpage_headerimages/press/iconPerformingArtsLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo17 {
+	width: 443px;
+	background: url("/images/landingpage_headerimages/press/contraCostaTimesLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo18 {
+	width: 116px;
+	background: url("/images/landingpage_headerimages/press/prMacLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo19 {
+	width: 202px;
+	background: url("/images/landingpage_headerimages/press/sacBeeLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo20 {
+	width: 275px;
+	background: url("/images/landingpage_headerimages/press/starTribuneLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo21 {
+	width: 348px;
+	background: url("/images/landingpage_headerimages/press/worldNewsNetworkLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo22 {
+	width: 249px;
+	background: url("/images/landingpage_headerimages/press/softwarePRNewsLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo23 {
+	width: 287px;
+	background: url("/images/landingpage_headerimages/press/pressTelegramLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo24 {
+	width: 218px;
+	background: url("/images/landingpage_headerimages/press/newsOKLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo25 {
+	width: 244px;
+	background: url("/images/landingpage_headerimages/press/theOlympianLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo26 {
+	width: 187px;
+	background: url("/images/landingpage_headerimages/press/wralLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo27 {
+	width: 453px;
+	background: url("/images/landingpage_headerimages/press/wsjLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo28 {
+	width: 469px;
+	background: url("/images/landingpage_headerimages/press/thePressEnterpriseLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo29 {
+	width: 227px;
+	background: url("/images/landingpage_headerimages/press/streetInsiderLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo30 {
+	width: 165px;
+	background: url("/images/landingpage_headerimages/press/kansasCityStarLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo31 {
+	width: 140px;
+	background: url("/images/landingpage_headerimages/press/minyanvilleLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo32 {
+	width: 629px;
+	background: url("/images/landingpage_headerimages/press/internationalBizTimesLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo33 {
+	width: 307px;
+	background: url("/images/landingpage_headerimages/press/digitalJournalLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo34 {
+	width: 149px;
+	background: url("/images/landingpage_headerimages/press/einLogo.png") no-repeat;
+    }
+    #about_container .aboutPress .pressLogo35 {
+	width: 203px;
+	background: url("/images/landingpage_headerimages/press/elNuevoHeraldLogo.png") no-repeat;
+    }
+    
+    
+    #about_container .aboutPartners .partnerLogo span,
+    #about_container .aboutPress .pressLogo span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			transition: opacity ease-in 125ms;
+	   -moz-transition: opacity ease-in 125ms;
+	-webkit-transition: opacity ease-in 125ms;
+    }
+    #about_container .aboutPartners .partnerLogo1 span {
+	
+    }
+    #about_container .aboutPartners .partnerLogo2 span {
+	
+    }
+    #about_container .aboutPartners .partnerLogo3 span {
+	
+    }
+    #about_container .aboutPartners .partnerLogo4 span {
+	
+    }
+    #about_container .aboutPartners .partnerLogo5 span {
+	
+    }
+    #about_container .aboutPartners .partnerLogo6 span {
+	
+    }
+    #about_container .aboutPartners .partnerLogo span:hover,
+    #about_container .aboutPress .pressLogo span:hover {
+	opacity: 1; filter: alpha(opacity=100); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+    #about_container .partnersUnit {
+	background: #FFFFFF;
+	border: 2px solid #E4E6E7;
+	margin-bottom: 20px;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: inline-block;
+    }
+    #about_container .partnersUnit_ImageBox {
+	min-height: 115px;
+	min-width: 115px;
+	background: #E7E8E9;
+	border-right: 2px solid #E4E6E7;
+	display: inline-block;
+	vertical-align: top;
+    }
+    #about_container .partnersUnit_ImageBox img {
+	width: 115px;
+	padding: 0;
+    }
+    #about_container .partnersUnit_Text {
+	width: 540px;
+	padding: 5px 30px;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+    }
+    #about_container .partnersUnit_Title {
+	color: #3A3A3C;
+	font-size: 24px;
+    }
+    #about_container .partnersUnit_URL {
+	margin-bottom: 5px;
+    }
+    #about_container .partnersUnit_URL a {
+	color: #939598;
+	font-size: 14px;
+    }
+    #about_container .partnersUnit_bodyText {
+	color: #6B6B6D;
+    }
+    
+    

@@ -1,0 +1,162 @@
+* {
+	font-family: lucida grande, helvetica, arial, sans-serif;
+	color: #3D3D3D;
+}
+ul {
+	list-style-type: none;
+}
+ul li {
+	display: inline;
+}
+a {
+	
+}
+h1 {
+	font-weight: normal;
+}
+a {
+	text-decoration: none;
+	color: #08BBE6;
+}
+a:hover {
+	color: #28DBF6;
+}
+
+#external_main {
+	max-height: 140px;
+	padding: 30px 15px 30px 50px;
+	margin: 0;
+	text-align: left;
+	overflow: hidden;
+}
+#external_main h1 {
+	margin-bottom: 10px;
+}
+	.folder-info {
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+	.folder-info a {
+		max-width: 270px;
+		overflow: hidden;
+		display: inline-block;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	#newsfeed_url {
+		background-color: #f0eded;
+		background: -moz-linear-gradient(center top, #fdfafb, #f9f7f7 50%, #f6f3f4 50%, #f0eded);
+		background: -o-linear-gradient(top left, #fdfafb, #f9f7f7 50%, #f6f3f4 50%, #f0eded);
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fdfafb), to(#f0eded), color-stop(.5,#f9f7f7),color-stop(.5,#f6f3f4));
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfafb', endColorstr='#f0eded');
+		color: #524D4D;
+		font-size: 16px;
+		padding: 3px 8px 5px;
+		border: 1px solid #8C7E7E;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-color: #bbb;
+		margin: 0 5px;
+		box-shadow: 0 1px rgba(255, 255, 255, 0.35) inset;
+		-moz-box-shadow: 0 1px rgba(255, 255, 255, 0.35) inset;
+		-webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.35) inset;
+		position: relative;
+		line-height: 26px;
+		text-shadow: 0 1px rgba(255, 255, 255, 0.9);
+	}
+	#newsfeed_url:hover {
+		border-color: #909090;
+		background-color: #f2f0f0;
+		background: -moz-linear-gradient(center top, #fdfcfc, #fbf9f9 50%, #f7f5f6 50%, #f2f0f0);
+		background: -o-linear-gradient(top left, #fdfcfc, #fbf9f9 50%, #f7f5f6 50%, #f2f0f0);
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fdfcfc), to(#f2f0f0), color-stop(.5,#fbf9f9),color-stop(.5,#f7f5f6));
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfcfc', endColorstr='#f2f0f0');
+		color: #666060;
+		text-shadow: 0 1px #FFFFFF;
+	}
+	.share_fb_app,
+	.share_twt_app,
+	#share_on_twitter_btn {
+	    background: url("/images/socNetShare_sprites.png") no-repeat;
+	    height: 28px;
+	    width: 94px;
+	    border-radius: 3px;
+	    margin-right: 5px;
+	    margin-left: 5px;
+	    display: inline-block;
+	    vertical-align: top;
+	    position:relative;
+	    cursor: pointer;
+	    transition: ease-in 125ms;
+	    -moz-transition: ease-in 125ms;
+	    -webkit-transition: ease-in 125ms;
+	}
+	.share_fb_app {
+	    background-position: -74px 0px;
+	}
+	.share_twt_app,
+	#share_on_twitter_btn {
+	    background-position: -74px -30px;
+	}
+	.share_fb_app:hover,
+	.share_twt_app:hover,
+	#share_on_twitter_btn:hover,
+	#newsfeed_url:hover {
+		    box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);
+	       -moz-box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);
+	    -webkit-box-shadow: 0 1px 3px 0px rgba(100, 100, 100, 0.5);
+		    transition: ease-in 125ms;
+	       -moz-transition: ease-in 125ms;
+	    -webkit-transition: ease-in 125ms;
+	}
+	.share_fb_app:hover #share_fb_app_span,
+	#share_on_twitter_btn:hover #share_on_twitter_span,
+	#newsfeed_url:hover #newsfeed_url_span {
+	    opacity: 0.3;
+	    filter:alpha(opacity=30);
+	    transition: ease-in 125ms;
+	    -moz-transition: ease-in 125ms;
+	    -webkit-transition: ease-in 125ms;
+	}
+	.share_fb_app #share_fb_app_span,
+	#share_on_twitter_btn #share_on_twitter_span,
+	#newsfeed_url #newsfeed_url_span {
+	    background: #555555;
+	    border-radius: 3px;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    opacity: 0;
+	    filter:alpha(opacity=0);
+	    transition: ease-in 125ms;
+	    -moz-transition: ease-in 125ms;
+	    -webkit-transition: ease-in 125ms;
+	}
+	.share_fb_app.disabled_bg,
+	#share_on_twitter_btn.disabled_bg {
+		    cursor: default;
+		    opacity: .4;
+		    filter:alpha(opacity=40);
+	}
+	.twitter-share-button {
+	    width: 56px !important; /* Fixes an issue in Moz FF with the Twitter button width */
+	}
+	.controls {
+		display: none;
+	}
+#error_popup {
+	display: none;
+	position: absolute;
+	left: 50%; top: 50%;
+	padding: 5px 10px;
+	margin-left: -100px;
+	font-family: helvetica, arial, sans-serif;
+	background-color: rgba(255, 128, 128, 0.8);
+	border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;
+	box-shadow: 0 2px 4px 0px rgba(75,75,75,0.5);
+	-moz-box-shadow: 0 2px 4px 0px rgba(75,75,75,0.5);
+	-webkit-box-shadow: 0 2px 4px 0px rgba(75,75,75,0.5);
+}

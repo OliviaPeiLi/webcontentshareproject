@@ -1,0 +1,92 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		help.css
+    -Description:	Formatting and styling for the (?) help system
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --helpSys		Main help system styling
+
+    ================================================================= */
+
+/* ===== Help System (--helpSys) ==================================== */
+
+/*help bar design*/
+#help_container{
+   color: #505050;
+   width: 100%;
+   top: 0px;
+   position:fixed;
+   text-align: right;
+   font-weight:bold;
+}
+#help_bar {   
+   /*width:100%;*/
+   right:0;
+   position:absolute;
+}
+#help_bar_message {display:none; font-family: 'lucida grande', Helvetica, arial, sans-serif; font-size: 12px; line-height: 36px; margin-right: 64px; text-shadow: 1px 1px #FFFFC3;}
+#btn_help {
+   background: #3366CC;
+   color: #FFFFFF;
+   top: 8px;
+   right: 7px;
+   font-family: "lucida grande", helvetica, arial, san-serif;
+   height: 19px;
+   width: 19px;
+   padding: 1px 5px;
+   border: 2px solid #FFFFFF;
+   border-radius: 10px;
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+   -moz-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+   -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+   position: absolute;
+   transition: ease-in 125ms;
+   -moz-transition: ease-in 125ms;
+   -webkit-transition: ease-in 125ms;
+}
+#btn_help:hover {
+   background: #003399;
+   color: #FFFFFF;
+   border-color: #CCCCCC;
+   cursor: pointer;
+   transition: ease-in 125ms;
+   -moz-transition: ease-in 125ms;
+   -webkit-transition: ease-in 125ms;
+}
+#btn_help.wide {
+   width: 42px;
+}
+
+ .help_activated{
+   	border: 1px solid #CCCCAA;
+	background: #EEEEAA;
+ }
+ .help {
+   border-radius: 4px;
+   -moz-border-radius: 4px;
+   -webkit-border-radius: 4px;
+   /*border: 2px dashed #F08080 !important;*/
+   cursor:help !important;
+ }
+ 
+ #help_overlay {
+   position:fixed;
+   top:0px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   background: black;
+   opacity: 0.5;
+   filter: Alpha(Opacity=50);
+   z-index:6;
+}

@@ -1,0 +1,302 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		logSign_ugc.css
+    -Description:	Formatting and styling for the Profile Page
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyling	General Styling
+    
+    ================================================================= */
+
+/* ===== General Styling (--genStyling) ============================= */
+
+    #login-popup,
+    #signup-popup,
+    #forgot-popup {
+	overflow: hidden;
+    }
+    #signup-popup {
+	width: 310px;
+    }
+    #forgot-popup {
+	min-width:  310px;
+    }
+    #login-popup .modal-header {
+	
+    }
+    #login-popup .modal-header h3,
+    #signup-popup .modal-header h3,
+    #forgot-popup .modal-header h3 {
+	color: #9E9E9E;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+    }
+    #login-popup .modal-body,
+    #signup-popup .modal-body,
+    #forgot-popup .modal-body {
+	border-radius: 0 0 5px 5px;
+	overflow: hidden;
+    }
+    
+    .new_close {
+	height: 16px;
+	width: 16px;
+	background: url(/images/common_sprites.png) no-repeat -160px -32px;
+	float: right;
+    }
+    .new_close:hover {
+	cursor: pointer;
+    }
+    
+    button.new_close {
+	padding: 0;
+	cursor: pointer;
+	border: 0;
+	-webkit-appearance: none;
+	opacity: .75;
+    }
+    .logSign_top,
+    .logSign_mid,
+    .logSign_bottom {
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    }
+    .logSign_top,
+    .logSign_mid {
+	border-bottom: 1px solid #E1E1E1;
+    }
+    .logSign_top {
+	padding: 10px;
+    }
+    .logSign_mid {
+	padding: 15px 10px;
+    }
+    .logSign_bottom {
+	background: #F8F8F8;
+    }
+    #signup-popup .logSign_bottom,
+    #signup-popup .logSign_bottom a {
+	font-size: 12px;
+    }
+    #signup-popup .logSign_bottom {
+	height: 36px;
+	color: #9C9C9C;
+	padding: 10px;
+	text-align: center;
+    }
+    #signup-popup .logSign_bottom a:hover {
+    	text-decoration: underline;
+    	}
+    .logSign_topText {
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 1.2em;
+	margin-bottom: 10px;
+	display: none;
+    }
+    .logSign_button {
+	height: 35px;
+	width: 290px;
+	color: #FFFFFF;
+	padding: 7px;
+	border-radius: 5px;
+	display: block;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+    }
+    .logSign_button:hover {
+    }
+    .logSign_button.loading {
+	border: 1px solid #E0E0FF !important;
+	border-radius: 7px;
+	
+    }
+    .logSign_button.loading .loadingElement {
+	background: rgba(255,255,255,.75) url('/images/loading_icons/loading_basic.gif') no-repeat !important;
+	background-position: 240px 10px !important;
+	position: absolute;
+	border-radius: 5px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	cursor: default;
+		transition: opacity ease-in 125ms;
+	   -moz-transition: opacity ease-in 125ms;
+	-webkit-transition: opacity ease-in 125ms;
+    }
+    .logSign_button:hover {
+	color: #FFFFFF;
+    }
+    .logSign_button:first-of-type {
+	margin-bottom: 5px;
+    }
+    .logSign_button .ico {
+	height: 20px;
+	width: 20px;
+    }
+    #twt-login .ico,
+    #twt-register .ico {
+	background-position: -95px -574px;
+    }
+    #fb-login .ico,
+    #fb-register .ico {
+	background-position: -96px -544px;
+    }
+    .logSign_buttonText {
+	margin-left: 50px;
+    }
+    #fb-login .logSign_buttonText,
+    #fb-register .logSign_buttonText {
+	text-shadow: 1px 1px #34466C;
+    }
+    #twt-login .logSign_buttonText,
+    #twt-register .logSign_buttonText {
+	text-shadow: 1px 1px #3A7B97;
+    }
+    .logSign_mid .form_row {
+	margin-bottom: 10px;
+    }
+    #login-popup input[type=text], #login-popup input[type=password],
+    #signup-popup .input_placeholder_enh,
+    #forgot-popup input[type=text] {
+	height: 40px;
+	width: 100%;
+	background: #F5F5F5;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #E5E5E5;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-size: 14px;
+    }
+    #signup-popup .input_placeholder_enh {
+	padding-right: 70px;
+	padding-left: 10px;
+	margin-bottom: 3px;	
+    }
+    .logSign_signupField {
+	width: 100%;
+	position: relative;
+	display: inline-block;
+    }
+    .tmp_input_holder {
+	padding-left: 10px !important;
+	font-size: 14px !important;
+	position: absolute;
+	top: 0px;
+	left:0;
+    }
+    .logSign_signupField .ico {
+	height: 20px;
+	display:none
+	margin: 0;
+	position: absolute;
+	top: 11px;
+	left: 10px;
+    }
+    .logSign_signup_userName .ico {
+	width: 20px;
+	background-position: 0 0;
+    }
+    .logSign_signup_userEmail .ico {
+	width: 20px;
+	background-position: -32px 3px;
+    }
+    .logSign_signup_userPass .ico {
+	width: 20px;
+	background-position: -64px 0;
+    }
+    .logSign_signup_userFirst .ico {
+	width: 20px;
+	background-position: 0 0;
+    }
+    .logSign_signup_userLast .ico {
+	width: 20px;
+	background-position: 0 0;
+    }
+    #forgot-popup .error {
+	margin-top: 10px;
+    }
+    .score {
+	position: absolute;
+	top: 10px;
+	left: 225px;
+    }
+    .checkText {
+	color: #A4A4A4;
+	font-size: 14px;
+    }
+    .logSign_submitButton {
+	height: 35px;
+	min-width: 80px;
+	padding: 9px 10px;
+	margin: 0;
+	font-size: 12px;
+	text-shadow: 1px 1px #336B8C;
+	cursor: pointer;
+    }
+    .logSign_bottomButton {
+	height: 40px;
+	width: 50%;
+	padding: 12px;
+	font-size: 12px;
+	text-align: center;
+		box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: inline-block;
+    }
+    .logSign_bottomButton:hover {
+	background: #F0F0F0;
+	text-decoration: underline;
+    }
+    .logSign_bottomButton:first-of-type {
+	border-right: 1px solid #E1E1E1;
+    }
+    
+    .form_row span.valid .valid_contents,
+    .form_row span.error .error_contents,
+    span.error .error_contents,
+    div.error .error_contents {height: 12px; width: 13px; display: inline-block; background: url(/images/common_sprites.png) no-repeat; margin: 0 5px 0 0; vertical-align: -2px;}
+    .form_row span{color: #656565; margin:5px 0 0 0;font-size: 12px;line-height: 19px;font-weight:normal;}
+    .form_row span.tmp_input_holder{padding:5px 0 0 5px;font-weight:normal;}
+    .form_row span.valid{display: none; position: static; color: #339900; margin-top: 5px;font-weight:bold;}
+    .form_row span.valid .valid_contents {background-position: -240px -304px; }
+    .form_row span.error{display: none; position: static; color: #e41f1f; margin-top: 5px;font-weight:bold;}
+    .form_row span.error a:hover{text-decoration: underline;}
+    .form_row span.error .error_contents,
+    span.error .error_contents,
+    div.error .error_contents {background-position: -224px -304px;}
+    .form_row span.loading{display: none; position: static; background: url(/images/loading_icons/roller_16x16.gif) no-repeat left center;color: #666666; padding: 2px 0 2px 20px; margin-top: 5px;}
+
+/* ================================================================== */
+
+/* ===== Reset Password (--resetPass) =============================== */
+    
+    #forgot-popup .resetPasswordStep2 h3 {
+	margin-bottom: 5px;
+    }
+    
+/* ================================================================== */
+    
+    .logSign_mid .form_row	{
+    	position: relative;
+    }

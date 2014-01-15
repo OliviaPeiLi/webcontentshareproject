@@ -1,0 +1,121 @@
+#clip_controls {
+    position: fixed;
+    right: 100px;
+    top: 50px;
+    background-color: gray  !important;
+    z-index: 99999998;
+}
+
+#clip_controls a, #clip_controls span {
+    color: white  !important;
+}
+
+#clip_overlay {
+    opacity: 0.3;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 30);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    background-color: #8fe050;
+    border-color: #11993C;
+    border-style: solid;
+    border-width: 3px;
+    z-index: 99999999;
+    display: none;
+    overflow: hidden;
+}
+
+#clip_preloader
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999999;
+}
+
+#clip_overlay_warning {
+    position: fixed;
+    color: red;
+    border: 2px solid black;
+    background-color: white;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    display: none;
+    z-index: 100000000;
+}
+
+#clip_preview {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 1000px;
+    height: 500px;
+    background-color: white;
+    z-index: 100000000;
+    border: 2px solid black;
+}
+
+#clip_preview_box {
+    width: 100%;
+    height: 450px;
+    overflow: auto;
+    z-index: -1000;
+}
+
+/* reset all of them */
+#clip_cancel, #clip_save,
+#clip_controls a, #clip_controls span,
+#clip_preview_box html, #clip_preview_box body, #clip_preview_box div, #clip_preview_box span, #clip_preview_box applet, #clip_preview_box object, #clip_preview_box iframe,
+#clip_preview_box h1, #clip_preview_box h2, #clip_preview_box h3, #clip_preview_box h4, #clip_preview_box h5, #clip_preview_box h6, #clip_preview_box p, #clip_preview_box blockquote, #clip_preview_box pre,
+#clip_preview_box a, #clip_preview_box abbr, #clip_preview_box acronym, #clip_preview_box address, #clip_preview_box big, #clip_preview_box cite, #clip_preview_box code,
+#clip_preview_box del, #clip_preview_box dfn, #clip_preview_box em, #clip_preview_box img, #clip_preview_box ins, #clip_preview_box kbd, #clip_preview_box q, #clip_preview_box s, #clip_preview_box samp,
+#clip_preview_box small, #clip_preview_box strike, #clip_preview_box strong, #clip_preview_box sub, #clip_preview_box sup, #clip_preview_box tt, #clip_preview_box var,
+#clip_preview_box b, #clip_preview_box u, #clip_preview_box i, #clip_preview_box center,
+#clip_preview_box dl, #clip_preview_box dt, #clip_preview_box dd, #clip_preview_box ol, #clip_preview_box ul, #clip_preview_box li,
+#clip_preview_box fieldset, #clip_preview_box form, #clip_preview_box label, #clip_preview_box legend,
+#clip_preview_box table, #clip_preview_box caption, #clip_preview_box tbody, #clip_preview_box tfoot, #clip_preview_box thead, #clip_preview_box tr, #clip_preview_box th, #clip_preview_box td,
+#clip_preview_box article, #clip_preview_box aside, #clip_preview_box canvas, #clip_preview_box details, #clip_preview_box embed,
+#clip_preview_box figure, #clip_preview_box figcaption, #clip_preview_box footer, #clip_preview_box header, #clip_preview_box hgroup,
+#clip_preview_box menu, #clip_preview_box nav, #clip_preview_box output, #clip_preview_box ruby, #clip_preview_box section, #clip_preview_box summary,
+#clip_preview_box time, #clip_preview_box mark, #clip_preview_box audio, #clip_preview_box video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+#clip_preview_box article, #clip_preview_box aside, #clip_preview_box details, #clip_preview_box figcaption, #clip_preview_box figure,
+#clip_preview_box footer, #clip_preview_box header, #clip_preview_box hgroup, #clip_preview_box menu, #clip_preview_box nav, #clip_preview_box section {
+    display: block;
+}
+#clip_preview_box body {
+    line-height: 1;
+}
+#clip_preview_box ol, #clip_preview_box ul {
+    list-style: none;
+}
+#clip_preview_box blockquote, #clip_preview_box q {
+    quotes: none;
+}
+#clip_preview_box blockquote:before, #clip_preview_box blockquote:after,
+#clip_preview_box q:before, #clip_preview_box q:after {
+    content: '';
+    content: none;
+}
+#clip_preview_box table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* and new cancel-save css */
+#clip_cancel, #clip_save
+{
+    font-weight: bold !important;
+    color: black  !important;
+    font-size: 100% !important;
+}

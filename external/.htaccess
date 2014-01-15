@@ -1,0 +1,4 @@
+RewriteEngine on
+# remove index.php from url
+RewriteRule ^data:(.*)$ 404
+RewriteRule ^(.*)/$ index.php/$1

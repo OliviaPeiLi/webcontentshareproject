@@ -1,0 +1,228 @@
+/**
+ * Used for the bookmarklet "Drop Page" popup contents
+ */
+body {
+	overflow: hidden;
+}
+a {
+	color: #1E82AD;
+}
+#drop_page {
+	padding: 5px 7px;
+	background: #F1F2F2;
+	border: 1px solid #333;
+	border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;
+	position: relative;
+}
+#drop_page #scraper_form * {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight: 300;
+	font-stretch: normal;
+	font-size: 14px;
+	line-height: 14px;
+}
+#drop_page #scraper_form #token-input- {
+	border: none;
+}
+#drop_page #scraper_form .token-input-token-fd_dropdown {
+	background-position: 330px -480px;
+}
+#drop_page #scraper_form .hashtag {
+	color: #08BBE6;
+	padding: 1px 4px;
+	font-size: 11px;
+	text-decoration: none;
+}
+#drop_page #scraper_form .hashtag:hover {
+	color: #28DBF6;
+}
+#bookmark_status_popup {
+	background: #666666;
+	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666666), to(#333333));/**/
+	/*background-image: -webkit-linear-gradient(top, #666666, #333333); /**/
+	/*background-image: -moz-linear-gradient(top, #666666, #333333);/**/
+	/*background-image: -ms-linear-gradient(top, #666666, #333333);/**/
+	/*background-image: -o-linear-gradient(top, #666666, #333333);/**/
+	width: 330px;
+	padding: 10px;
+	border-radius: 7px;
+	margin-top: -78px;
+	margin-left: -165px;
+	font-family: 'lucida grande', helvetica, arial, sans-serif;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+			box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5);
+	   -moz-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+#bookmark_status_popup h1 {
+	width: 100%;
+	background: #FFFFFF;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 0;
+	display: inline-block;
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.error {
+	color: #FF0000;
+	padding: 0 0px 0 5px;
+	margin-bottom: 5px;
+	font: 12px "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
+	font-weight: bold !important;
+	text-align: left;
+	display: block;
+	position: absolute;
+	bottom: 0px; /* RR - using bottom for better position on rows with different height */
+	left: 10px;
+}
+.form_row.title input {
+	font: 14px 'serif';
+	color: #333366;
+}
+#drop_page .form_row.title {
+	display: none;
+}
+/* ================== Form Controls ================== */
+
+.form_row {
+	position: relative;
+	padding: 3px 7px 25px 7px;
+}
+.form_row:last-of-type {
+    padding-bottom: 5px;
+}
+.form_row .maxLength {
+	color: #8B8B8B;
+	position: absolute;
+	bottom: 4px; right: 5px;
+}
+.form_row input {
+	padding: 5px;
+}
+.form_row textarea {
+	/*height: 55px;*/height: 100px;
+	width: 98%;
+	padding: 5px;	
+	resize: none;
+}
+.form_row .form_left {
+	position: relative;
+	height: 60px;
+	/*width: 45%;*/ width: 100%;
+	margin-top: 5px;
+	display: inline-block;
+}
+/*.form_row.form_bottom {
+	position: absolute;
+	bottom: 40px;
+}
+.form_row.form_submit_button {
+	padding-top: 25px;
+}*/
+.form_row .form_left .form_left_title,
+.form_row .right .form_right_title,
+.form_row .form_bottom_title {
+	display: block;
+	height: 23px;
+	color: #656565;
+	line-height: 18px !important;
+	font-size: 13px !important;
+	font-weight: bold !important;
+}
+.form_row .form_left .form_left_title,
+.form_row .right .form_right_title,
+.form_row .form_bottom_title {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-stretch:normal;
+}
+.form_row input, .form_row textarea, .form_row select {
+	color: #999999;
+	border: 1px solid #CCC;
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	font: 12px 'lucida grande', helvetica, arial, sans-serif;
+}
+.form_row input, .form_row select {
+	width: 98%;
+}
+.form_row.double .right {
+	position: relative;
+	display: inline-block;
+	/*width: 50%;*/ width: 100%;
+	margin-right: 15px;
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	vertical-align: top;
+}
+.form_row.double input, select {
+	width: 49%;
+}
+.form_row.double ul {
+	width: 386px !important;
+	display: block;
+	float:left;
+	height: 25px; /* !important  RR - important here breaks the collection dropdown js*/;
+	vertical-align: top;
+}
+.form_row.double ul.token-input-list-fd_dropdown {
+	height: auto;
+}
+.form_row .blue_btn {
+	line-height: 25px !important;
+	font-size: 16px !important;
+	width: 100%;
+	color: white;
+    text-shadow: 1px 1px #73A6FC;
+    padding: 7px 10px;
+    border: 0px;
+    cursor: pointer;
+    /*Experimental Rounding*/
+    border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+    /*Experimental Shadow*/
+    box-shadow: 0 1px 4px 0px rgba(75,75,75,0.5);
+    -moz-box-shadow: 0 1px 4px 0px rgba(75,75,75,0.5);
+    -webkit-box-shadow: 0 1px 4px 0px rgba(75,75,75,0.5);
+	/* Background */
+	background: rgb(41,171,226); /* Old browsers */
+	/*background: -moz-linear-gradient(top, rgba(41,171,226,1) 0%, rgba(0,113,188,1) 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(41,171,226,1)), color-stop(100%,rgba(0,113,188,1))); /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* IE10+ */
+	/*background: linear-gradient(to bottom, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29abe2', endColorstr='#0071bc',GradientType=0 ); /* IE6-9 */
+}
+.form_row .blue_btn:hover {
+	background: rgb(47,195,249); /* Old browsers */
+	/*background: -moz-linear-gradient(top, rgba(47,195,249,1) 0%, rgba(0,134,211,1) 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(47,195,249,1)), color-stop(100%,rgba(0,134,211,1))); /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* IE10+ */
+	/*background: linear-gradient(to bottom, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fc3f9', endColorstr='#0086d3',GradientType=0 ); /* IE6-9 */
+	color: #FFFFFF;
+}
+#drop_page #scraper_form .form_row hashtag.hashNSFW {
+	padding-right: 2px;
+	font-weight: bold;
+}
+#drop_page #scraper_form .form_row .parenText {
+	color: #808080;
+	font-size: 10px;
+}
+#drop_page #scraper_form .form_row .typeyourOwn {
+	color: #808080;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* ================== End - Form Controls ============ */

@@ -1,0 +1,251 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		newsfeed.css
+    -Description:	Formatting and styling for the base Newsfeed
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Dmitry Kashlev, Radil Radenkov, & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyling		General Styling
+    
+    ================================================================= */
+
+/* ===== General Styling (--genStyling) ============================= */
+	#controlDashboard {
+		width: 1235px;
+		background: #FFFFFF;
+		padding: 40px 45px 45px;
+		border-radius: 10px;
+		margin: 0 auto;
+				box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	
+	#controlDashboard #controlDashboard_top {
+		min-height: 50px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #B0B0B0;
+		margin-bottom: 30px;
+	}
+	#controlDashboard h1,
+	#controlDashboard h1 a {
+		display: inline-block;
+	}
+	#controlDashboard h1 a {
+		font-size: 32px;
+	}
+	#controlDashboard a.contestFeed {
+		background: #00ADEE;
+		color: #FFFFFF;
+		font-size: 18px;
+		letter-spacing: 1px;
+		padding: 10px 25px;
+		border-radius: 10px;
+		float:right;
+		vertical-align: middle;
+				transition: ease-in 128ms;
+		   -moz-transition: ease-in 128ms;
+		-webkit-transition: ease-in 128ms;		
+	}
+	#controlDashboard a.contestFeed:hover {
+		background: #10BDFE;
+	}
+	#controlDashboard #controlDashboard_bottom {
+		
+	}
+	#controlDashboard #controlDashboard_bottom>span.companyTile:nth-of-type(2n) {
+		margin-right: 0;
+	}
+	#controlDashboard .companyTile {
+		width: 545px;
+		margin: 0 50px 40px 0;
+		display: inline-table;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#controlDashboard .companyTile .companyTile_labels {
+		display: table-row;
+	}
+	#controlDashboard .companyTile .companyTile_labels > span,
+	#controlDashboard .companyTile .companyTile_data > span,
+	#controlDashboard .companyTile .companyTile_shares > span {
+		display: table-cell;
+	}
+	#controlDashboard .companyTile .companyTile_data > span,
+	#controlDashboard .companyTile .companyTile_shares > span {
+		border: solid #D0D0D0;
+		border-width: 1px 0 0 1px;
+	}
+	#controlDashboard .companyTile .companyTile_label.companyTile_labelsCompany {
+		width: 145px;
+	}
+	#controlDashboard .companyTile .companyTile_data > span:last-of-type,
+	#controlDashboard .companyTile .companyTile_shares > span:last-of-type {
+		border-right-width: 1px;
+	}
+	#controlDashboard .companyTile .companyTile_shares > span {
+		padding: 10px;
+		border-bottom-width: 1px;
+	}
+	#controlDashboard .companyTile .companyTile_labels > .companyTile_label .companyTile_labelsContents {
+		background: #F0F0F0;
+		color: #909090;
+		padding: 5px 10px;
+		border: solid #D0D0D0;
+		border-width: 1px 1px 0;
+		display: inline-block;
+		font-size: 11px;
+		letter-spacing: 1px;
+	}
+	#controlDashboard .companyTile .companyTile_data {
+		height: 50px;
+		display: table-row;
+	}
+	#controlDashboard .companyTile .companyTile_data .companyLogo_holder {
+		width: 145px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	#controlDashboard .companyTile .companyTile_data .companyLogo_holder span {
+		display: block;
+		overflow:hidden;
+	}
+	#controlDashboard .companyTile .companyTile_data .companyLogo_holder span img {
+		/*margin-bottom: -16px;*/
+	}
+	#controlDashboard .companyTile .companyTile_data .companyLogo_restrictor {
+		height: 50px;
+	}
+	#controlDashboard .companyTile .companyTile_data .companyLogo {
+		max-height: 50px;
+		max-width: 145px;
+		padding: 0;
+	}
+	#controlDashboard .companyTile .companyTile_data .companyShares {
+		min-width: 145px;
+		color: #656565;
+		padding: 15px;
+		font-size: 24px;
+		vertical-align: middle;
+	}
+	#controlDashboard .companyTile .companyTile_data .companyGraph {
+		width: 255px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	#controlDashboard .companyTile .companyTile_data .companyGraph span {
+		height: 90%;
+		width: 90%;
+		display: inline-block;
+	}
+	
+	#controlDashboard .companyTile .companyTile_shares {
+		width: 100%;
+		background: #F5F5F5;
+		display: table;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesContent {
+		display: table-row;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesColumn {
+		/*width: 20%;*/
+		padding: 5px 9px;
+		border: solid #D0D0D0;
+		border-width: 1px 0 1px 1px;
+		display: table-cell;
+	}
+	#controlDashboard .companyTile .companyTile_shares span.companyTile_sharesColumn:last-of-type {
+		border-right-width: 1px;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesIcon {
+		height: 32px;
+		width: 32px;
+		background: url("/images/common_sprites.png") no-repeat;
+		margin-right: 5px;
+		display: inline-block;
+		vertical-align: -11px;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesIcon.fb_sharesIcon {
+		background-position: -256px -224px;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesIcon.tw_sharesIcon {
+		background-position: -288px -224px;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesIcon.pin_sharesIcon {
+		background-position: -256px -256px;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesIcon.gplus_sharesIcon {
+		background-position: -320px -256px;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesIcon.linkedin_sharesIcon {
+		background-position: -288px -256px;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesText {
+		color: #909090;
+		margin-right: 3px;
+		font-size: 11px;
+		letter-spacing: 1px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#controlDashboard .companyTile .companyTile_shares .companyTile_sharesCount {
+		display: block;
+		text-align: center;
+		color: #656565;
+		font-size: 24px;
+		vertical-align: -4px;
+	}
+	
+#contest_tabs {
+	background: #B5B5B5;
+}
+#contest_tabs .contest_tabs_container {
+	width: 995px;
+	margin: 0 auto;
+}
+#contest_tabs .contest_tab {
+	height: 40px;
+	min-width: 170px;
+	background: #909090;
+	color: #FFFFFF;
+	line-height: 40px;
+	font-size: 18px;
+	display: inline-block;
+	text-align: center;
+			transition: ease-in 128ms;
+	   -moz-transition: ease-in 128ms;
+		-ms-transition: ease-in 128ms;
+	-webkit-transition: ease-in 128ms;
+}
+#contest_tabs .contest_tab:hover {
+	background: #A5A5A5;
+}
+#contest_tabs .contest_tab.active {
+	background: #3D3D3D;
+}
+.demo_topBox {
+	width: auto;
+	background: #FFFFFF;
+	padding: 20px 25px 30px;
+	margin: 30px auto 25px;
+	border-radius: 10px;	
+			box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+			box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/* ================================================================== */

@@ -1,0 +1,178 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		user_info.css
+    -Description:	Formatting and styling for the Profile Info page
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+
+    --genStyling		General Styling for the User Info page
+	--infoTop		Seemingly Unused
+	--infoBot		Sets the width of the bottom of the User Info Page 
+	--infoMain		Main styling for the User Info Page
+	
+    ================================================================= */
+
+/*  ===== General Styling (--genStyle) ======================== */
+
+    /* ----- Info Top (--infoTop) ---------------------------------- */
+	.info_top{
+	    height: 45px;
+	    padding: 0px 0px 0px 25px;
+	}
+	.info_top a {
+	    /* float: right; */
+	}
+	.info_top .edit_button {
+	    margin-top: 20px;
+	    margin-left: 20px;
+	}
+	.info_top a.wide_button {
+	    background: #3366CC;
+	    width: 120px !important;
+	    height: 24px !important;
+	    border: none;
+	    margin: 0px 15px 0 0;
+	    float: right;
+	}
+	.info_top a.wide_button:hover{
+	    background: #003399;
+	}
+	
+    /* ----- Info Bot (--infoBot) ---------------------------------- */
+	.info_bot {
+	    width: 710px;
+	    height: 23px;
+	}
+	
+    /* ----- Info Main (--infoMain) -------------------------------- */
+	.info_main ul li.info_section i {
+	    width: 95%;
+	    margin: 0 0 15px 20px;
+	    font-style: italic;
+	    float: left;
+	}
+	.info_main a.my_links{
+	    font-weight: bold;
+	    margin: 5px 0 5px 5px;
+	    text-decoration: none;
+	    color: #656565;
+	    font-size: 12px;
+	    clear: both;
+	    display: inline-block;
+	}
+	.info_main a.my_links img{
+	    vertical-align: middle;
+	}
+	.info_main a.my_links:hover{
+	    color: #2d2d2d
+	}
+	.info_main div ul li.left{
+	    text-align: right;
+	    /*width: 55px;*/
+	    padding-right: 10px;
+	    margin-left: 10px;
+	    vertical-align: top;
+	    font-weight: bold;
+	    float: left;
+	}
+	.info_main .edit_button {
+		margin-top: 0px;
+	}
+	.info_main ul li.info_section {
+	    width: 943px;
+	    background: #FFFFFF;
+	    overflow: hidden;
+	    margin-right: auto;
+	    margin-left: auto;
+	    /*border-bottom: 1px solid #E6E6E6;*/
+	    border: 1px solid #ddd;
+	    padding: 20px 0 20px 30px;
+		    box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+		    box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	       -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	    -webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+	}
+	.info_main ul li.info_section.first{
+	    padding-top: 10px;
+	    margin-left: 65px;
+	}
+	.info_main ul li.info_section.last
+	.edit_info_main ul li.edit_section.last{
+	    border-bottom: none;
+	}
+	.info_main ul li.info_section span{
+	    color: #656565;
+	    font-size: 13px;
+	    line-height: 25px;
+	    margin: 5px 0 5px 2px;
+	    /*display: block;*/
+	    clear: both;
+	}
+	.info_main ul li.info_section strong{
+	    display: block;
+	    font-weight: bold;
+	    margin: 10px 0 2px 10px;
+	    font-size: 12px;
+	    color: #656565;
+	}
+	.info_main ul li.info_section small{
+	    display: block;
+	    margin-left: 20px;
+	    font-size: 12px;
+	    color: #656565;
+	}
+	.info_main,
+	.edit_info_main{
+	    overflow: visible;
+	    width: 100%;
+	    margin-top: 20px;
+	    margin-left: 0px;
+	}
+	.info_main ul li p
+	.edit_info_main ul li p#social_networks{
+	    width: 51px;
+	    height: 16px;
+	    background: url(/images/socials.png) no-repeat center center;
+	    float: right;   
+	    margin-right: 10px;
+	}
+	.info_main ul li p a,
+	.edit_info_main ul li p a{
+	    text-indent: -9999px;
+	    display: block;
+	    width: 18px;
+	    height: 18px;
+	}
+	.info_main div.info_body,
+	.edit_info_main div.edit_body{
+	    margin-left: 20px;
+	    color: #656565;
+	    clear: both;
+	}
+	.info_main div.info_body .spacing{
+	    margin-left: 10px;
+	}
+	.locations{
+	    width: 230px !important;
+	    padding-top: 0px !important;
+	    border-bottom: none !important;
+	    margin-left: 20px;
+	    clear: both;
+	    float: left;
+	}
+	.on_the_map{
+	    width: 300px !important;
+	    padding-top: 0px !important;
+	    border-bottom: none !important;
+	    margin-right: 30px;
+	    float: left;
+	}

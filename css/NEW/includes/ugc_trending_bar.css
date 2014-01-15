@@ -1,0 +1,315 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		ugc_trending_bar.css
+    -Description:	Formatting and styling for the base Newsfeed
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Radil Radenkov & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	960 Grid - Fluid variant
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genStyling	General Styling
+    --
+    
+    ================================================================= */
+
+/* ===== General Styling (--genStyling) ============================= */
+
+    #trending_bar {
+	background-color: rgba(255, 255, 255, 0.95);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.21); /* drop shadow */
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.21); /* drop shadow */
+	box-shadow: 0 0 3px rgba(0,0,0,.21); /* drop shadow */
+	font-family: 'Droid Sans', sans-serif;
+	display: none;
+
+		height: 32px;
+		width: 100%;
+		min-width: 1009px;
+		padding: 0 30px 0 15px;
+		position: fixed;
+		top: 45px;
+		z-index: 5; /* increase if needed */
+
+		/* Zorbas: "Old stuff" */
+		/* background: #FFFFFF;
+				box-shadow: 0 1px 1px 0px rgba(10,10,10,.125);
+		   -moz-box-shadow: 0 1px 1px 0px rgba(10,10,10,.125);
+		-webkit-box-shadow: 0 1px 1px 0px rgba(10,10,10,.125);
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box; */
+	} 
+	#trending_categories {
+		white-space: nowrap;
+		min-width: 1180px;
+	}
+	#trending_categories div,
+	#trending_categories span,
+	#trending_categories .trending_hashtags a {
+		font-size: 12px;
+	}
+
+/* ================================================================== */
+
+/* ===== General Styling (--genStyling) ============================= */
+
+	#trending_categories .totalPoints span,
+	#trending_categories .totalPoints a {
+		font-size: 12px;
+	}
+	#trending_categories .totalPoints span {
+		color: #656565;
+	}
+	#trending_categories div,
+	#trending_categories span,
+	#trending_categories .trending_hashtags,
+	#all_categories_btn,
+	#trending_categories .totalPoints {
+	    vertical-align: bottom;
+	}
+	#trending_categories #topCategories_Section {
+		display: inline;
+	}
+	#trending_categories #trendingCategories_Section {
+		margin-left: 20px;
+	}
+	#trending_categories .trendingTitles {
+		height: 32px;
+		color: #3D3D3D;
+		padding: 10px 11px 10px 8px;
+		margin-left: 10px;
+		font-weight: bold;
+		display: inline-block;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		float: left;
+		padding-left: 20px;
+	}
+	#trendingCategories_Section .trendingTitles {
+			background: url(/images/zachary-images/icon-trending.png) left center no-repeat;
+		}
+	#topCategories_Section .trendingTitles {
+		background: url(/images/zachary-images/icon-star.png) left center no-repeat;
+		}
+	#trending_categories .trending_hashtags,
+	#trending_categories .totalPoints {
+		height: 32px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#trending_categories .trending_hashtags {
+		border-right: 1px solid #F0F0F0;
+		float: left;
+	}
+	#trending_categories li.trending_hashtags:first-of-type {
+	    border-left: 1px solid #F0F0F0;
+	}
+	#trending_categories .trending_hashtags a {
+		padding: 10px 11px 10px 8px;
+		display: inline-block;
+	}
+	#trending_categories .trending_hashtags a:hover,
+	#all_categories_btn:hover {
+		cursor: pointer;
+	}
+	#trending_categories .trending_hashtags a:hover {
+		text-decoration: underline;
+		color: #3582ac;
+	}
+	#all_categories_btn:hover {
+		color: #59B6DF;
+	}
+	#trending_categories .trending_hashtags.active a {
+		font-weight: bold;
+	}
+	#trendingHeader_login_container {
+		display: inline-block;
+		float: right;
+	}
+	#trendingHeader_login {
+		color: #E0E0E0;
+		padding: 0px 0 0 10px;
+	}
+	#trendingHeader_login:hover {
+		color: #C0C0C0;
+		text-shadow: 1px 1px #2986AF;
+	}
+	#trending_categories .totalPoints {
+		font-weight: bold;
+		float: right;
+		background: url(/images/trophy.png) no-repeat;
+		padding: 4px 0 0 28px;
+		height: 23px;
+		position: relative;
+		top: -4px;
+	}
+	#all_categories_btn {
+		color: #656565;
+		margin-right: 15px;
+		position: relative;
+		top: -10px;
+		display: inline-block;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#all_categories_btn .all_categories_btn_contents {
+		background: #fcfcfc; /* Old browsers */
+		background: -moz-linear-gradient(top, #fcfcfc 0%, #afb1b4 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#afb1b4)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #fcfcfc 0%,#afb1b4 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #fcfcfc 0%,#afb1b4 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #fcfcfc 0%,#afb1b4 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #fcfcfc 0%,#afb1b4 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#afb1b4',GradientType=0 ); /* IE6-9 */
+		padding: 10px 15px 11px 15px;
+		position: relative;
+		display: inline-block;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#all_categories_btn .all_categories_btn_contents:hover {
+		background: #ececec; /* Old browsers */
+		background: -moz-linear-gradient(top, #ececec 0%, #9fa1a4 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ececec), color-stop(100%,#9fa1a4)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #ececec 0%,#9fa1a4 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #ececec 0%,#9fa1a4 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #ececec 0%,#9fa1a4 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #ececec 0%,#9fa1a4 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#9fa1a4',GradientType=0 ); /* IE6-9 */
+	}
+	#all_categories_btn .all_categories_btn_contents span {
+		font-weight: bold;
+	}
+	#all_categories_btn > span:first-of-type,
+	#trending_bar #filter_by_menu_trigger > span:first-of-type {
+		padding-right: 5px;
+		font-weight: bold;
+	}
+	#trending_bar .users-meter {
+		display: inline-block;
+		float: right;
+		position: relative;
+		top: -5px;
+	}
+	#trending_bar .users-meter.completed {
+		width: 34%;
+	}
+	#trending_bar .users-meter strong {
+		float: left;
+		margin-right: 12px;
+		color: #FFF;
+		font-weight: bold;
+		line-height: 19px;
+	}
+	#trending_bar .users-meter strong span {
+		line-height: 19px;
+	}
+	#trending_bar .users-meter ul {
+		display: inline-block;
+		float: right;
+	}
+	#trending_bar .users-meter ul li {
+		display: inline-block;
+		padding: 0 2px;
+	}
+	#trending_bar .users-meter ul li span {
+		display: block;
+		width: 9px; height: 20px;
+		background: url(/images/friends_icon.png) no-repeat 0 -29px; 
+	}
+	#trending_bar .users-meter ul li.selected span {
+		background-position: 0 -58px
+	}
+
+	/* ----- Drop Down (--categoryDrop) ----------------------------- */
+	
+	#all_categories_btn .menuButton,
+	#trending_bar .menuButton {
+		height: 15px;
+		width: 15px;
+		background: url(/images/common_sprites.png) no-repeat -224px -288px;
+		position: relative;
+		display: inline-block;
+	}
+	#trending_categories .menuButton_contents,
+	#trending_bar .menuButton_contents {
+		background: url(/images/common_sprites.png) no-repeat -240px -288px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+				transition: opacity ease-in 250ms;
+		   -moz-transition: opacity ease-in 250ms;
+		-webkit-transition: opacity ease-in 250ms;
+    }
+	#all_categories_btn .menuButton_contents:hover,
+	#all_categories_btn:hover .menuButton_contents,
+	#trending_bar .menuButton_contents:hover {
+		opacity: 1;
+	}
+	#trending_categories #categories_menu {
+		width: 140px;
+		background: #D9D6DF;
+		border-radius: 5px;
+		position: relative;
+		top: -10px;
+		left: 14px;
+		z-index: 1;
+				box-shadow: 1px 3px 5px 0 rgba(10, 10, 10, 0.5);
+		   -moz-box-shadow: 1px 3px 5px 0 rgba(10, 10, 10, 0.5);
+		-webkit-box-shadow: 1px 3px 5px 0 rgba(10, 10, 10, 0.5);
+	}
+	#trending_categories .category_menu_item:first-of-type {
+	    border-radius: 5px 5px 0 0;
+	}
+	#trending_categories .category_menu_item:last-of-type {
+	    border-radius: 0 0 5px 5px;
+	}
+	#trending_categories .category_menu_item:hover {
+		background: #B4B2BB;
+				box-shadow: 0 0 8px 0 rgba(150, 150, 150, 1) inset;
+		   -moz-box-shadow: 0 0 8px 0 rgba(150, 150, 150, 1) inset;
+		-webkit-box-shadow: 0 0 8px 0 rgba(150, 150, 150, 1) inset;
+	}
+	#trending_categories .category_menu_item a {
+		width: 100%;
+		color: #79767F;
+		padding: 2px 10px;
+		font-size: 10px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		display: inline-block;
+	}
+	#categories_menu_arrow {
+		border-color: transparent transparent #D9D6DF transparent;
+		border-style: solid;
+		border-width: 0px 5px 5px 5px;
+		position: absolute;
+		top: -5px;
+		left: 10px;
+	}
+	#trending_bar #collection_media_filter {
+		position: absolute;
+		top: 13px;
+		right: 15px;
+		cursor: pointer;
+	}
+	#trending_bar .ft-dropdown {
+		color: #79767F;
+		height: 42px;
+		font-size: 10px;
+	}

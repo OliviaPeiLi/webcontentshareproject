@@ -1,0 +1,74 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		hostedContent.css
+    -Description:	Basic formatting and styling for Landing Page Fresh
+    -Version:		Unspecified Beta
+    -Site:		Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	Homebrewed - based upon a width of 960, but not a
+					grid
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genContest	Styling for the Contest Page
+
+    ================================================================= */
+
+/* ===== Contest Page (--genContest) ================================ */
+
+	#contestBody {
+		margin-top: -69px;
+	}
+	#contestBody .contestHeader {
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#contestBody .contestHeader .contestHeader_contentsContainer {
+		display: block;
+		margin: 0 auto;
+	}
+	#contestBody .contestHeader .contestHeader_contentsContainer .contestHeader_logo {
+		display: inline-block;
+	}
+	
+	/* ----- Contest Specific (--contestSpec) ----------------------- */
+		#contestBody.demoMobile .contestHeader .contestHeader_contentsContainer {
+			width: 770px;
+		}
+		#contestBody.demoMobile .contestHeader {
+			height: 80px;
+			width: 100%;
+			background: #FFFFFF;
+			padding: 15px;
+			border-width: 4px 0;
+			border-style: solid;
+			border-color: #008ECC;
+			position: fixed;
+			top: 0;
+					box-shadow: 0 2px 4px 0px rgba(100,100,100, 0.5);
+			   -moz-box-shadow: 0 2px 4px 0px rgba(100,100,100, 0.5);
+			-webkit-box-shadow: 0 2px 4px 0px rgba(100,100,100, 0.5);
+		}
+		
+		#contestBody.demoMobile .contestHeader .contestHeader_logo {
+			height: 47px;
+			width: 416px;
+			background-image: url('/images/contestFiles/demoMobile/demoMobile.png');
+			background-repeat: no-repeat;
+		}
+
+#contestBody .contestContainer {
+	margin-top: 170px;
+}
+#contestBody .thirdParty_iframe {
+    margin: 0 auto;
+    display: block;
+	border-radius: 5px;
+			box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+       -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+    -webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+}

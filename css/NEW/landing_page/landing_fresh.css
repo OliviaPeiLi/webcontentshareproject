@@ -1,0 +1,318 @@
+/*  ===== INFO =========================================================
+   
+    -FileName:		landing_fresh.css
+    -Description:	Basic formatting and styling for Landing Page Fresh
+    -Version:		Unspecified Beta
+    -Site:			Fandrop.com
+    -Author/s:		Dmitry Kashlev & Michael Eng
+    
+    ----- Structure ----------------------------------------------------
+    
+    -Page format:	Homebrewed - based upon a width of 960, but not a
+					grid
+    
+    ----- Anchors ------------------------------------------------------
+    
+    --genLanding	Styling for the Landing Page
+    --carousel		Structure for the carousel at the top of the page
+    --popFolders	For the Popular Collections section on the right side
+
+    ================================================================= */
+
+/* ===== Landing Page (--genLanding) ============================= */
+
+	body.logged_out {
+		/*background: url('/images/backgrounds/grey.png');*/
+		background: url('/images/backgrounds/low_contrast_linen.png');
+	}
+	#landing_page {
+		color: #8B8B8B;
+		/*width: 960px;*/
+		/*min-width: 960px;*/
+		width: 1100px;
+		min-width: 1100px;
+		/*background: #EFEFF1;*/
+		/*padding: 20px;*/
+		margin: 40px auto 0 auto;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#landing_page #top_landing {
+		margin-bottom: 20px;
+	}
+	#landing_page .top_landing {
+		background: #EFEFF1;
+				box-shadow: 0px 2px 5px 0 rgba(100, 100, 100, 0.25);
+		   -moz-box-shadow: 0px 2px 5px 0 rgba(100, 100, 100, 0.25);
+		-webkit-box-shadow: 0px 2px 5px 0 rgba(100, 100, 100, 0.25);
+	}
+	#landing_page .top_text {
+		width: 44%;
+		min-width: 400px;
+		padding-right: 10px;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		vertical-align: top;
+	}
+	#landing_page .top_text.top_text_right {
+		
+	}
+	#landing_page .top_title {
+		color: #3D3D3D;
+		font-size: 42px;
+		margin-bottom: 20px;
+	}
+	#landing_page .mid_text {
+		font-size: 14px;
+		line-height: 24px;
+		text-shadow: 1px 1px #F0F0F0;
+		margin-bottom: 10px;
+	}
+	#landing_sign_up,
+	#landing_login {
+		height: 36px;
+		width: 107px;
+		color: #FFFFFF;
+		padding: 7px 25px 6px;
+		border: none;
+		border-radius: 10px;
+		font-size: 16px;
+				box-sizing: content-box;
+		   -moz-box-sizing: content-box;
+			-ms-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		vertical-align: top;
+		cursor: pointer;
+	}
+	#landing_sign_up {
+		width: auto;
+		background: #F75547 url("/images/sunset_bg_tall_sprite.png");
+		margin-right: 10px;
+	}
+	#landing_sign_up:hover {
+		background-color: #98211B;
+		background-position: 0 -38px;
+	}
+	#landing_login {
+		background: #F6F3EF url("/images/light_bg_tall_sprite.png");
+		color: #808080;
+		border: 1px solid #C9C9B0;
+		text-shadow: 1px 1px #FFFFFF;
+	}
+	#landing_login:hover {
+		background-color: #E3DCD2;
+		background-position: 0 -38px;
+		color: #909090;
+		text-shadow: 1px 1px #F0F0F0;
+	}
+	#landing_page .top_pic {
+		vertical-align: top;
+		width: 508px;
+		height: 300px;
+		position: relative;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#landing_page .top_pic img {
+		padding: 0;
+	}
+	#landing_page .top_pic.pages img {
+		width: 408px;
+		margin-top: 5px;
+		margin-left: 7px;
+				box-shadow: 0 2px 7px 2px rgba(175, 175, 175, 0.75);
+		   -moz-box-shadow: 0 2px 7px 2px rgba(175, 175, 175, 0.75);
+		-webkit-box-shadow: 0 2px 7px 2px rgba(175, 175, 175, 0.75);
+				border-radius: 5px;
+		   -moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+	#landing_page .top_pic.pages.top_pic_right img {
+		margin-right: 5px;
+		float: right;
+	}
+	
+	#landing_page #videoBox {
+		width: 346px;
+		height: 216px;
+		display: inline-block;
+		position: absolute;
+		top: 27px;
+		left: 81px;
+				transition: ease-in 125ms;
+		   -moz-transition: ease-in 125ms;
+		-webkit-transition: ease-in 125ms;
+		cursor: pointer;
+	}
+	#landing_page #videoBox:hover {
+		background: rgba(250, 250, 250, 0.5);
+	}
+	#landing_page #videoBox:hover #boxPlay {
+		opacity: .75;
+	}
+	#landing_page #videoBox #boxPlay {
+		background: url('/images/play_button.png') center no-repeat;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+				transition: opacity ease-in 125ms;
+		   -moz-transition: opacity ease-in 125ms;
+		-webkit-transition: opacity ease-in 125ms;
+	}
+	#landing_page .bot_landing {
+		
+	}
+	#landing_page .bot_title {
+		color: #5A5A5A;
+		font-size: 14px;
+		font-weight: bold;
+		padding-bottom: 5px;
+		border-bottom: 4px solid #EC4F79;
+		margin-bottom: 20px;
+	}
+	#landing_page .bot_content {
+		margin-bottom: 20px;
+	}
+	#landing_page .how_it_works_item {
+		min-height: 180px;
+		width: 33%;
+		padding: 0 50px 0 10px;
+		display: inline-block;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		vertical-align: top;
+	}
+	#landing_page .how_it_works_item .item_title {
+		color: #3D3D3D;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	#landing_page .how_it_works_item .item_text {
+		font-size: 14px;
+		line-height: 24px;
+		text-shadow: 1px 1px #FFFFFF;
+	}
+	.logged_out #fb_facepile {
+		height: 50px;
+		float: left;
+	}
+	
+/*  ================================================================= */
+
+/*  ===== Carousel (--carousel) ===================================== */
+
+	/* Related to Carousel for sliding images */
+	/*
+	.carousel{overflow: hidden;position:relative;width:100%;}
+	.carousel .carousel-inner {height:100%;min-width: 920px;overflow: hidden;width: 90%;margin:auto;position: relative;}
+	
+	.carousel .item{width: 100%;overflow: hidden;height:100%;
+	-webkit-transition: 0.5s ease-in-out left;
+	-moz-transition: 0.5s ease-in-out left;
+	-ms-transition: 0.5s ease-in-out left;
+	-o-transition: 0.5s ease-in-out left;
+	transition: 0.5s ease-in-out left;display:none;position:relative;}
+	.carousel .active,.carousel .next,.carousel .prev {display: block;}
+	.carousel .active {left: 0;}
+	.carousel .next,.carousel .prev {position: absolute;top: 0;width: 100%;}
+	.carousel .next {left: 100%;}
+	.carousel .prev {left: -100%;}
+	.carousel .next.left,.carousel .prev.right {left: 0;}
+	.carousel .active.left {left: -100%;}
+	.carousel .active.right {left: 100%;}
+	
+	.carousel .carousel-control {width:46px;height:46px;position:absolute;top:50%;margin-top:-23px;z-index:20;opacity: 0.5;text-indent:-9999px;border:0;display:none;}
+	.carousel:hover .carousel-control {display:block;}
+	.carousel .carousel-control:hover{opacity: 0.9;}
+	.carousel .control-left {background:url(/images/arrow_sprites.png) no-repeat 0 -65px;left:15px;}
+	.carousel .control-right {background:url(/images/arrow_sprites.png) no-repeat -51px -65px;right:15px;left:auto;}
+	*/
+/* ================================================================== */
+
+/* ====== Popular Folders (--popFolders) ============================ */
+	
+	#popular_collections_list .folder,
+	#popular_collections_list .folderSignup {
+		background: #FFFFFF;
+		width: 430px;
+		/*width: 184px;*/
+		margin-bottom: 25px;
+	}
+	#popular_collections_list .folder {
+				box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		   -moz-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		-webkit-box-shadow: -5px 5px 10px 0px rgba(10, 10, 10, 0.5);
+		cursor: pointer;
+	}
+	#popular_collections_list .folderSignup { /* for the currently unused sign up box */
+		height: 205px;
+		padding: 20px 10px 5px;
+		border: 1px solid #C0C0C0;
+				box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		text-align: center;
+				box-shadow: 0 0 15px 0 rgba(175, 175, 175, 0.5) inset;
+		   -moz-box-shadow: 0 0 15px 0 rgba(175, 175, 175, 0.5) inset;
+		-webkit-box-shadow: 0 0 15px 0 rgba(175, 175, 175, 0.5) inset;
+	}
+	#popular_collections_list .folderSignup_text,
+	#popular_collections_list .folderSignup_text span {
+		font-size: 20px;
+	}
+	#popular_collections_list .folderSignup_text {
+		margin-bottom: 20px;
+	}
+	#popular_collections_list .folderSignup_text span {
+		font-weight: bold;
+		display: block;
+	}
+	#popular_collections_list .folderSignup_drop {
+		height: 28px;
+		width: 28px;
+		background: url('/images/signupDrop.png') no-repeat;
+		margin: 0 auto 20px;
+	}
+	#popular_collections_list .folderSignup_button {
+		height: 33px;
+		width: 90px;
+		background: rgb(41,171,226); /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(41,171,226,1) 0%, rgba(0,113,188,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(41,171,226,1)), color-stop(100%,rgba(0,113,188,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom, rgba(41,171,226,1) 0%,rgba(0,113,188,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29abe2', endColorstr='#0071bc',GradientType=0 ); /* IE6-9 */
+		color: #FFFFFF;
+		font-size: 13px;
+		line-height: 33px;
+		text-shadow: 1px 1px #808080;
+		padding-right: 15px;
+		padding-left: 15px;
+		display: inline-block;
+		text-align: center;
+	}
+	#popular_collections_list .folderSignup_button:hover {
+		background: rgb(47,195,249); /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(47,195,249,1) 0%, rgba(0,134,211,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(47,195,249,1)), color-stop(100%,rgba(0,134,211,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom, rgba(47,195,249,1) 0%,rgba(0,134,211,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fc3f9', endColorstr='#0086d3',GradientType=0 ); /* IE6-9 */
+	}
+
+/* ================================================================== */
+

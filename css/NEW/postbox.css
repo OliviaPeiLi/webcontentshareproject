@@ -1,0 +1,313 @@
+* {margin:0; padding: 0; font:12px "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;}
+
+.clear {clear: both;}
+.postboxwrapper{
+    width: 545px;
+    margin: auto;
+}
+
+.circles_menu_wrapper
+{
+    margin: auto; width: 700px;
+    margin-top: 5px;
+}
+
+.postbox {
+    width: 696px; 
+    height: 20px; 
+    resize: none;
+    border: 0;
+    border-top: 1px solid #515151;
+    padding: 3px 2px;
+    font-size: 16px;
+    line-height: 25px;
+}
+.postbox.inactive {
+    color: #999;
+    border-top: 0;
+}
+.postbox.empty{
+    border-top: 0;
+}
+
+.postboxtoolbar {
+    padding: 1px 5px 0px 0px;
+    display: inline-block;
+}
+.choose_collection_text {
+    margin-bottom: 5px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.postbox_folders {
+    margin-top: 10px;
+}
+.postbox_interests {
+    margin-bottom: 5px;
+}
+.postboxwrapper .preview {
+    padding: 7px;
+    display: none;
+}
+.previewtitle {
+    font-weight: bold;
+}
+
+.suggestion_item strong {
+    font-weight: bold;
+}
+
+.suggestion_item img {
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+}
+.markup_at {
+    color: darkgreen;
+    font-style: italic;
+
+}
+.markup_hash {
+    color: darkred;
+    font-weight: bold;
+}
+
+.markup_circle {
+    color: darkbrown;
+}
+
+.linkbuilder {
+    padding-top: 5px;
+    display: none;
+    position: relative;
+}
+
+.linkbuilder.active {
+    display: block;
+}
+
+.linkbuilder .thumbslist {
+    width: 230px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 15px;
+    min-height: 120px;
+    max-height: 200px;
+    overflow: hidden;
+}
+.linkbuilder .thumbslist img {
+    display: none;
+    max-width: 250px;
+    max-height: 150px;
+    padding: 0;
+}
+.linkbuilder .thumbslist img.current {
+    display: block;
+}
+
+.linkbuilder .props {
+    float: left;
+    width: 500px;
+}
+.linkbuilder .pagetitle span{
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.linkbuilder .pagetitle span:hover{
+    background-color: yellow;
+}
+
+.linkbuilder .pagedescr span{
+    cursor: pointer;
+}
+
+.linkbuilder .pagedescr span:hover {
+    background-color: yellow;
+}
+
+.linkbuilder .toolbar {
+    margin-top: 14px;
+    margin-bottom: 17px;
+}
+.linkbuilder .toolbar span {
+    font-size: 9px;
+    line-height: 20px;
+}
+.linkbuilder .preview_buttons a {
+    width: 25px;
+    height: 22px;
+    display: block;
+    float: left;
+}
+
+.linkbuilder .nextbutton{
+    background: url("/images/buttons.gif") -25px -83px no-repeat;
+}
+
+.linkbuilder .prevbutton{
+    background: url("/images/buttons.gif") 0px -83px no-repeat;
+}
+
+.linkbuilder .nextbutton.inactive, #linkbuilder .nextbutton.inactive:active {
+    background: url("/images/buttons.gif") -75px -83px no-repeat;
+}
+
+.linkbuilder .prevbutton.inactive, #linkbuilder .prevbutton.inactive:active { 
+    background: url("/images/buttons.gif") -50px -83px no-repeat;
+}
+
+.linkbuilder .nextbutton:active, {
+    background: url("/images/buttons.gif") -125px -83px no-repeat;
+}
+
+.linkbuilder .prevbutton:active{
+    background: url("/images/buttons.gif") -100px -83px no-repeat;
+}
+
+
+.linkbuilder .navy{
+    margin-left: 10px;
+}
+
+.linkbuilder .helptext {
+    color: #666;
+    margin-left: 10px;
+}
+
+.linkbuilder .thumbnailchoose{
+    margin: 5px 0 15px 6px;
+}
+.linkbuilder .thumbnailchoose label {
+    color: #666;
+    margin-left: 0;
+    font-weight: bold;
+}
+.linkbuilder .closebutton{
+    float:right;
+    position: absolute;
+   top: 7px;
+   right: 2px;
+}
+.linkbuilder .closebutton a {
+    background: url("/images/close_new.png") -0px 0px no-repeat;
+    width: 15px;
+    height: 15px;
+    display: block;
+    cursor: pointer;
+}
+.linkbuilder .closebutton a:hover {
+    background: url("/images/close_new.png") -0px -48px no-repeat;
+}
+#postbox_lowersection .pagelink {
+    background: #FFFFFF;
+    color: #808080;
+    min-height: 25px;
+    width: 250px;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    margin: 10px 10px 5px 10px;
+    overflow: hidden;
+    display: inline-block;
+    word-wrap: break-word;
+    float: left;
+}
+
+.inline_edit textarea{
+    width: 100%;
+    height: 40px;
+}
+.inline_edit input{
+    width: 100%;
+}
+.location_text {
+    color: #666;
+}
+.circles_switch_wrapper {
+    float: left;
+    line-height: 35px;
+}
+.choosen_circles {
+    float: left;
+}
+.choosen_circles .template {
+    display: none;
+}
+.choosen_circles li {
+    display: block;
+    float: left;
+    padding: 4px;
+    background-color: darkcyan;
+    margin: 3px;
+    border-radius: 3px;
+    border: 1px solid #666;
+}
+.choosen_circles li span {
+    display: block;
+    float: left;
+    color: white;
+    font-weight: bold;
+    line-height: 16px;
+}
+.choosen_circles li span.contents{
+    padding-left: 10px;
+    margin-top: -3px;
+}
+
+.choosen_circles li .close{
+    width: 7px;
+    height: 7px;
+    background: url("../img/chips.png") -28px -0px no-repeat;
+    cursor: pointer;
+    display: block;
+    margin-left: 7px;
+}
+
+.choosen_circles li .close:hover{
+    background: url("../img/chips.png") -28px -17px no-repeat;
+}
+
+.circles_menu {
+    width: 400px;
+    border: 1px solid #CCC;
+    display: none;
+}
+
+.circles_menu li {
+    display: block;
+    line-height: 20px;
+    background: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.circles_menu li .count {
+    color: #999;
+    margin-left: 5px;
+}
+
+.circles_menu li.item:hover {
+    background: #EEE;
+}
+
+.circles_menu .inactive {
+    display: none;
+}
+
+.circles_menu li.delimeter {
+    height: 1px;
+    line-height: 1px;
+    background: #999;
+    cursor: auto;
+    padding: 0;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.circles_menu .template{
+    display: none;
+}
